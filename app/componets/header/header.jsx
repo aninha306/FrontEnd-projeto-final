@@ -2,9 +2,9 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from './header.module.css';
-import Contato from "../contato/Contato";
+import Contato from "../../contato/page";
 
-function Header() {
+export function Header() {
     return (
         <div className={styles.header}>
 
@@ -16,7 +16,7 @@ function Header() {
                 <Link className={styles.links} href={'/'}>Home</Link>
                 <Link className={styles.links} href={'/'}>Sobre nós</Link>
 
-                <Link className={styles.links} href={'/'} >Contato</Link>
+                <Link className={styles.links} href={'/contato'} >Contato</Link>
             </div>
 
             <div className={styles.cadastro}>

@@ -1,20 +1,21 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import styles from './header.module.css';
+import styles from './Contato.module.css';
+import Header from "../componets/header/header";
+import Footer from "../componets/footer/footer";
 
 function Contato() {
     return (
 
-        
         <div className={styles.contato}>
 
     <Header></Header>
 
             <div>
                 
-                <input className={styles.nome}  href={'/'} placeholder="Nome">Nome</input>
-                <input className={styles.email} href={'/'} placeholder="Email"><Email></Email></input>
+                <input className={styles.nome}  href={'/'} placeholder="Nome"/>
+                <input className={styles.email} href={'/'} placeholder="Email"/>
 
             </div>
 
