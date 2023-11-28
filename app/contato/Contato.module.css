@@ -1,42 +1,47 @@
 
 .contato{
-    width: 400px;
-    height: 369px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
+}
+
+.contato h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contato p{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.contato a{
+    font-size: 1.2rem;
+    color: #fff;
     background-color: #000;
-    box-shadow: grey;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+}
+
+.contato a:hover{
+    background-color: #fff;
+    color: #000;
 }
 
 .nome{
-    font-size: 2rem;
-    font-weight: bold;
-    color: #fff;
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
 .email{
-    font-size: 1.5rem;
-    color: #fff;
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
 .enviarMsg{
     width: 100%;
-    height: 100%;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 0.5rem;
-    background-color: #fff;
-    color: #000;
-    font-size: 1.5rem;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.enviarMsg:hover{
-    background-color: #000;
-    color: #fff;
+    margin-bottom: 1rem;
 }
