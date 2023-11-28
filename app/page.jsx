@@ -11,7 +11,6 @@ function Home() {
   return (
     <>
       <Header></Header>
-        <h1>arte alem da tela.</h1>
       <div className={style.main} >
       
         <div className={style.qudrosDiv}>
@@ -33,7 +32,7 @@ function Home() {
           <img className={style.imgsQuadrosFixos} src="https://www.melhoresdestinos.com.br/wp-content/uploads/2021/02/nascimento-de-venus-artes.jpg" alt="" />
           <p className={style.direitos}>  As imagens podem ter direitos autorais.</p>
           <div className={style.testoDiv}>
-            <h2>nome da obra:</h2>
+            <h2>nome da obra: Noite Estrelada</h2>
             <h2>nome do artista:</h2>
 
 
