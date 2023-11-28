@@ -11,7 +11,7 @@ function Contato() {
         <div className={styles.contato}>
 
     <Header></Header>
-
+<div className={styles.card}>
             <div>
 
                 <h1 className={styles.titulo}>Entre em Contato Conosco! </h1>
@@ -23,6 +23,8 @@ function Contato() {
 
             <div className={styles.contato}>
                 <button className={styles.enviarMsg}>Enviar</button>
+            </div>
+
             </div>
 
             <Footer></Footer>

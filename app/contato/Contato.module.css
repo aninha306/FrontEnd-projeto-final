@@ -11,11 +11,16 @@
 }
 
 .contato h1{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8rem;
     font-size: 2rem;
     margin-bottom: 1rem;
     color: #000;
     box-shadow: darkgrey;
     border-radius: 2rem;
+    
 }
 
 .contato p{
@@ -38,17 +43,27 @@
 }
 
 .nome{
-    width: 100%;
+    width: 80%;
+    height: 13%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 1rem;
 }
 
 .email{
-    width: 100%;
+    width: 80%;
+    height: 13%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 1rem;
 }
 
 .enviarMsg{
     width: 20%;
     height: 2rem;
+    margin-top: 3rem;
     margin-bottom: 1rem;
+    margin-bottom: 5rem;
 }
