@@ -12,6 +12,10 @@
 .icons1{
     margin: 40px;
 }
+.icons1:hover{
+    color: #5e5e5e;
+    transition: 1s;
+}
 .camihos{
     align-items: center;
     justify-content: center;
@@ -22,6 +26,10 @@
     text-decoration: none;
     margin: 15px;
     color: white;
+}
+.links:hover{
+    color: #5e5e5e;
+    transition: 1s;
 }
 .todosdireitosreservados{
     align-items: center;
