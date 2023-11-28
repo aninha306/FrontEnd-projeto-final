@@ -1,10 +1,10 @@
 'use client'
 import { useState } from "react";
-import style from "@/app/componets/cadastro/cadastro.module.css";
+import style from "./cadastro.module.css";
 import Usuario from "@/app/models/Cadastroo/cadastro";
 import Usuarios from "@/app/models/Cadastroo/cadastros";
-import Header from "../header/header";
-import Footer from "../footer/footer";
+import Header from "../componets/header/header";
+import Footer from "../componets/footer/footer";
 
 const usuarios = new Usuarios();
 
@@ -13,7 +13,7 @@ function Cadastro() {
 
     let vazio = '';
 
-    const [nome, setNome] = useState(vazio);
+    const [nomeobra, setNome] = useState(vazio);
     const [imglink, setimglink] = useState(vazio);
     const [artista, setArtista] = useState(vazio);
     const [data, setData] = useState(vazio);
@@ -23,10 +23,10 @@ function Cadastro() {
     const [show, setShow] = useState(false);
     const [lista, setLista] = useState(usuarios.lista);
     const showUsuario = () => {
-        if (nome.trim() == '' || imglink.trim() == '' || artista.trim() == '' || data.trim() == '' || tipo.trim() == '' || idadeartista.trim() == '') {
-            alert("teste")
+        if (nomeobra.trim() == '' || imglink.trim() == '' || artista.trim() == '' || data.trim() == '' || tipo.trim() == '' || idadeartista.trim() == '') {
+            
         } else {
-            const usuario = new Usuario(nome, imglink, artista, data, tipo, idadeartista);
+            const usuario = new Usuario(nomeobra, imglink, artista, data, tipo, idadeartista);
             usuarios.addUsuario(usuario);
             setNome(vazio);
             setimglink(vazio);
@@ -38,10 +38,10 @@ function Cadastro() {
             console.log(usuarios.lista);
         }
     }
-    const Edit = (nome, imglink, artista, data, tipo, idadeartista, id) => {
+    const Edit = (nomeobra, imglink, artista, data, tipo, idadeartista, id) => {
         setShow(true);
 
-        setNome(nome);
+        setNome(nomeobra);
         setimglink(imglink);
         setArtista(artista);
         setData(data);
@@ -51,7 +51,7 @@ function Cadastro() {
         setAux(id);
     }
     const editUsuario = () => {
-        usuarios.editUsuario(aux, nome, imglink, artista, data, tipo, idadeartista);
+        usuarios.editUsuario(aux, nomeobra, imglink, artista, data, tipo, idadeartista);
 
         setNome(vazio);
         setimglink(vazio);
@@ -94,10 +94,10 @@ function Cadastro() {
                         />
                     </section>
                     <section className={style.inputs}>
-                        <input type="image"
+                        <input type="file"
                             value={imglink}
                             onChange={(param) => {
-                                setNome(param.target.value);
+                                setimglink(param.target.value);
                             }}
                             placeholder="Imagem da Obra"
                             className={style.infos}
@@ -107,7 +107,7 @@ function Cadastro() {
                         <input type="text"
                             value={artista}
                             onChange={(param) => {
-                                setNome(param.target.value);
+                                setArtista(param.target.value);
                             }}
                             placeholder="Nome do Artista"
                             className={style.infos}
@@ -117,7 +117,7 @@ function Cadastro() {
                         <input type="date"
                             value={data}
                             onChange={(param) => {
-                                setNome(param.target.value);
+                                setData(param.target.value);
                             }}
                             placeholder="Data de Produção"
                             className={style.infos}
@@ -127,7 +127,7 @@ function Cadastro() {
                         <input type="text"
                             value={tipo}
                             onChange={(param) => {
-                                setNome(param.target.value);
+                                setTipo(param.target.value);
                             }}
                             placeholder="Tipo da Obra"
                             className={style.infos}
@@ -137,7 +137,7 @@ function Cadastro() {
                         <input type="number"
                             value={idadeartista}
                             onChange={(param) => {
-                                setNome(param.target.value);
+                                setIdadeArtista(param.target.value);
                             }}
                             placeholder="Idade do Artista"
                             className={style.infos}
@@ -163,7 +163,7 @@ function Cadastro() {
                             lista.map((usuario) => (
                                 <div key={usuario.id} className={style.usuarios}>
                                     <div className={style.lista}>
-                                        <p><strong>Nome da Obra:</strong> {usuario.nome}</p>
+                                        <p><strong>Nome da Obra:</strong> {usuario.nomeobra}</p>
                                         <p><strong>Artista:</strong> {usuario.artista}</p>
                                         <p><strong>Data de Produção:</strong> {usuario.data}</p>
                                         <p><strong>Tipo da Arte:</strong> {usuario.tipo}</p>
@@ -171,7 +171,7 @@ function Cadastro() {
                                         <p><strong>Id:</strong> {usuario.id}</p>
                                     </div>
                                     <div className={style.botaoCadastro}>
-                                        <button onClick={() => Edit(usuario.nome, usuario.imglink, usuario.artista,usuario.data,usuario.tipo, usuario.idadeartista, usuario.id)} className={style.botaoeditar}>Editar</button>
+                                        <button onClick={() => Edit(usuario.nomeobra, usuario.imglink, usuario.artista,usuario.data,usuario.tipo, usuario.idadeartista, usuario.id)} className={style.botaoeditar}>Editar</button>
                                         <button onClick={() => delet(usuario.id)} className={style.botaodeletar}>Excluir</button> 
                                     </div>
                                 </div>
