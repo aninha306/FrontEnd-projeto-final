@@ -11,7 +11,10 @@
     border: 10px double #070707;
     border-radius: 20px;
     box-shadow: 23px 24px 20px rgba(0, 0, 0, 0.2);
-    display: block;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .imgsQuadrosFixos{
