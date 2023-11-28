@@ -1,4 +1,3 @@
-
 import Footer from './componets/footer/footer';
 import Header from './componets/header/header';
 import style from './pageIndex.module.css'
