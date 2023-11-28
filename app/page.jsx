@@ -1,6 +1,11 @@
+
   import Header from './componets/header/header';
   import { RiDeleteBinLine } from "react-icons/ri";
   import { FaEdit } from "react-icons/fa";
+
+import Footer from './componets/footer/footer';
+import Header from './componets/header/header';
+
 import style from './pageIndex.module.css'
 
 function Home() {
@@ -8,9 +13,14 @@ function Home() {
     <>
    
     <div className={style.main} >
+
       <header></header>
      <h1>arte alem da tela.</h1>
     
+
+      <Header></Header>
+      <h1>arte alem da tela.</h1>
+
       <div className={style.qudrosDiv}>
         
         <img className={style.imgsQuadrosFixos} src="https://m.media-amazon.com/images/I/71xpcgHewaL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="" />
@@ -108,6 +118,7 @@ function Home() {
         </div>
       </div>
 
+
       <div className={style.qudrosDiv}>
         <img height={"220px"} className={style.imgsQuadrosFixos} src="https://d1o6h00a1h5k7q.cloudfront.net/imagens/img_g/13945/6311896.jpg" alt=""/>
         <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
@@ -148,6 +159,8 @@ function Home() {
 
         </div>
       </div>
+    <Footer></Footer>
+
     </div>
 
     
