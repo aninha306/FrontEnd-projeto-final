@@ -5,9 +5,12 @@ import style from './pageIndex.module.css'
 
 function Home() {
   return (
+    <>
+   
     <div className={style.main} >
       <header></header>
-      <h1>arte alem da tela.</h1>
+     <h1>arte alem da tela.</h1>
+    
       <div className={style.qudrosDiv}>
         
         <img className={style.imgsQuadrosFixos} src="https://m.media-amazon.com/images/I/71xpcgHewaL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="" />
@@ -15,9 +18,10 @@ function Home() {
         <div className={style.testoDiv}>
           <h2>nome da obra:</h2>
           <h2>nome do artista:</h2>
-          <button  className={style.button} >saiba mais...</button> 
+        
           <button className={style.button}><RiDeleteBinLine color={"white"} /></button>
           <button className={style.button}><FaEdit  color={"white"} /></button>
+          <button  className={style.button} >saiba mais...</button> 
 
         </div>
       </div>
@@ -28,10 +32,11 @@ function Home() {
         <div className={style.testoDiv}>
           <h2>nome da obra:</h2>
           <h2>nome do artista:</h2>
-          <button className={style.button}>saiba mais sobre a obra...</button>
+       
           
-          <button  className={style.button}>editar</button>
-          <button className={style.button}>excluir</button>
+          <button className={style.button}><RiDeleteBinLine color={"white"} /></button>
+          <button className={style.button}><FaEdit  color={"white"} /></button>
+          <button  className={style.button} >saiba mais...</button> 
         </div>
       </div>
 
@@ -41,9 +46,10 @@ function Home() {
         <div className={style.testoDiv}>
           <h2>nome da obra:</h2>
           <h2>nome do artista:</h2>
-          <button className={style.button}>saiba mais sobre a obra...</button>
-          <button className={style.button}>editar</button>
-          <button className={style.button}>excluir</button>
+          <button className={style.button}><RiDeleteBinLine color={"white"} /></button>
+          <button className={style.button}><FaEdit  color={"white"} /></button>
+          <button className={style.button}>saiba mais...</button>
+
         </div>
       </div>
 
@@ -53,9 +59,11 @@ function Home() {
         <div className={style.testoDiv}>
           <h2>nome da obra:</h2>
           <h2>nome do artista:</h2>
-          <button className={style.button}>saiba mais sobre a obra...</button>
-          <button className={style.button}>editar</button>
-          <button className={style.button}>excluir</button>
+          
+          <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25}/></button>
+          <button className={style.button}><FaEdit  color={"white"} fontSize={25} /></button>
+          <button className={style.button}>saiba mais...</button>
+
         </div>
       </div>
 
@@ -65,21 +73,26 @@ function Home() {
         <div className={style.testoDiv}>
           <h2>nome da obra:</h2>
           <h2>nome do artista:</h2>
-          <button className={style.button}>saiba mais sobre a obra...</button>
-          <button className={style.button}>editar</button>
-          <button className={style.button}>excluir</button>
+         
+          <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
+          <button className={style.button}><FaEdit  color={"white"} fontSize={25} /></button>
+          <button className={style.button}>saiba mais...</button>
+
         </div>
       </div>
 
       <div className={style.qudrosDiv}>
         <img className={style.imgsQuadrosFixos} src="https://s1.static.brasilescola.uol.com.br/img/2018/07/a_persistencia_da_memoria.jpg" alt="" />
         <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
+      
         <div className={style.testoDiv}>
           <h2>nome da obra:</h2>
           <h2>nome do artista:</h2>
-          <button className={style.button}>saiba mais sobre a obra...</button>
-          <button className={style.button}>editar</button>
-          <button className={style.button}>excluir</button>
+         
+          <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
+          <button className={style.button}><FaEdit  color={"white"} fontSize={25} /></button>
+          <button className={style.button}>saiba mais...</button>
+
         </div>
       </div>
 
@@ -101,9 +114,11 @@ function Home() {
         <div className={style.testoDiv}>
           <h2>nome da obra:</h2>
           <h2>nome do artista:</h2>
-          <button className={style.button}>saiba mais sobre a obra...</button>
-          <button className={style.button}>editar</button>
-          <button className={style.button}>excluir</button>
+        
+          <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
+          <button className={style.button}><FaEdit  color={"white"} fontSize={25} /></button>
+          <button className={style.button}>saiba mais...</button>
+
         </div>
       </div>
 
@@ -113,9 +128,10 @@ function Home() {
         <div className={style.testoDiv}>
           <h2>nome da obra:</h2>
           <h2>nome do artista:</h2>
-          <button className={style.button}>saiba mais sobre a obra...</button>
-          <button className={style.button}>editar</button>
-          <button className={style.button}>excluir</button>
+          <button className={style.button}><RiDeleteBinLine color={"white"}fontSize={25} /></button>
+          <button className={style.button}><FaEdit  color={"white"} fontSize={25} /></button>
+          <button className={style.button}>saiba mais...</button>
+
         </div>
       </div>
 
@@ -125,15 +141,17 @@ function Home() {
         <div className={style.testoDiv}>
           <h2>nome da obra:</h2>
           <h2>nome do artista:</h2>
-          <button className={style.button}>saiba mais sobre a obra...</button>
-          <button className={style.button}>editar</button>
-          <button className={style.button}>excluir</button>
+          
+          <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25}/></button>
+          <button className={style.button}><FaEdit  color={"white"} fontSize={25} /></button>
+          <button className={style.button}>saiba mais...</button>
+
         </div>
       </div>
     </div>
 
     
 
-    
+    </>
   )
 }export default Home;
