@@ -1,6 +1,7 @@
 import Footer from './componets/footer/footer';
 import Header from './componets/header/header';
 import style from './pageIndex.module.css'
+
 function Home() {
   return (
     <div className={style.main} >
@@ -14,7 +15,7 @@ function Home() {
           <h2>nome da obra:</h2>
           <h2>nome do artista:</h2>
           <button  className={style.button} >saiba mais...</button> 
-          <button className={style.button}></button>
+          <button className={style.button}>excluir</button>
           <button className={style.button}>excluir</button>
 
         </div>
