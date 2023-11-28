@@ -22,10 +22,10 @@ function Cadastro() {
 
     const [show, setShow] = useState(false);
     const [lista, setLista] = useState(usuarios.lista);
-    const showUsuario = () =>{
-        if (nome.trim() == '' || imglink.trim() == '' || artista.trim() == '' || data.trim() == '' || tipo.trim() == '' || idadeartista.trim() == ''){
-            alert ("teste")
-        }else{
+    const showUsuario = () => {
+        if (nome.trim() == '' || imglink.trim() == '' || artista.trim() == '' || data.trim() == '' || tipo.trim() == '' || idadeartista.trim() == '') {
+            alert("teste")
+        } else {
             const usuario = new Usuario(nome, imglink, artista, data, tipo, idadeartista);
             usuarios.addUsuario(usuario);
             setNome(vazio);
@@ -34,11 +34,11 @@ function Cadastro() {
             setData(vazio);
             setTipo(vazio);
             setIdadeArtista(vazio);
-    
+
             console.log(usuarios.lista);
         }
     }
-       const Edit =(nome, imglink, artista, data, tipo, idadeartista, id) => {
+    const Edit = (nome, imglink, artista, data, tipo, idadeartista, id) => {
         setShow(true);
 
         setNome(nome);
@@ -49,34 +49,140 @@ function Cadastro() {
         setIdadeArtista(idadeartista);
 
         setAux(id);
-       }
-      const editUsuario = () => {
-        usuarios.editUsuario(aux,nome, imglink, artista, data, tipo, idadeartista);
+    }
+    const editUsuario = () => {
+        usuarios.editUsuario(aux, nome, imglink, artista, data, tipo, idadeartista);
 
-           setNome(vazio);
-            setimglink(vazio);
-            setArtista(vazio);
-            setData(vazio);
-            setTipo(vazio);
-            setIdadeArtista(vazio);
+        setNome(vazio);
+        setimglink(vazio);
+        setArtista(vazio);
+        setData(vazio);
+        setTipo(vazio);
+        setIdadeArtista(vazio);
 
-            setLista(usuarios.lista);
-            setShow(false);
-            setAux(null);
-      }
-     const delet = (id) => {
+        setLista(usuarios.lista);
+        setShow(false);
+        setAux(null);
+    }
+    const delet = (id) => {
         let already = false;
 
         usuarios.lista.map((usuario) => (
             usuario.id == id ? already = true : already
         ));
-        if (already){
+        if (already) {
             usuarios.deletarUsuario(id);
             setLista(usuarios.lista);
         }
-     }
+    }
 
-    return(
+    return (
 
-    
+        <main>
+            <Header></Header>
+            <div className={style.mainContent}>
+                <h1>Cadastros</h1>
+                <article className={style.cadastroform}>
+                    <section className={style.inputs}>
+                        <input type="text"
+                            value={nomeobra}
+                            onChange={(param) => {
+                                setNome(param.target.value);
+                            }}
+                            placeholder="Nome da Obra"
+                            className={style.infos}
+                        />
+                    </section>
+                    <section className={style.inputs}>
+                        <input type="image"
+                            value={imglink}
+                            onChange={(param) => {
+                                setNome(param.target.value);
+                            }}
+                            placeholder="Imagem da Obra"
+                            className={style.infos}
+                        />
+                    </section>
+                    <section className={style.inputs}>
+                        <input type="text"
+                            value={artista}
+                            onChange={(param) => {
+                                setNome(param.target.value);
+                            }}
+                            placeholder="Nome do Artista"
+                            className={style.infos}
+                        />
+                    </section>
+                    <section className={style.inputs}>
+                        <input type="date"
+                            value={data}
+                            onChange={(param) => {
+                                setNome(param.target.value);
+                            }}
+                            placeholder="Data de Produção"
+                            className={style.infos}
+                        />
+                    </section>
+                    <section className={style.inputs}>
+                        <input type="text"
+                            value={tipo}
+                            onChange={(param) => {
+                                setNome(param.target.value);
+                            }}
+                            placeholder="Tipo da Obra"
+                            className={style.infos}
+                        />
+                    </section>
+                    <section className={style.inputs}>
+                        <input type="number"
+                            value={idadeartista}
+                            onChange={(param) => {
+                                setNome(param.target.value);
+                            }}
+                            placeholder="Idade do Artista"
+                            className={style.infos}
+                        />
+                    </section>
+
+                    <section className={style.divBotao}>
+                        {
+                            show && (
+                                <button onClick={editUsuario} className={style.botao}>Editar</button>
+                            )
+                        }
+                        {
+                            !show && (
+                                <button onClick={showUsuario} className={style.botao}>Cadastrar</button>
+                            )
+                        }
+                    </section>
+                </article>
+                <article className={style.usuarioLista}>
+                    <section className={style.secusuarios}>
+                        {
+                            lista.map((usuario) => (
+                                <div key={usuario.id} className={style.usuarios}>
+                                    <div className={style.lista}>
+                                        <p><strong>Nome da Obra:</strong> {usuario.nome}</p>
+                                        <p><strong>Artista:</strong> {usuario.artista}</p>
+                                        <p><strong>Data de Produção:</strong> {usuario.data}</p>
+                                        <p><strong>Tipo da Arte:</strong> {usuario.tipo}</p>
+                                        <p><strong>Idade do Artista:</strong> {usuario.idadeartista}</p>
+                                        <p><strong>Id:</strong> {usuario.id}</p>
+                                    </div>
+                                    <div className={style.botaoCadastro}>
+                                        <button onClick={() => Edit(usuario.nome, usuario.imglink, usuario.artista,usuario.data,usuario.tipo, usuario.idadeartista, usuario.id)} className={style.botaoeditar}>Editar</button>
+                                        <button onClick={() => delet(usuario.id)} className={style.botaodeletar}>Excluir</button> 
+                                    </div>
+                                </div>
+                            ))
+                        }
+
+                    </section>
+                </article>
+            </div>
+        </main>
+    )
 }
+
+    export default Cadastro;
