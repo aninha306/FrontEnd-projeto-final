@@ -1,9 +1,11 @@
 
+import Footer from './componets/footer/footer';
+import Header from './componets/header/header';
 import style from './pageIndex.module.css'
 function Home() {
   return (
     <div className={style.main} >
-      <header></header>
+      <Header></Header>
       <h1>arte alem da tela.</h1>
       <div className={style.qudrosDiv}>
         
@@ -55,6 +57,7 @@ function Home() {
           <button className={style.button}>excluir</button>
         </div>
       </div>
+      <Footer></Footer>
     </div>
 
     

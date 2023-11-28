@@ -1,0 +1,37 @@
+.main{
+    background-color: #52290e;
+    height: 35vh;
+    width: 100%;
+    bottom: 0;
+}
+.icons{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.icons1{
+    margin: 40px;
+}
+.camihos{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: white;
+}
+.links{
+    text-decoration: none;
+    margin: 15px;
+    color: white;
+}
+.todosdireitosreservados{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: rgb(223, 169, 102);
+    margin-top: 74px;
+}
+.titulocopyright{
+    color: white;
+}
+
+
