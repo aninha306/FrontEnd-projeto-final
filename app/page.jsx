@@ -1,4 +1,4 @@
-
+import Header from './componets/header/header';
 import style from './pageIndex.module.css'
 function Home() {
   return (
