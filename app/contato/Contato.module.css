@@ -1,15 +1,4 @@
-/* Contato.module.css */
-
-.contato {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin-top: 2rem;
-  }
-  
-  .card {
+.card{
     background-color: rgb(0, 0, 0);
     width: 25rem;
     height: 26rem;
@@ -17,37 +6,82 @@
     border: 10px double #fafafa;
     border-radius: 20px;
     box-shadow: 23px 24px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  .titulo {
-    margin-top: 7rem;
+}
+
+.titulo{
+    margin-top: 3rem;
+    color: #fafafa;
     text-align: center;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .enviarMsg {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  
-  .enviarMsg {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
+}
+
+.nome{
+    height: 2rem;
+    color: #000000;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.email{
+    height: 2rem;
+    color: #000000;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    margin-top: 1rem;
+}
+
+.inputs{
+    margin-top: 2rem;
+    text-align: center;
+    margin-left: 6.5rem;
+}
+
+.enviarMsg {
+    text-align: center;
+    align-items: center;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
     border: none;
-    border-radius: 4px;
+    width: 10.3rem;
+    margin-top: 1rem;
+    margin-left: 6.5rem;
+    border-radius: 0.1rem;
+    height: 2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    border: 1px solid #ffffff;
+}
+
+.enviarMsg:hover{
+    background-color: #ffffff;
+    transition: 1s;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 50px;
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .enviarMsg:hover {
-    background-color: #868585;
-  }
-  
+    text-align: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    border: none;
+    width: 10.3rem;
+    margin-top: 1rem;
+    margin-left: 6.5rem;
+    border-radius: 0.1rem;
+    height: 2rem;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    border: 1px solid #000000;
+}
