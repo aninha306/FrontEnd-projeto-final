@@ -1,15 +1,21 @@
 
 .contato{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    
 }
 
 .contato h1{
     font-size: 2rem;
     margin-bottom: 1rem;
+    color: #000;
+    box-shadow: darkgrey;
+    border-radius: 2rem;
 }
 
 .contato p{
@@ -42,6 +48,7 @@
 }
 
 .enviarMsg{
-    width: 100%;
+    width: 20%;
+    height: 2rem;
     margin-bottom: 1rem;
 }

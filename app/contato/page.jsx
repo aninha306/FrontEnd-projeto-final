@@ -13,6 +13,8 @@ function Contato() {
     <Header></Header>
 
             <div>
+
+                <h1 className={styles.titulo}>Entre em Contato Conosco! </h1>
                 
                 <input className={styles.nome}  href={'/'} placeholder="Nome"/>
                 <input className={styles.email} href={'/'} placeholder="Email"/>
@@ -20,7 +22,7 @@ function Contato() {
             </div>
 
             <div className={styles.contato}>
-                <button className={styles.enviarMsg}></button>
+                <button className={styles.enviarMsg}>Enviar</button>
             </div>
 
             <Footer></Footer>
