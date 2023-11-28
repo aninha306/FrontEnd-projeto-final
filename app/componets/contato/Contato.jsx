@@ -19,7 +19,7 @@ function Contato() {
             </div>
 
             <div className={styles.contato}>
-                <button className={styles.enviarMsg}>Enviar</button>
+                <button className={styles.enviarMsg}></button>
             </div>
 
             <Footer></Footer>
