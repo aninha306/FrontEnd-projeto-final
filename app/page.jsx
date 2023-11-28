@@ -60,12 +60,12 @@ function Home() {
           <img className={style.imgsQuadrosFixos} src="https://www.melhoresdestinos.com.br/wp-content/uploads/2021/02/obra-de-arte-o-grito-edvard-munch.jpg" alt="" />
           <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
           <div className={style.testoDiv}>
-            <h2>nome da obra:</h2>
-            <h2>nome do artista:</h2>
+            <h2>Nome da Obra:</h2>
+            <h2>Nome do Artista:</h2>
 
             <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
             <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
-            <button className={style.button}>saiba mais...</button>
+            <button className={style.button}>Saiba mais...</button>
 
           </div>
         </div>
@@ -74,12 +74,12 @@ function Home() {
           <img className={style.imgsQuadrosFixos} src="https://aventurasnahistoria.uol.com.br/media/_versions/capa_ivan_o_terrivel_pintura_filho_morto_historia_widelg.jpeg " alt="" />
           <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
           <div className={style.testoDiv}>
-            <h2>nome da obra:</h2>
-            <h2>nome do artista:</h2>
+            <h2>Nome da Obra:</h2>
+            <h2>Nome do Artista:</h2>
 
             <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
             <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
-            <button className={style.button}>saiba mais...</button>
+            <button className={style.button}>Saiba mais...</button>
 
           </div>
         </div>
@@ -89,12 +89,12 @@ function Home() {
           <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
 
           <div className={style.testoDiv}>
-            <h2>nome da obra:</h2>
-            <h2>nome do artista:</h2>
+            <h2>Nome da Obra:</h2>
+            <h2>Nome do Artista:</h2>
 
             <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
             <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
-            <button className={style.button}>saiba mais...</button>
+            <button className={style.button}>Saiba mais...</button>
 
           </div>
         </div>
