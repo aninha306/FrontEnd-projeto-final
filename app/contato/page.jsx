@@ -10,7 +10,7 @@ function contato() {
         </div>
 
         <div className={styles.imagem}>
-            <img src="/contato.png" alt="Imagem de contato" />
+            <img src={'/almocodosbarqueiros'}alt="Imagem de contato" />
         </div>
 
         <div className={styles.divinputs}>
