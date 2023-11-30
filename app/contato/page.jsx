@@ -5,12 +5,17 @@ import { text } from 'express';
 import { FaGithub, FaInstagram } from "react-icons/fa";
 import { SiLinktree } from "react-icons/si";
 import Link from 'next/link';
+import Footer from '../componets/footer/footer';
+import Header from '../componets/header/header';
 
 function contato() {
   return (
+    <>
+
+    <Header></Header>
     <div className={styles.principal}>
         
-
+    
         <div className={styles.imagem}>
             <Image src={'/almoçodosbarqueiros.png'} width={400} height={300} className={styles.img}/>
         </div>
@@ -42,10 +47,9 @@ function contato() {
            <hr className={styles.hr}></hr>
 
            <button className={styles.button}> Enviar </button>
-            
-        </div>
+           
+           <div className={styles.divicones}>
 
-        <div className={styles.divicones}>
            <Link href='/'>
            <FaGithub color={"black"} fontSize={30}/>
            </Link>
@@ -58,7 +62,14 @@ function contato() {
             <FaInstagram color={"black"} fontSize={30}/>
            </Link>
         </div>
+            
+        </div>
+
+        
+        
     </div>
+    <Footer></Footer>
+    </>
   )
 }
 

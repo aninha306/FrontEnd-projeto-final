@@ -8,9 +8,7 @@
     font-size: 30px;
 }
 
-.imagem{
 
-}
 
 .divinputs{
     flex-direction: column;
@@ -49,4 +47,8 @@
     align-items: center;
     justify-content: center;
     
+}
+
+.divicones{
+    margin-top: 5rem;
 }
