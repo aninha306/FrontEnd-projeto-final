@@ -6,6 +6,10 @@ import { FaGithub,FaInstagram } from "react-icons/fa";
 import { SiLinktree } from "react-icons/si";
 import { MdOutlineMail } from "react-icons/md";
 
+//funcao responsavel pelo header
+//div style.main engloba todos os componentes do footer
+//div style.icons armazena os icones
+//div style.camihos armazena as rotas de home, sobre nos, contato e cadastro.
 function Footer(){
 
         return(
@@ -30,3 +34,4 @@ function Footer(){
     } 
 
     export default Footer;
+    //exportar funçao
