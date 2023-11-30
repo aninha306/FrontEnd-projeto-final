@@ -6,22 +6,35 @@ import Usuarios from "@/app/models/Cadastroo/cadastros";
 import Header from "../componets/header/header";
 import Footer from "../componets/footer/footer";
 
+//const responsavel por adicionar um novo usuario
 const usuarios = new Usuarios();
 
+//funcao responsavel por cadastrar um novo usuario
 function Cadastro() {
+    
     const [aux, setAux] = useState(null);
 
     let vazio = '';
 
+    //const responsavel pelo nome da obra
     const [nomeobra, setNome] = useState(vazio);
+    //const responsavel pela imagem
     const [imglink, setimglink] = useState(vazio);
+    //const responsavel pelo nome do artista
     const [artista, setArtista] = useState(vazio);
+    //const responsavel pela data
     const [data, setData] = useState(vazio);
+    //const responsavel pelo tipo de obra
     const [tipo, setTipo] = useState(vazio);
+    //const responsavel pela idade do artista
     const [idadeartista, setIdadeArtista] = useState(vazio);
 
+    //const responsavel por mostrar a obra e dados do usuario
     const [show, setShow] = useState(false);
+    //const responsavel por montar uma lista de obras/usuarios
     const [lista, setLista] = useState(usuarios.lista);
+
+    //const responsavel por mostrar o usuario a partir do nome,imagem,artista,data, tipo e idade.
     const showUsuario = () => {
         if (nomeobra.trim() == '' || imglink.trim() == '' || artista.trim() == '' || data.trim() == '' || tipo.trim() == '' || idadeartista.trim() == '') {
             
@@ -38,6 +51,8 @@ function Cadastro() {
             console.log(usuarios.lista);
         }
     }
+
+    //const responsavel por editar nome.imagem, artista, data, tipo e idade.
     const Edit = (nomeobra, imglink, artista, data, tipo, idadeartista, id) => {
         setShow(true);
 
@@ -50,6 +65,8 @@ function Cadastro() {
 
         setAux(id);
     }
+
+    //const responsavel por editar o usuario
     const editUsuario = () => {
         usuarios.editUsuario(aux, nomeobra, imglink, artista, data, tipo, idadeartista);
 
@@ -64,6 +81,8 @@ function Cadastro() {
         setShow(false);
         setAux(null);
     }
+
+    //const responsavel por deletar o usuario pelo id
     const delet = (id) => {
         let already = false;
 
@@ -76,6 +95,7 @@ function Cadastro() {
         }
     }
 
+    //retornar na tela os dados
     return (
 
         <main>
@@ -160,6 +180,8 @@ function Cadastro() {
                 <article className={style.usuarioLista}>
                     <section className={style.secusuarios}>
                         {
+                            //usuario lista responsavel pelos campos de nome da obra, nome do artista, data de produçao, tipo de arte, 
+                            //idade do artista e id.
                             lista.map((usuario) => (
                                 <div key={usuario.id} className={style.usuarios}>
                                     <div className={style.lista}>
@@ -170,6 +192,7 @@ function Cadastro() {
                                         <p><strong>Idade do Artista:</strong> {usuario.idadeartista}</p>
                                         <p><strong>Id:</strong> {usuario.id}</p>
                                     </div>
+                            
                                     <div className={style.botaoCadastro}>
                                         <button onClick={() => Edit(usuario.nomeobra, usuario.imglink, usuario.artista,usuario.data,usuario.tipo, usuario.idadeartista, usuario.id)} className={style.botaoeditar}>Editar</button>
                                         <button onClick={() => delet(usuario.id)} className={style.botaodeletar}>Excluir</button> 
@@ -186,3 +209,4 @@ function Cadastro() {
 }
 
     export default Cadastro;
+    //exportar funçao de cadastrp
