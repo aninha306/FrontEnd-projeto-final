@@ -129,8 +129,8 @@ function Home() {
           <img className={style.imgsQuadrosFixos} src="https://arteeartistas.com.br/wp-content/uploads/2017/01/Impress%C3%A3o-Sol-Nascente.-Claude-Monet.jpg" alt="" />
           <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
           <div className={style.testoDiv}>
-            <h2>nome da obra:</h2>
-            <h2>nome do artista:</h2>
+            <h2> <s></s></h2>
+            <h2> </h2>
             <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
             <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
             <button className={style.button}>saiba mais...</button>
@@ -151,6 +151,8 @@ function Home() {
 
           </div>
         </div>
+
+        <button>SAIBA MAIS</button>
         <Footer></Footer>
 
       </div>
