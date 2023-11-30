@@ -14,7 +14,7 @@ export default function Page() {
     const router = useRouter();
 
     const deletar = async (id) => {
-        const url = `API/cadastro/${id}`;
+        const url = `API/cadastro2/${id}`;
 
         try {
             await axios.delete(url);
@@ -25,13 +25,13 @@ export default function Page() {
     };
 
     const atualizar = async (id) => {
-        router.push(`/cadastro/${id}`);
+        router.push(`/cadastro2/${id}`);
     }
 
     useEffect(() => {
         async function BuscarObras() {
             try {
-                const resposta = await axios.get("/API/cadastro");
+                const resposta = await axios.get("/API/cadastro2");
                 setCadastro(resposta.data);
                 setDados(resposta.data);
             } catch (error) {
@@ -46,7 +46,7 @@ export default function Page() {
             <Header></Header>
 
             <div className={style.acoes}>
-                <Link href="/cadastro/register">
+                <Link href="/cadastro2/register">
                     <button className={`${style.button} ${style.primeirobtn}`}>
                         Cadastrar Obra
                     </button>
@@ -61,6 +61,7 @@ export default function Page() {
                         {cadastro.map((cadastro) => (
                             <div key={cadastro.id} className={style.cadastro}>
                                 <div className={style.infos}>
+                                    <img src="{cadastro.url}" alt="img" />
                                     <p>
                                         <strong>ID:</strong> {cadastro.id}
                                     </p>

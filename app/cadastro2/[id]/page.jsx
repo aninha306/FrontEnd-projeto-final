@@ -22,7 +22,7 @@ export default function AtualizarCadastro({ params }) {
     useEffect(() => {
         async function BuscarObra() {
             try {
-                const resposta = await axios.get(`/API/cadastro/${id}`);
+                const resposta = await axios.get(`/API/cadastro2/${id}`);
                 const cadastro = resposta.data;
                 setNome(cadastro.nomeObra);
                 setImagem(cadastro.url);
@@ -42,8 +42,8 @@ export default function AtualizarCadastro({ params }) {
         e.prevenirObra();
 
         try {
-            await axios.put(`/API/cadastro/${id}`, { nomeObra, url, artista, dataProducao, tipo, idadeArtista });
-            router.push(`/cadastro/`);
+            await axios.put(`/API/cadastro2/${id}`, { nomeObra, url, artista, dataProducao, tipo, idadeArtista });
+            router.push(`/cadastro2/`);
         } catch (error) {
             console.error("Error atualizar cadastro", error);
         }
@@ -52,13 +52,13 @@ export default function AtualizarCadastro({ params }) {
         <div className={style.container}>
             <Header></Header>
          <div className={style.acoes}> 
-          <Link href={`/cadastro`}>
+          <Link href={`/cadastro2`}>
             <button className={`${style.button} ${style.primeirobtn}`}>
               Voltar para Obras
             </button>
           </Link>
          </div>
-        <div className={style.cadastroContaners}>
+        <div className={style.cadastroContainer}>
     
             <h1 className={style.mainprincipal}>Atualizar Obra</h1>
             {id ? (
@@ -100,7 +100,7 @@ export default function AtualizarCadastro({ params }) {
                         <label htmlFor="dataProducao">
                             Data de Produção:
                         </label>
-                        <input type="text"
+                        <input type="date"
                             className={style.input}
                             id="dataProducao"
                             value={dataProducao}
@@ -126,7 +126,7 @@ export default function AtualizarCadastro({ params }) {
                             className={style.input}
                             id="idadeArtista"
                             value={idadeArtista}
-                            onChange={(e) => setNome(e.target.value)}
+                            onChange={(e) => setIdade(e.target.value)}
                             required />
                     </div>
     
@@ -142,7 +142,6 @@ export default function AtualizarCadastro({ params }) {
     }
     
         </div>
-        <Footer></Footer>
         </div>
     );
 }
