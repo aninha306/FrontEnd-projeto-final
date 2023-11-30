@@ -56,7 +56,7 @@ export default function Register() {
                     </button>
                 </Link>
             </div>
-            <div className={style.cadastroContaners}>
+            <div className={style.cadastroContainer}>
 
                 <h1 className={style.mainprincipal}>Cadastrar Obras</h1>
 
