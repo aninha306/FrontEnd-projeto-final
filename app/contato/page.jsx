@@ -22,9 +22,17 @@ function contato() {
 
             <input 
             type='text'
-            className={styles.inp2}
+            className={styles.inp1}
             placeholder='Email'
            />
+
+            <input 
+            type='number'
+            className={styles.inp1}
+            placeholder='Numero'
+           />
+
+           <button className={styles.button}> Enviar </button>
             
         </div>
 
