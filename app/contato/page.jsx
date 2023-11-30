@@ -15,13 +15,16 @@ function contato() {
 
         <div className={styles.divinputs}>
             <input 
-            className={styles.inp}
-            value={state}
-            type={text}
-            name={nome}
-            placeholder={texto}
-            onChange={(e) => setState(e.target.value)}
-    />
+            type='text'
+            className={styles.inp1}
+            placeholder='Nome'
+           />
+
+            <input 
+            type='text'
+            className={styles.inp2}
+            placeholder='Email'
+           />
             
         </div>
 
