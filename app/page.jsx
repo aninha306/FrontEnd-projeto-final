@@ -12,16 +12,16 @@ function Home() {
     <>
       <Header></Header>
 
-    <div className={style.poster}>
-<img src="https://photoarts.com.br/magazine/wp-content/uploads/sites/2/2021/07/artur-matosyan-4YWUMaftmag-unsplash-1-1.jpg" alt="" />
+      <div className={style.poster}>
+        <img src="https://photoarts.com.br/magazine/wp-content/uploads/sites/2/2021/07/artur-matosyan-4YWUMaftmag-unsplash-1-1.jpg" alt="" />
       </div>
 
       <div className={style.infos}>
 
         <p>
-           A definição de arte é uma questão complexa e muitas vezes subjetiva, pois a arte abrange uma ampla gama de formas de expressão criativa e manifestações culturais. Ao longo da história, diferentes culturas e períodos de tempo têm apresentado concepções distintas sobre o que constitui a arte. No entanto, algumas características e princípios fundamentais podem ser explorados para compreender melhor essa manifestação humana.</p>
+          A definição de arte é uma questão complexa e muitas vezes subjetiva, pois a arte abrange uma ampla gama de formas de expressão criativa e manifestações culturais. Ao longo da história, diferentes culturas e períodos de tempo têm apresentado concepções distintas sobre o que constitui a arte. No entanto, algumas características e princípios fundamentais podem ser explorados para compreender melhor essa manifestação humana.</p>
 
-          <p>A arte, em sua essência, é uma forma de comunicação e expressão. Ela transcende a linguagem verbal, permitindo que os artistas transmitam ideias, emoções, conceitos e experiências através de diferentes meios. Pode ser visual, como pintura e escultura; auditiva, como música e poesia; cênica, como teatro e dança; ou uma combinação de várias formas, como no cinema.</p>
+        <p>A arte, em sua essência, é uma forma de comunicação e expressão. Ela transcende a linguagem verbal, permitindo que os artistas transmitam ideias, emoções, conceitos e experiências através de diferentes meios. Pode ser visual, como pintura e escultura; auditiva, como música e poesia; cênica, como teatro e dança; ou uma combinação de várias formas, como no cinema.</p>
       </div>
 
 
@@ -35,8 +35,7 @@ function Home() {
           <div className={style.testoDiv}>
             <h2> Noite Estrelada</h2>
             <h2>  van gogh</h2>
-
-            <button className={style.button}><RiDeleteBinLine color={"white"} /></button>
+             <button className={style.button}><RiDeleteBinLine color={"white"} /></button>
             <button className={style.button}><FaEdit color={"white"} /></button>
             <button className={style.button} >saiba mais...</button>
 
@@ -57,7 +56,7 @@ function Home() {
           </div>
         </div>
 
-       
+
 
         <div className={style.qudrosDiv}>
           <img className={style.imgsQuadrosFixos} src="https://www.melhoresdestinos.com.br/wp-content/uploads/2021/02/obra-de-arte-o-grito-edvard-munch.jpg" alt="" />
@@ -103,7 +102,7 @@ function Home() {
         </div>
 
         <div className={style.qudrosDiv}>
-          <img height={"210px"} className={style.imgsQuadrosFixos} src="" alt="" />
+          <img height={"210px"} className={style.imgsQuadrosFixos} src="https://cdn.culturagenial.com/imagens/tarsila-do-amaral-abaporu-cke.jpg" alt="" />
           <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
           <div className={style.testoDiv}>
             <h2>Abaporu</h2>
@@ -134,7 +133,7 @@ function Home() {
           <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
           <div className={style.testoDiv}>
 
-          
+
             <h2>Impressão, nascer do sol</h2>
             <h2>Claude Monet</h2>
 
@@ -155,11 +154,12 @@ function Home() {
             <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
             <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
             <button className={style.button}>saiba mais...</button>
-
+            
           </div>
+    
         </div>
 
-        <button>SAIBA MAIS</button>
+
         <Footer></Footer>
 
       </div>
