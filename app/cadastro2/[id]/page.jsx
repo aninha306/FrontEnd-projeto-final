@@ -50,6 +50,7 @@ export default function AtualizarCadastro({ params }) {
     };
     return (
         <div className={style.container}>
+            <Header></Header>
          <div className={style.acoes}> 
           <Link href={`/cadastro`}>
             <button className={`${style.button} ${style.primeirobtn}`}>
@@ -141,6 +142,7 @@ export default function AtualizarCadastro({ params }) {
     }
     
         </div>
+        <Footer></Footer>
         </div>
     );
 }
