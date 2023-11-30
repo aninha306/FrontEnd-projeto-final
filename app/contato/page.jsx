@@ -9,12 +9,14 @@ import Link from 'next/link';
 function contato() {
   return (
     <div className={styles.principal}>
-        <div className={styles.titulo}>
-            <h1>  Contato  </h1>
-        </div>
+        
 
         <div className={styles.imagem}>
             <Image src={'/almoçodosbarqueiros.png'} width={400} height={300} className={styles.img}/>
+        </div>
+
+        <div className={styles.titulo}>
+            <h1>  Contato  </h1>
         </div>
 
         <div className={styles.divinputs}>
@@ -23,18 +25,21 @@ function contato() {
             className={styles.inp1}
             placeholder='Nome'
            />
+           <hr className={styles.hr}></hr>
 
             <input 
             type='text'
             className={styles.inp1}
             placeholder='Email'
            />
+           <hr className={styles.hr}></hr>
 
             <input 
             type='number'
             className={styles.inp1}
             placeholder='Numero'
            />
+           <hr className={styles.hr}></hr>
 
            <button className={styles.button}> Enviar </button>
             

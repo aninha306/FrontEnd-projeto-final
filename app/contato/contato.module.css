@@ -1,0 +1,52 @@
+.principal{
+    display: flex;
+    
+}
+
+.titulo{
+    color: black;
+    font-size: 30px;
+}
+
+.imagem{
+
+}
+
+.divinputs{
+    flex-direction: column;
+    text-align: center;
+    margin-left: 10%;
+    align-items: center;
+    margin-top: 9rem;
+    width: 50%;
+    height: 50%;
+    border: 3px solid #000000;
+}
+
+.inp1{
+    margin-top: 10%;
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-decoration: none;
+    border: none;
+    margin-top: 3rem;
+}
+
+.hr{
+    color: black;
+    width: 90%;
+}
+
+.button{
+    background-color: black;
+    color: white;
+    width: 55%;
+    height: 10%;
+    border-radius: 3rem;
+    margin-top: 3rem;
+    align-items: center;
+    justify-content: center;
+    
+}
