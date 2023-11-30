@@ -6,7 +6,7 @@ function contato() {
   return (
     <div className={styles.principal}>
         <div className={styles.titulo}>
-            <h1> Contato </h1>
+            <h1> Entre em Contato Conosco </h1>
         </div>
 
         <div className={styles.imagem}>
