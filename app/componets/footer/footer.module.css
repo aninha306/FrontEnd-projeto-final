@@ -1,36 +1,50 @@
+
+/*Estilizaçao div main: armazena tudo*/
 .main{
     background-color: #000000;
     height: 35vh;
     width: 100%;
     bottom: 0;
 }
+
+/*Estilizaçao dos icones*/
 .icons{
     align-items: center;
     justify-content: center;
     display: flex;
 }
+/*Estilizaçao dos icones1*/
 .icons1{
     margin: 40px;
 }
+/*Estilizaçao para que os icones mude de cor*/
 .icons1:hover{
     color: #5e5e5e;
     transition: 1s;
 }
+
+/*Estilizaçao da div camihos = rotas de home,sobre nos, contato e cadastro*/
 .camihos{
     align-items: center;
     justify-content: center;
     display: flex;
     color: white;
 }
+
+/*Estilizaçao dos links*/
 .links{
     text-decoration: none;
     margin: 15px;
     color: white;
 }
+
+/*Estilizaçao para que os links mude de cor*/
 .links:hover{
     color: #5e5e5e;
     transition: 1s;
 }
+
+/*Estilizaçao da div todosdireitosreservados presente no footer*/
 .todosdireitosreservados{
     align-items: center;
     justify-content: center;
@@ -39,6 +53,8 @@
     margin-top: 74px;
     height: 50px;
 }
+
+/*Estilizaçao do texto presente na div todosdireitosreservados*/
 .titulocopyright{
     color: white;
 }
