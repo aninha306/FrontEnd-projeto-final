@@ -14,7 +14,7 @@ function Header() {
             <div className={styles.rotas}>
                 <Link className={styles.links} href={'/'}>Home</Link>
                 <Link className={styles.links} href={'/'}>Sobre nós</Link>
-                <Link className={styles.links} href={'/'}>Detralhes</Link>
+                <Link className={styles.links} href={'/'}>Quadoros</Link>
                 <Link className={styles.links} href={'/'}>Contato</Link>
             </div>
 
