@@ -156,16 +156,9 @@ function Home() {
             <button className={style.button}>saiba mais...</button>
             
           </div>
-    
         </div>
-
-
         <Footer></Footer>
-
       </div>
-
-
-
     </>
   )
 } export default Home;
