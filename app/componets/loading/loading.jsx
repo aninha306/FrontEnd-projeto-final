@@ -9,4 +9,4 @@ function Loading() {
     )
 }
 
-export default ImageLoading
+export default ImageLoading;
