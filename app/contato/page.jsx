@@ -2,7 +2,8 @@ import React from 'react'
 import styles from "./contato.module.css"
 import Image from 'next/image';
 import { text } from 'express';
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaInstagram } from "react-icons/fa";
+import { SiLinktree } from "react-icons/si";
 import Link from 'next/link';
 
 function contato() {
@@ -40,7 +41,17 @@ function contato() {
         </div>
 
         <div className={styles.divicones}>
-           <Link><FaGithub color={"black"} fontSize={35}/></Link>
+           <Link href='/'>
+           <FaGithub color={"black"} fontSize={30}/>
+           </Link>
+
+           <Link href='/'>
+            <SiLinktree color={"black"} fontSize={30}/>
+           </Link>
+
+           <Link href='/'>
+            <FaInstagram color={"black"} fontSize={30}/>
+           </Link>
         </div>
     </div>
   )
