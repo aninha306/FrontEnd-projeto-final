@@ -1,47 +1,64 @@
 .principal{
-    display: flex;
+    display: flex;  
+}
+.maeinputs{
+    width: 27rem;
+    height: 30rem;
+    margin-left: 5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2rem;
     
 }
 
 .titulo{
     color: black;
-    font-size: 30px;
+    font-size: 25px;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+   
 }
-
-
 
 .divinputs{
     flex-direction: column;
     text-align: center;
-    margin-left: 10%;
     align-items: center;
-    margin-top: 9rem;
-    width: 50%;
-    height: 50%;
+    width: 25rem;
+    height: 29rem;
     border: 3px solid #000000;
+    padding: 3rem;
+    margin-right: 5rem;
+    margin-bottom: 5rem;
+    
 }
 
 .inp1{
-    margin-top: 10%;
-    width: 300px;
-    height: 30px;
+    width: 8rem;
+    height: 2rem;
     border-radius: 5px;
-    border: 1px solid black;
+    border: 0.5px solid black;
     text-decoration: none;
     border: none;
-    margin-top: 3rem;
+    margin-top: 2rem;
+    margin-right: 6rem;
+
 }
 
 .hr{
     color: black;
-    width: 90%;
+    width: 15rem;
+    margin-left: 2rem;
+    text-align: center;
+    align-items: center;
+
 }
 
 .button{
     background-color: black;
     color: white;
-    width: 55%;
-    height: 10%;
+    width: 9rem;
+    height: 2rem;
     border-radius: 3rem;
     margin-top: 3rem;
     align-items: center;
@@ -50,5 +67,17 @@
 }
 
 .divicones{
-    margin-top: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+
+
+.imagem{
+    padding: 7rem;
+    margin-left: 3rem;
+}
+
+.icons{
+    margin: 1rem;
 }

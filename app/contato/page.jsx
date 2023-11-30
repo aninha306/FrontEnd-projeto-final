@@ -17,8 +17,10 @@ function contato() {
         
     
         <div className={styles.imagem}>
-            <Image src={'/almoçodosbarqueiros.png'} width={400} height={300} className={styles.img}/>
+            <img src={'/noiteestrelada.gif'} width={350} height={450} className={styles.img}/>
         </div>
+
+        <div className={styles.maeinputs}>
 
         <div className={styles.titulo}>
             <h1>  Contato  </h1>
@@ -48,19 +50,21 @@ function contato() {
 
            <button className={styles.button}> Enviar </button>
            
+
            <div className={styles.divicones}>
 
-           <Link href='/'>
-           <FaGithub color={"black"} fontSize={30}/>
+           <Link href='/' className={styles.icons}>
+           <FaGithub color={"black"} fontSize={20} />
            </Link>
 
-           <Link href='/'>
-            <SiLinktree color={"black"} fontSize={30}/>
+           <Link href='/' className={styles.icons}>
+            <SiLinktree color={"black"} fontSize={20}/>
            </Link>
 
-           <Link href='/'>
-            <FaInstagram color={"black"} fontSize={30}/>
+           <Link href='/' className={styles.icons}>
+            <FaInstagram color={"black"} fontSize={20}/>
            </Link>
+           </div>
         </div>
             
         </div>
