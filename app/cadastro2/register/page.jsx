@@ -22,14 +22,14 @@ export default function Register() {
         e.prevenirObra();
 
         try {
-            await axios.post("/API/cadastro", { nomeObra, url, artista, dataProducao, tipo, idadeArtista });
+            await axios.post("/API/cadastro2", { nomeObra, url, artista, dataProducao, tipo, idadeArtista });
             setNome("");
             setImagem("");
             setArtista("");
             setData("");
             setTipo("");
             setIdade("");
-            router.push(`/cadastro/`);
+            router.push(`/cadastro2/`);
         } catch (error) {
             console.error("ERRO AO ENVIAR DADOS", error);
         }
@@ -37,7 +37,7 @@ export default function Register() {
     useEffect(() => {
         async function BuscarObra() {
             try {
-                const resposta = await axios.get("/API/cadastro");
+                const resposta = await axios.get("/API/cadastro2");
                 setCadastro(resposta.data);
             } catch (error) {
                 console.error("ERRO AO ENVIAR DADOS", error);
@@ -50,7 +50,7 @@ export default function Register() {
         <div className={style.container}>
             <Header></Header>
             <div className={style.acoes}>
-                <Link href={`/cadastro`}>
+                <Link href={`/cadastro2`}>
                     <button className={`${style.button} ${style.primeirobtn}`}>
                         Voltar para Obras
                     </button>
@@ -98,7 +98,7 @@ export default function Register() {
                         <label htmlFor="dataProducao">
                             Data de Produção:
                         </label>
-                        <input type="text"
+                        <input type="date"
                             className={style.input}
                             id="dataProducao"
                             value={dataProducao}
@@ -124,7 +124,7 @@ export default function Register() {
                             className={style.input}
                             id="idadeArtista"
                             value={idadeArtista}
-                            onChange={(e) => setNome(e.target.value)}
+                            onChange={(e) => setIdade(e.target.value)}
                             required />
                     </div>
 
@@ -135,7 +135,7 @@ export default function Register() {
                     </button>
                 </form>
             </div>
-        <Footer></Footer>
         </div>
+        
     );
 }
