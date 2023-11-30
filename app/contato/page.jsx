@@ -1,16 +1,19 @@
 import React from 'react'
 import styles from "./contato.module.css"
+import Image from 'next/image';
 import { text } from 'express';
+import { FaGithub } from "react-icons/fa";
+import Link from 'next/link';
 
 function contato() {
   return (
     <div className={styles.principal}>
         <div className={styles.titulo}>
-            <h1> Entre em Contato Conosco </h1>
+            <h1>  Contato  </h1>
         </div>
 
         <div className={styles.imagem}>
-            <img src={'/almocodosbarqueiros'}alt="Imagem de contato" />
+            <Image src={'/almoçodosbarqueiros.png'} width={400} height={300} className={styles.img}/>
         </div>
 
         <div className={styles.divinputs}>
@@ -37,7 +40,7 @@ function contato() {
         </div>
 
         <div className={styles.divicones}>
-           
+           <Link><FaGithub color={"black"} fontSize={35}/></Link>
         </div>
     </div>
   )
