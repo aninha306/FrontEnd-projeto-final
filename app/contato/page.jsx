@@ -57,16 +57,16 @@ function contato() {
 
            <div className={styles.divicones}>
 
-           <Link href='/' className={styles.icons}>
+           <Link href='https://github.com' className={styles.icons}>
            <FaGithub color={"black"} fontSize={20} />
            </Link>
 
-           <Link href='/' className={styles.icons}>
+           <Link href='https://linktr.ee/ArteAlemdaTela' className={styles.icons}>
             <SiLinktree color={"black"} fontSize={20}/>
             
            </Link>
 
-           <Link href='/' className={styles.icons}>
+           <Link href='https://www.instagram.com' className={styles.icons}>
             <FaInstagram color={"black"} fontSize={20}/>
            </Link>
            </div>
