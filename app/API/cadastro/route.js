@@ -1,7 +1,7 @@
 import axios from "axios";
 import { NextResponse } from "next/server";
 
-const url = process.env.BASE_URL + "cadastro2"
+const url = process.env.BASE_URL + "cadastro"
 
 export async function GET (){
    try{
