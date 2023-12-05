@@ -1,7 +1,7 @@
 import axios from "axios";
 import { NextResponse } from "next/server";
 
-const url = process.env.BASE_URL + "cadastro2"
+const url = process.env.BASE_URL + "/cadastro2"
 
 export async function GET (){
    try{
@@ -12,7 +12,7 @@ export async function GET (){
         return new NextResponse("ERRO INTERNO DO SERVIDOR!", {status: 500});
     }
 }
-export async function GET (request, {params}){
+export async function get (request, {params}){
     const {id} = params;
 
     try{

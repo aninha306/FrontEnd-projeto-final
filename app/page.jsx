@@ -1,14 +1,30 @@
-
-import Header from './componets/header/header';
+"use client"
 import { RiDeleteBinLine } from "react-icons/ri";
 import { FaEdit } from "react-icons/fa";
-import Footer from './componets/footer/footer';
-import Popup from './componets/popup/PopUp';
-
-
+import Header from "./components/header/header";
+import Footer from './components/footer/footer';
 import style from './pageIndex.module.css'
+import { useEffect, useState } from "react";
+import axios from "axios"; // Add missing import
 
 function Home() {
+  const [obras, setObras] = useState([]);
+  const [dadosApi, setdadosApi] = useState("")
+
+
+  useEffect(() => {
+    async function ArtesFetch(){
+      try{
+        const response = await axios.get("/api/backendIntegrantes");
+        setObras(response.data.obras);
+        setdadosApi(response.data.obras);
+      }catch(error){
+        console.error(error);
+      
+      }}
+      ArtesFetch();
+  },[])
+
   return (
     <>
       <Header></Header>
@@ -24,141 +40,30 @@ function Home() {
         <p>A arte, em sua essência, é uma forma de comunicação e expressão. Ela transcende a linguagem verbal, permitindo que os artistas transmitam ideias, emoções, conceitos e experiências através de diferentes meios. Pode ser visual, como pintura e escultura; auditiva, como música e poesia; cênica, como teatro e dança; ou uma combinação de várias formas, como no cinema.</p>
       </div>
 
-
+      <div className={style.titulo}>
+        <h3>Conheça algumas obras...</h3>
+      </div>
 
       <div className={style.main} >
-
-        <div className={style.qudrosDiv}>
-
-          <img className={style.imgsQuadrosFixos} src="https://m.media-amazon.com/images/I/71xpcgHewaL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="" />
-          <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
-          <div className={style.testoDiv}>
-            <h2> Noite Estrelada</h2>
-            <h2>  van gogh</h2>
-             <button className={style.button}><RiDeleteBinLine color={"white"} /></button>
-            <button className={style.button}><FaEdit color={"white"} /></button>
-            <button className={style.button} >Saiba Mais...</button>
-
+        {obras.map(obras => (
+          <div className={style.qudrosDiv} key={obras.id}>
+            <img className={style.imgsobrassFixos} src={obras.url} alt="" />
+            <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
+            <div className={style.testoDiv}>
+              <h2 className={style.textoDiv}>{obras.nomeObra}</h2>
+              <h2>{obras.artista}</h2>
+              <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
+              <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
+              <button className={style.button}>Saiba Mais...</button>
+            </div>
           </div>
-        </div>
-
-        <div className={style.qudrosDiv}>
-          <img className={style.imgsQuadrosFixos} src="https://www.melhoresdestinos.com.br/wp-content/uploads/2021/02/nascimento-de-venus-artes.jpg" alt="" />
-          <p className={style.direitos}>  As imagens podem ter direitos autorais.</p>
-          <div className={style.testoDiv}>
-            <h2>O Nascimento de Vênus </h2>
-            <h2> Sandro Botticelli</h2>
-
-
-            <button className={style.button}><RiDeleteBinLine color={"white"} /></button>
-            <button className={style.button}><FaEdit color={"white"} /></button>
-            <button className={style.button} >Saiba Mais...</button>
-          </div>
-        </div>
-
-
-
-        <div className={style.qudrosDiv}>
-          <img className={style.imgsQuadrosFixos} src="https://www.melhoresdestinos.com.br/wp-content/uploads/2021/02/obra-de-arte-o-grito-edvard-munch.jpg" alt="" />
-          <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
-          <div className={style.testoDiv}>
-            <h2>O grito. </h2>
-            <h2> Edvard Munch</h2>
-
-            <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
-            <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
-            <button className={style.button}>Saiba Mais...</button>
-
-          </div>
-        </div>
-
-        <div className={style.qudrosDiv}>
-          <img className={style.imgsQuadrosFixos} src="https://aventurasnahistoria.uol.com.br/media/_versions/capa_ivan_o_terrivel_pintura_filho_morto_historia_widelg.jpeg " alt="" />
-          <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
-          <div className={style.testoDiv}>
-            <h2>Ivan, o Terrível </h2>
-            <h2>Josef Stalin</h2>
-
-            <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
-            <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
-            <button className={style.button}>Saiba Mais...</button>
-
-          </div>
-        </div>
-
-        <div className={style.qudrosDiv}>
-          <img className={style.imgsQuadrosFixos} src="https://s1.static.brasilescola.uol.com.br/img/2018/07/a_persistencia_da_memoria.jpg" alt="" />
-          <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
-
-          <div className={style.testoDiv}>
-            <h2>A persistência da memória</h2>
-            <h2> Salvador Dali.</h2>
-
-            <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
-            <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
-            <button className={style.button}>Saiba Mais...</button>
-
-          </div>
-        </div>
-
-        <div className={style.qudrosDiv}>
-          <img height={"210px"} className={style.imgsQuadrosFixos} src="https://cdn.culturagenial.com/imagens/tarsila-do-amaral-abaporu-cke.jpg" alt="" />
-          <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
-          <div className={style.testoDiv}>
-            <h2>Abaporu</h2>
-            <h2>Tarsila do Amaral</h2>
-            <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
-            <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
-            <button className={style.button}>Saiba Mais...</button>
-          </div>
-        </div>
-
-
-        <div className={style.qudrosDiv}>
-          <img height={"220px"} className={style.imgsQuadrosFixos} src="https://d1o6h00a1h5k7q.cloudfront.net/imagens/img_g/13945/6311896.jpg" alt="" />
-          <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
-          <div className={style.testoDiv}>
-            <h2>Britto Garden</h2>
-            <h2>Romero Britt</h2>
-
-            <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
-            <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
-            <button className={style.button}>Saiba Mais...</button>
-
-          </div>
-        </div>
-
-        <div className={style.qudrosDiv}>
-          <img className={style.imgsQuadrosFixos} src="https://arteeartistas.com.br/wp-content/uploads/2017/01/Impress%C3%A3o-Sol-Nascente.-Claude-Monet.jpg" alt="" />
-          <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
-          <div className={style.testoDiv}>
-
-
-            <h2>Impressão, nascer do sol</h2>
-            <h2>Claude Monet</h2>
-
-            <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
-            <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
-            <button className={style.button}>Saiba Mais...</button>
-
-          </div>
-        </div>
-
-        <div className={style.qudrosDiv}>
-          <img className={style.imgsQuadrosFixos} src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Vincent_van_Gogh_-_Almond_blossom_-_Google_Art_Project.jpg/1139px-Vincent_van_Gogh_-_Almond_blossom_-_Google_Art_Project.jpg" alt="" />
-          <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
-          <div className={style.testoDiv}>
-            <h2>Almond Blossom</h2>
-            <h2>Van Gogh</h2>
-
-            <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
-            <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
-            <button className={style.button}>Saiba Mais...</button>
-            
-          </div>
-        </div>
-        <Footer></Footer>
+        ))}
       </div>
+
+      <Footer></Footer>
     </>
   )
-} export default Home;
+}
+
+export default Home;
+
