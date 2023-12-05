@@ -28,14 +28,14 @@
     color: white;
 }
 .links:hover{
-    color: #5e5e5e;
+    color: #daa520;
     transition: 1s;
 }
 .todosdireitosreservados{
     align-items: center;
     justify-content: center;
     display: flex;
-    background-color: #868585;
+    background-color: #daa520;
     height: 2.5rem;
 }
 .titulocopyright{

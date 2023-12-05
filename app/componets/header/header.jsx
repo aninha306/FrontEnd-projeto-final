@@ -21,7 +21,6 @@ function Header() {
             <div className={styles.cadastro}>
                 <button className={styles.butaocadastro}>Cadastro</button>
             </div>
-
         </div>
     )
 }

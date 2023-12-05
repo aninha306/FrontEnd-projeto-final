@@ -53,7 +53,7 @@ function contato() {
            <hr className={styles.hr}></hr>
 
            <button className={styles.button}> Enviar </button>
-           <Popup/>
+           
 
            <div className={styles.divicones}>
 
