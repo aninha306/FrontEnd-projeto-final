@@ -5,10 +5,8 @@ import { text } from 'express';
 import { FaGithub, FaInstagram } from "react-icons/fa";
 import { SiLinktree } from "react-icons/si";
 import Link from 'next/link';
-import Footer from '../componets/footer/footer';
-import Header from '../componets/header/header';
-import Popup from '../componets/popup/PopUp';
-import Loading from '../componets/loading/Loading';
+import Footer from '../components/footer/footer';
+import Header from '../components/header/header';
 
 function contato() {
   return (
@@ -54,7 +52,7 @@ function contato() {
            <hr className={styles.hr}></hr>
 
            <button className={styles.button}> Enviar </button>
-           <Popup/>
+          
 
            <div className={styles.divicones}>
 
