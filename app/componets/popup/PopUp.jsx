@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
-import PopUp from '../components/popUp/PopUp';
-import Header from '../components/header/header';
+import PopUp from '../popup/popup.module.css';
+import Header from '../header/header';
 
 const App = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -15,17 +15,22 @@ const App = () => {
     setTimeout(() => {
       setShowPopup(false)
     }, time)
+
+    if (inp1) {
+        inp1.value = '';
+        return error;
+    } else {
+        inp1 = value;
+        return sucess;
+    }
   }
 
   return (
     <div>
-      <Header />
-      <button onClick={() => handleShowPopup('Erro ao processar!', 'error', 4000)}>
-        Exibir mensagem de erro
-      </button>
-      <button onClick={() => handleShowPopup('Operação concluída com sucesso!', 'success', 6000)}>
-        Exibir mensagem de sucesso
-      </button>
+     
+    <button onClick={() => handleShowPopup('Erro ao processar!', 'error', 4000)}></button>
+      
+    <button onClick={() => handleShowPopup('Mensagem Enviada!', 'success', 6000)}></button>
 
       {showPopup && (
         <PopUp
