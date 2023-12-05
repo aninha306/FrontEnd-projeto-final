@@ -8,7 +8,7 @@ function Header() {
         <div className={styles.header}>
 
             <div className={styles.img}>
-                <Image src={"/logoArteAlémdaTela.jpeg"} width={150} height={150} className={styles.imagem}/>
+                <Image src={"/logoArteAlémdaTela.jpeg"} width={80} height={80} className={styles.imagem}/>
             </div>
 
             <div className={styles.rotas}>
