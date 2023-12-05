@@ -3,8 +3,6 @@ import Header from './componets/header/header';
 import { RiDeleteBinLine } from "react-icons/ri";
 import { FaEdit } from "react-icons/fa";
 import Footer from './componets/footer/footer';
-
-
 import style from './pageIndex.module.css'
 
 function Home() {
@@ -159,5 +157,7 @@ function Home() {
         <Footer></Footer>
       </div>
     </>
+
+    //quadrosDiv contem um link da imagem referente a obra, nome do quadro e nome do autor
   )
 } export default Home;
