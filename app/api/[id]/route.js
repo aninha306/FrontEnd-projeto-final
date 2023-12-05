@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 const url = process.env.BASE_URL + "cadastro2"
 
-export async function GET (){
+export async function get (){
    try{
         const resposta = await axios.get(url);
         return NextResponse.json(resposta.data);

@@ -48,7 +48,6 @@ export default function Page() {
         <Header></Header>
         <div className={style.container}>
 
-            <Header></Header>
             <div className={style.container}>
                 <div className={style.acoes}>
                     <Link href="/cadastro2/register">
