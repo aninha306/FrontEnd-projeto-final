@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import style from "./register.module.css";
 import Link from "next/link";
+import Header from "@/app/components/header/header";
+import Footer from "@/app/components/footer/footer";
 
 export default function Register() {
     const [nomeObra, setNome] = useState("");
