@@ -45,7 +45,6 @@ export default function Register() {
 
     return (
         <>
-        <Header></Header>
         <div className={style.container}>
             
             <div className={style.main}>
@@ -143,7 +142,7 @@ export default function Register() {
                 </div>
             </div>
         </div>
-        <Footer></Footer>
+     
         </>
     );
 }
