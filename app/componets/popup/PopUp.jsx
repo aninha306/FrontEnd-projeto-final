@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import PopUp from '../popup/popup.module.css';
-import Header from '../components/header/Header';
+import Header from '../header/header';
 
 const App = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -19,7 +19,7 @@ const App = () => {
 
   return (
     <div>
-      <Header />
+     
 
       <button onClick={() => handleShowPopup('Erro ao processar!', 'error', 4000)}>
         Exibir mensagem de erro
