@@ -1,45 +1,81 @@
-"use client"
 import React, { useState } from 'react';
-import PopUp from '../popup/popup.module.css';
-import Header from '../header/header';
 
-const App = () => {
-  const [showPopup, setShowPopup] = useState(false);
-  const [popupMessage, setPopupMessage] = useState('');
-  const [popupType, setPopupType] = useState('');
+const ErrorPopup = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
 
-  function handleShowPopup(message, type, time) {
-    setPopupMessage(message)
-    setPopupType(type)
-    setShowPopup(true)
-    setTimeout(() => {
-      setShowPopup(false)
-    }, time)
+  const openPopup = () => {
+    setIsOpen(true);
+  };
 
-    if (inp1) {
-        inp1.value = '';
-        return error;
+  const closePopup = () => {
+    setIsOpen(false);
+    // Limpar mensagem de erro ao fechar o popup
+    setError('');
+  };
+
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+    // Limpar mensagem de erro ao começar a digitar
+    setError('');
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    // Limpar mensagem de erro ao começar a digitar
+    setError('');
+  };
+
+  const handleSubmit = () => {
+    // Verificar se os campos estão vazios
+    if (name === '' || email === '' || numero === '') {
+      setError('Por favor, preencha todos os campos.');
     } else {
-        inp1 = value;
-        return sucess;
+      // Faça algo com os valores de 'name' e 'email', por exemplo, envie para o servidor
+      console.log('Nome:', name);
+      console.log('E-mail:', email);
+
+      // Feche o popup após o envio
+      closePopup();
     }
-  }
+  };
 
   return (
     <div>
-     
-    <button onClick={() => handleShowPopup('Erro ao processar!', 'error', 4000)}></button>
-      
-    <button onClick={() => handleShowPopup('Mensagem Enviada!', 'success', 6000)}></button>
+      <button onClick={openPopup}>Abrir Popup</button>
 
-      {showPopup && (
-        <PopUp
-          message={popupMessage}
-          type={popupType}
-        />
+      {isOpen && (
+        <div className="popup-overlay">
+          <div className="popup">
+            
+            <p>Insira suas informações:</p>
+            
+            <label>
+              Nome:
+              <input type="text" value={name} onChange={handleNameChange} />
+            </label>
+            
+            <label>
+              E-mail:
+              <input type="email" value={email} onChange={handleEmailChange} />
+            </label>
+
+            <label>
+              Numero:
+              <input type="email" value={email} onChange={handleEmailChange} />
+            </label>
+            
+            {error && <p className="error-message">{error}</p>}
+            <button onClick={handleSubmit}>Enviar</button>
+            <button onClick={closePopup}>Fechar Popup</button>
+          </div>
+        </div>
       )}
     </div>
   );
 };
 
-export default App;
+export default ErrorPopup;
+
