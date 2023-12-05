@@ -57,8 +57,8 @@
 
 .butaocadastro:hover {
     position: relative;
-    background-color: #ffffff;
-    color: #fff;
+    background-color: white;
+    color: black;
     transition: 1s;
     text-decoration: none;
     font-size: 20px;
