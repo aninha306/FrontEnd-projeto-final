@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import PopUp from '../components/popUp/PopUp';
+import PopUp from '../popup/popup.module.css';
 import Header from '../components/header/Header';
 
 const App = () => {
