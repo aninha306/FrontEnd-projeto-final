@@ -7,7 +7,6 @@ import { SiLinktree } from "react-icons/si";
 import Link from 'next/link';
 import Footer from '../componets/footer/footer';
 import Header from '../componets/header/header';
-import Input from "../componets/input/Input.js"
 import Popup from '../componets/popup/PopUp';
 
 function contato() {
