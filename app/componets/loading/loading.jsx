@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from './loading.module.css'
+import styles from './imageLoading.module.css'
 
-function Loading() {
+function ImageLoading() {
     return (
         <div id={styles.containerImgLoading}>
                 <img id={styles.image} src='/steamuserimages-a.akamaihd.gif' alt="Loading Image" />

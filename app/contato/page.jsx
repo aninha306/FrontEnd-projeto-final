@@ -7,6 +7,7 @@ import { SiLinktree } from "react-icons/si";
 import Link from 'next/link';
 import Footer from '../componets/footer/footer';
 import Header from '../componets/header/header';
+import Popup from '../componets/popup/PopUp';
 
 function contato() {
   return (
@@ -49,7 +50,7 @@ function contato() {
            <hr className={styles.hr}></hr>
 
            <button className={styles.button}> Enviar </button>
-           
+           <Popup/>
 
            <div className={styles.divicones}>
 
