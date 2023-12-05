@@ -4,7 +4,7 @@ import styles from './imageLoading.module.css'
 function ImageLoading() {
     return (
         <div id={styles.containerImgLoading}>
-                <img id={styles.image} src='/steamuserimages-a.akamaihd.gif' alt="Loading Image" />
+                <img id={styles.image} src='/loading.gif' alt="Loading Image" />
         </div>
     )
 }
