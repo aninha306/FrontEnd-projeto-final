@@ -15,3 +15,7 @@ export default function RootLayout({ children }) {
     </html>
   )
 }
+
+//esse código parece configurar a fonte "Inter" do Google Fonts e define algumas informações de metadados para
+// uma aplicação web usando Next.js. Ele também cria um layout base para a página web em português do Brasil, 
+//aplicando estilos globais e definindo a fonte para o corpo da página.
