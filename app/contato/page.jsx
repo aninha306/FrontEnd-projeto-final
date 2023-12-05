@@ -63,6 +63,7 @@ function contato() {
 
            <Link href='/' className={styles.icons}>
             <SiLinktree color={"black"} fontSize={20}/>
+            
            </Link>
 
            <Link href='/' className={styles.icons}>
