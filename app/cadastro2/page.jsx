@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import style from "./cadastro2.module.css";
 import Header from "../components/header/header";
-import Footer from "../componets/footer/footer";
+import Footer from "../components/footer/footer";
 import Link from "next/link";
 import { FaEdit, FaTrash } from "react-icons/fa";
 
