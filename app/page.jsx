@@ -8,7 +8,6 @@ import Header from "./components/header/header";
 function Home() {
   return (
     <>
-
     <Header></Header>
       <div className={style.poster}>
         <img src="https://photoarts.com.br/magazine/wp-content/uploads/sites/2/2021/07/artur-matosyan-4YWUMaftmag-unsplash-1-1.jpg" alt="" />
