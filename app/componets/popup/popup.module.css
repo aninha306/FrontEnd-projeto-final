@@ -29,14 +29,14 @@
     animation-fill-mode: both;
 }
 
-.error {
+.msgerror {
     background-color: #202020e2;
-    color: #f99914;
+    color: #db3131;
     font-weight: 700;
     border: 1px solid #f99914;
 }
 
-.success{
+.msgsucess{
     background-color: rgb(26, 213, 45);
     color: black !important;
 }
