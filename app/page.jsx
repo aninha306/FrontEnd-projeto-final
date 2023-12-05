@@ -1,8 +1,8 @@
 
-import Header from './componets/header/header';
 import { RiDeleteBinLine } from "react-icons/ri";
 import { FaEdit } from "react-icons/fa";
-import Footer from './componets/footer/footer';
+import Header from "./components/header/header";
+import Footer from './components/footer/footer';
 
 import style from './pageIndex.module.css'
 
