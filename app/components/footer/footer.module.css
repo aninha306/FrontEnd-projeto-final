@@ -10,7 +10,11 @@
     display: flex;
 }
 .icons1{
-    margin: 40px;
+    margin: 3rem;
+}
+.icons1:hover{
+    color: #5e5e5e;
+    transition: 1s;
 }
 .camihos{
     align-items: center;
@@ -23,13 +27,16 @@
     margin: 15px;
     color: white;
 }
+.links:hover{
+    color: #daa520;
+    transition: 1s;
+}
 .todosdireitosreservados{
     align-items: center;
     justify-content: center;
     display: flex;
-    background-color: #868585;
-    margin-top: 74px;
-    height: 50px;
+    background-color: #daa520;
+    height: 3rem;
 }
 .titulocopyright{
     color: white;

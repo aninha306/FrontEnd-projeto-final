@@ -8,14 +8,14 @@ function Header() {
         <div className={styles.header}>
 
             <div className={styles.img}>
-                <Image src={"/logoArteAlémdaTela.jpeg"} width={150} height={150} className={styles.imagem}/>
+                <img src={"/Arte.jpg"} width={89} height={89} className={styles.imagem}/>
             </div>
 
-            <div>
+            <div className={styles.rotas}>
                 <Link className={styles.links} href={'/'}>Home</Link>
                 <Link className={styles.links} href={'/'}>Sobre nós</Link>
-
-                <Link className={styles.links} href={'/'}>Contato</Link>
+                <Link className={styles.links} href={'/'}>Quadros</Link>
+                <Link className={styles.links} href={'/contato'}>Contato</Link>
             </div>
 
             <div className={styles.cadastro}>

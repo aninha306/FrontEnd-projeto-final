@@ -1,0 +1,83 @@
+.primeirobtn {
+    background-color: #000000;
+    color: #fff;
+    border-color: #daa520;
+    width: 12vw;
+    height: 6vh;
+    border-radius: 10px;
+    margin-top: 2dvh;
+    align-items: center;
+    text-align: center;
+    margin-left: 45%;
+    font-size: 20px;
+}
+
+.mainprincipal {
+    color: #fff;
+font-family: 'Poppins';
+    font-size: 35px;
+    margin-left: 66%;
+
+}
+
+.box {
+    height: 65vh;
+    margin-left: 73%;
+    width: 30vw;
+    border: 4px solid #daa520;
+}
+
+.forms {
+    text-align: center;
+
+}
+
+.submitButton {
+    margin-left: 25%;
+    margin-top: 10%;
+    background-color: #000000;
+    color: #fff;
+    border-color: #daa520;
+    width: 15vw;
+    height: 4vh;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.input {
+    width: 15rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: 0.5px solid black;
+    text-decoration: none;
+    border: none;
+    margin-top: 2rem;
+    margin-left: 0.5rem;
+    background-color: #000000;
+    color: #fff;
+}
+
+.hr {
+    color: black;
+    width: 15rem;
+    margin-left: 7.3rem;
+    text-align: center;
+    align-items: center;
+}
+
+.imagem {
+    margin-left: 15%;
+    border-radius: 5px;
+    border: 0.5px solid black;
+    border: none;
+
+}
+
+.cadastroContainer {
+    display: flex;
+}
+
+.container {
+    background-color: black;
+
+}

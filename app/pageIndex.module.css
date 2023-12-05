@@ -1,42 +1,104 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&family=Poppins:wght@100&family=Sedgwick+Ave+Display&display=swap');
+
 .main{
+
+    background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
     background-color: white;
+
     
 }
 
+.poster{ 
+   
+     background-color: rgb(0, 0, 0) ;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    align-items: center;
+    text-align: center;
+
+  
+}
+
+.infos{
+    font-size:18px;
+    border: 10px double rgb(0, 0, 0);    
+    height: 10px;
+    margin-bottom: 10px;
+    height: 240px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    
+
+}
+
 .qudrosDiv{
-    background-color: rgb(154, 104, 39);
-    width: 500px;
-    height: 570px;
-    margin: 35rem;
-    border: 10px double #070707;
+    background-color: rgb(0, 0, 0);
+    width: 25rem;
+    height: 26rem;
+    margin:33px;
+    border: 10px double #ffffff;
     border-radius: 20px;
     box-shadow: 23px 24px 20px rgba(0, 0, 0, 0.2);
-    display: block;
+    font-family: 'Poppins', sans-serif;
+
+
+
 }
 
 .imgsQuadrosFixos{
-    width: 26rem;
-margin-left: 38px;
+    width: 18rem;
+    height: 200px;
+margin-left: 48px;
 margin-top: 20px;
-border: 8px double #171616;
+border: 8px double #ffffff;
 border-radius: 20px;
+
 }
 
 .testoDiv{
-    color: rgb(67, 41, 12);
-    font-size: 15spx;
-    margin-left: 50px;
-    margin-bottom:300px ;
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+    margin-left: 25px;
+    margin-bottom:2rem ;
+    margin-top: 25px;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
 }
 .button{
-    background-color:rgb(154, 104, 39);
-    margin-top: 15px;
-    margin-left: 5%;
+    background-color:rgb(0, 0, 0);
+    margin-top: 30px;
+    margin-left: 5px;
+    padding: 9px;
+    color: rgb(255, 255, 255);
+    border: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    
+    
 }
 .direitos{
+
     color: rgb(51, 51, 51);
     margin-left: 80px;
 }
 .h1{
     text-align: center;
+
+    color: rgb(199, 199, 199);
+    margin-left: 66px;
+    margin-bottom: 5px;
+    font-size: 14px;
+
 }
