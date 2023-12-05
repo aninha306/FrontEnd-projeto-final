@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './imageLoading.module.css'
+import styles from '../loading/loading.module.css'
 import Header from '../header/header';
 import Footer from '../footer/footer';
 
