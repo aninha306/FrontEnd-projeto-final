@@ -5,10 +5,8 @@ import { text } from 'express';
 import { FaGithub, FaInstagram } from "react-icons/fa";
 import { SiLinktree } from "react-icons/si";
 import Link from 'next/link';
-import Footer from '../componets/footer/footer';
-import Header from '../componets/header/header';
-import Popup from '../componets/popup/PopUp';
-import Loading from '../componets/loading/Loading';
+import Footer from '../components/footer/footer';
+import Header from '../components/header/header';
 
 function contato() {
   return (
@@ -54,21 +52,21 @@ function contato() {
            <hr className={styles.hr}></hr>
 
            <button className={styles.button}> Enviar </button>
-           <Popup/>
+          
 
            <div className={styles.divicones}>
 
-           <Link href='/' className={styles.icons}>
-           <FaGithub color={"black"} fontSize={20} />
+           <Link href='https://github.com' className={styles.icons}>
+           <FaGithub color={"white"} fontSize={20} />
            </Link>
 
-           <Link href='/' className={styles.icons}>
-            <SiLinktree color={"black"} fontSize={20}/>
+           <Link href='https://linktr.ee/ArteAlemdaTela' className={styles.icons}>
+            <SiLinktree color={"white"} fontSize={20}/>
             
            </Link>
 
-           <Link href='/' className={styles.icons}>
-            <FaInstagram color={"black"} fontSize={20}/>
+           <Link href='https://www.instagram.com/' className={styles.icons}>
+            <FaInstagram color={"white"} fontSize={20}/>
            </Link>
            </div>
         </div>
