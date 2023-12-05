@@ -32,6 +32,7 @@ function contato() {
             type='text'
             className={styles.inp1}
             placeholder='Nome'
+            required
            />
            <hr className={styles.hr}></hr>
 
@@ -39,6 +40,7 @@ function contato() {
             type='text'
             className={styles.inp1}
             placeholder='Email'
+            required
            />
            <hr className={styles.hr}></hr>
 
@@ -46,6 +48,7 @@ function contato() {
             type='number'
             className={styles.inp1}
             placeholder='Numero'
+            required
            />
            <hr className={styles.hr}></hr>
 

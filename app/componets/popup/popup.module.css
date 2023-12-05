@@ -31,14 +31,15 @@
 
 .msgerror {
     background-color: #202020e2;
-    color: #db3131;
+    color: #ff0606;
     font-weight: 700;
-    border: 1px solid #f99914;
+    border: 1px solid #f91414;
 }
 
 .msgsucess{
     background-color: rgb(26, 213, 45);
     color: black !important;
+    border: rgb(26, 213, 45);
 }
 
 #message {

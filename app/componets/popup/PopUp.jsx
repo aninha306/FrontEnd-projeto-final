@@ -6,9 +6,7 @@ const Popup = ({icon1, message, icon2, type}) => {
     var mainDiv = styles.mainDiv + ' ' + color;
   return (
     <div className={mainDiv}>
-        <p className={msgsucess}> Mensagem Enviada !</p>
-        <p className={msgerror}> Preencha todos os campos !</p>
-      <p>{icon1}<span id={styles.message}>{message}</span>{icon2}</p>
+        <p>{icon1}<span id={styles.message}>{message}</span>{icon2}</p> 
     </div>
   );
 };
