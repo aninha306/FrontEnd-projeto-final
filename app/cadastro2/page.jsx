@@ -3,7 +3,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import style from "./cadastro2.module.css";
-import Header from "../componets/header/header";
+import Header from "../components/header/header";
 import Footer from "../componets/footer/footer";
 import Link from "next/link";
 import { FaEdit, FaTrash } from "react-icons/fa";
@@ -42,6 +42,8 @@ export default function Page() {
     }, []);
 
     return (
+        <>
+        <Header></Header>
         <div className={style.container}>
             <Header></Header>
 
@@ -103,5 +105,6 @@ export default function Page() {
                 )}
             </div>
         </div>
+        </>
     );
 }

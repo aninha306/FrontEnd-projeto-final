@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import PopUp from '../popup/popup.module.css';
-import Header from '../header/header';
+
 
 const App = () => {
   const [showPopup, setShowPopup] = useState(false);
