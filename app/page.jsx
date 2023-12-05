@@ -9,8 +9,12 @@ function Home() {
   return (
     <>
     <Header></Header>
+    <div className={style.principal}>
+      <div className={style.divtitulo}>
+        <h1 className={style.titulo}>Arte Além da Tela</h1>
+      </div>
       <div className={style.poster}>
-        <img src="https://photoarts.com.br/magazine/wp-content/uploads/sites/2/2021/07/artur-matosyan-4YWUMaftmag-unsplash-1-1.jpg" alt="" />
+        <img src="https://photoarts.com.br/magazine/wp-content/uploads/sites/2/2021/07/artur-matosyan-4YWUMaftmag-unsplash-1-1.jpg" width={1250} height={600} alt="" />
       </div>
 
       <div className={style.infos}>
@@ -34,8 +38,8 @@ function Home() {
           <img className={style.imgsQuadrosFixos} src="https://www.melhoresdestinos.com.br/wp-content/uploads/2021/02/obra-de-arte-o-grito-edvard-munch.jpg" alt="" />
           <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
           <div className={style.testoDiv}>
-            <h2>O grito. </h2>
-            <h2> Edvard Munch</h2>
+            <h2 className={style.tituloquadro}>O grito. </h2>
+            <h2 className={style.tituloquadro}> Edvard Munch</h2>
 
             <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
             <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
@@ -48,8 +52,8 @@ function Home() {
           <img className={style.imgsQuadrosFixos} src="https://aventurasnahistoria.uol.com.br/media/_versions/capa_ivan_o_terrivel_pintura_filho_morto_historia_widelg.jpeg " alt="" />
           <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
           <div className={style.testoDiv}>
-            <h2>Ivan, o Terrível </h2>
-            <h2>Josef Stalin</h2>
+            <h2 className={style.tituloquadro}>Ivan, o Terrível </h2>
+            <h2 className={style.tituloquadro}>Josef Stalin</h2>
 
             <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
             <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
@@ -63,8 +67,8 @@ function Home() {
           <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
 
           <div className={style.testoDiv}>
-            <h2>A persistência da memória</h2>
-            <h2> Salvador Dali.</h2>
+            <h2 className={style.tituloquadro}> A persistência da memória</h2>
+            <h2 className={style.tituloquadro}> Salvador Dali.</h2>
 
             <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
             <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
@@ -77,8 +81,8 @@ function Home() {
           <img height={"210px"} className={style.imgsQuadrosFixos} src="https://cdn.culturagenial.com/imagens/tarsila-do-amaral-abaporu-cke.jpg" alt="" />
           <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
           <div className={style.testoDiv}>
-            <h2>Abaporu</h2>
-            <h2>Tarsila do Amaral</h2>
+            <h2 className={style.tituloquadro}>Abaporu</h2>
+            <h2 className={style.tituloquadro}> Tarsila do Amaral</h2>
             <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
             <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
             <button className={style.button}>Saiba Mais...</button>
@@ -90,8 +94,8 @@ function Home() {
           <img height={"220px"} className={style.imgsQuadrosFixos} src="https://d1o6h00a1h5k7q.cloudfront.net/imagens/img_g/13945/6311896.jpg" alt="" />
           <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
           <div className={style.testoDiv}>
-            <h2>Britto Garden</h2>
-            <h2>Romero Britt</h2>
+            <h2 className={style.tituloquadro}> Britto Garden</h2>
+            <h2 className={style.tituloquadro}>Romero Britt</h2>
 
             <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
             <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
@@ -106,8 +110,8 @@ function Home() {
           <div className={style.testoDiv}>
 
 
-            <h2>Impressão, nascer do sol</h2>
-            <h2>Claude Monet</h2>
+            <h2 className={style.tituloquadro}>Impressão, nascer do sol</h2>
+            <h2 className={style.tituloquadro}>Claude Monet</h2>
 
             <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
             <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
@@ -120,8 +124,8 @@ function Home() {
           <img className={style.imgsQuadrosFixos} src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Vincent_van_Gogh_-_Almond_blossom_-_Google_Art_Project.jpg/1139px-Vincent_van_Gogh_-_Almond_blossom_-_Google_Art_Project.jpg" alt="" />
           <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
           <div className={style.testoDiv}>
-            <h2>Almond Blossom</h2>
-            <h2>Van Gogh</h2>
+            <h2 className={style.tituloquadro}>Almond Blossom</h2>
+            <h2 className={style.tituloquadro}>Van Gogh</h2>
 
             <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
             <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
@@ -130,6 +134,7 @@ function Home() {
           </div>
         </div>
         <Footer></Footer>
+      </div>
       </div>
     </>
   )

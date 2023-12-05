@@ -16,9 +16,10 @@
 }
 .titulo{
     color: rgb(255, 255, 255);
-    font-size: 25px;
+    font-size: 20px;
     margin-bottom: 1rem;
     margin-right: 2rem;
+    font-family: 'Poppins';
    
 }
 .divinputs{
