@@ -1,6 +1,6 @@
 .button{
     background-color: #000000;
-    color: white;
+    color:#daa520;
     width: 12vw;
     height: 6vh;
     border-radius: 10px;
@@ -9,5 +9,13 @@
     text-align: center;
     margin-left: 45%;
     font-size: 20px;
-
+}
+.cadastroContainer{
+    background-color: #000000;
+    color: #daa520;
+    margin-top: 3%;
+}
+.mainprincipal{
+    text-align: center;
+    font-size: 45px;
 }
