@@ -4,7 +4,6 @@ import Footer from "@/app/componets/footer/footer";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-
 import style from "./register.module.css";
 import Link from "next/link";
 
@@ -47,95 +46,106 @@ export default function Register() {
     }, []);
 
     return (
+        <>
+        <Header></Header>
         <div className={style.container}>
-            <Header></Header>
-            <div className={style.acoes}>
-                <Link href={`/cadastro2`}>
-                    <button className={`${style.button} ${style.primeirobtn}`}>
-                        Voltar para Obras
-                    </button>
-                </Link>
-            </div>
-            <div className={style.cadastroContainer}>
-
+            
+            <div className={style.main}>
+                <div className={style.acoes}>
+                    <Link href={`/cadastro2`}>
+                        <button className={`${style.button} ${style.primeirobtn}`}>
+                            Voltar para Obras
+                        </button>
+                    </Link>
+                </div>
                 <h1 className={style.mainprincipal}>Cadastrar Obras</h1>
+                <div className={style.cadastroContainer}>
 
-                <form onSubmit={handleSubmit}>
-                    <div className={style.forms}>
-                        <label htmlFor="nomeObra">
-                            Nome da Obra:
-                        </label>
-                        <input type="text"
-                            className={style.input}
-                            id="nomeObra"
-                            value={nomeObra}
-                            onChange={(e) => setNome(e.target.value)}
-                            required />
-                    </div>
-                    <div className={style.forms}>
-                        <label htmlFor="url">
-                            Imagem da Obra:
-                        </label>
-                        <input type="text"
-                            className={style.input}
-                            id="url"
-                            value={url}
-                            onChange={(e) => setImagem(e.target.value)}
-                            required />
-                    </div>
-                    <div className={style.forms}>
-                        <label htmlFor="artista">
-                            Nome do Artista:
-                        </label>
-                        <input type="text"
-                            className={style.input}
-                            id="artista"
-                            value={artista}
-                            onChange={(e) => setArtista(e.target.value)}
-                            required />
-                    </div>
-                    <div className={style.forms}>
-                        <label htmlFor="dataProducao">
-                            Data de Produção:
-                        </label>
-                        <input type="date"
-                            className={style.input}
-                            id="dataProducao"
-                            value={dataProducao}
-                            onChange={(e) => setData(e.target.value)}
-                            required />
-                    </div>
-                    <div className={style.forms}>
-                        <label htmlFor="tipo">
-                            Tipo de Obra:
-                        </label>
-                        <input type="text"
-                            className={style.input}
-                            id="tipo"
-                            value={tipo}
-                            onChange={(e) => setTipo(e.target.value)}
-                            required />
-                    </div>
-                    <div className={style.forms}>
-                        <label htmlFor="idadeArtista">
-                            Idade do Artista:
-                        </label>
-                        <input type="text"
-                            className={style.input}
-                            id="idadeArtista"
-                            value={idadeArtista}
-                            onChange={(e) => setIdade(e.target.value)}
-                            required />
+                    <div className={style.imagem}>
+                        <img src={'/imagem.gif'} width={350} height={450} className={style.img} />
                     </div>
 
-                    <button
-                        type="submit"
-                        className={`${style.button} ${style.submitButton}`}>
-                        Cadastrar
-                    </button>
-                </form>
+                    
+
+                    <form onSubmit={handleSubmit}>
+                        <div className={style.box}>
+                            <div className={style.forms}>
+                               
+                                <input type="text"
+                                    className={style.input}
+                                    id="nomeObra"
+                                    value={nomeObra}
+                                    onChange={(e) => setNome(e.target.value)}
+                                    required
+                                    placeholder="Nome da Obra" />
+                                     <hr className={style.hr}/>
+                            </div>
+                            <div className={style.forms}>
+                            
+                                <input type="text"
+                                    className={style.input}
+                                    id="url"
+                                    value={url}
+                                    onChange={(e) => setImagem(e.target.value)}
+                                    required
+                                    placeholder="Imagem da Obra" />
+                                     <hr className={style.hr}/>
+                            </div>
+                            <div className={style.forms}>
+                            
+                                <input type="text"
+                                    className={style.input}
+                                    id="artista"
+                                    value={artista}
+                                    onChange={(e) => setArtista(e.target.value)}
+                                    required
+                                    placeholder="Nome do Artista" />
+                                     <hr className={style.hr}/>
+                            </div>
+                            <div className={style.forms}>
+                            
+                                <input type="date"
+                                    className={style.input}
+                                    id="dataProducao"
+                                    value={dataProducao}
+                                    onChange={(e) => setData(e.target.value)}
+                                    required />
+                                     <hr className={style.hr}/>
+                            </div>
+                            <div className={style.forms}>
+                         
+                                <input type="text"
+                                    className={style.input}
+                                    id="tipo"
+                                    value={tipo}
+                                    onChange={(e) => setTipo(e.target.value)}
+                                    placeholder="Tipo da Obra"
+                                    required />
+                                     <hr className={style.hr}/>
+                            </div>
+                            <div className={style.forms}>
+                           
+                                <input type="text"
+                                    className={style.input}
+                                    id="idadeArtista"
+                                    value={idadeArtista}
+                                    onChange={(e) => setIdade(e.target.value)}
+                                    required
+                                    placeholder="Idade do Artista" />
+                                     <hr className={style.hr}/>
+                            </div>
+                            <button
+                                type="submit"
+                                className={`${style.button} ${style.submitButton}`}>
+                                Cadastrar
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
             </div>
         </div>
-        
+        <Footer></Footer>
+        </>
     );
 }

@@ -1,6 +1,8 @@
-.button{
+
+.primeirobtn {
     background-color: #000000;
-    color:#daa520;
+    color: #fff;
+    border-color: #daa520;
     width: 12vw;
     height: 6vh;
     border-radius: 10px;
@@ -10,10 +12,84 @@
     margin-left: 45%;
     font-size: 20px;
 }
-.cadastroContainer{
-    margin-top: 3%;
-    color: #daa520;
-    width: 40%;
-    text-align: center;
+
+.mainprincipal {
+    color: #fff;
+ 
+    font-size:35px;
+    margin-left: 66%;
+
+}
+
+.box {
+    background-image: repeating-linear-gradient(0deg, #daa520, #daa520 11.7px, transparent 30px, transparent 30.39px, #daa520 31px), repeating-linear-gradient(90deg, #daa520, #daa520 11.7px, transparent 30px, transparent 30.39px, #daa520 31px), repeating-linear-gradient(180deg, #daa520, #daa520 11.7px, transparent 30px, transparent 30.39px, #daa520 31px), repeating-linear-gradient(270deg, #daa520, #daa520 11.7px, transparent 30px, transparent 30.39px, #daa520 31px);
+    background-size: 6px calc(100% + 31px), calc(100% + 31px) 6px, 6px calc(100% + 31px), calc(100% + 31px) 6px;
+    background-position: 0 0, 0 0, 100% 0, 0 100%;
+    background-repeat: no-repeat;
+    animation: borderAnimation 0.5s infinite linear;
     height: 65vh;
+    margin-left: 73%;
+    width: 30vw;
+}
+
+@keyframes borderAnimation {
+    from {
+        background-position: 0 0, -31px 0, 100% -31px, 0 100%;
+    }
+
+    to {
+        background-position: 0 -31px, 0 0, 100% 0, -31px 100%;
+    }
+}
+
+.forms {
+    text-align: center;
+
+}
+
+.submitButton {
+    margin-left: 25%;
+    margin-top: 10%;
+    background-color: #000000;
+    color: #fff;
+    border-color: #daa520;
+    width: 15vw;
+    height: 4vh;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.input {
+   width: 15rem;
+   height: 2rem;
+   border-radius: 5px;
+   border: 0.5px solid black;
+   text-decoration: none;
+   border: none;
+   margin-top: 2rem;
+   margin-left: 0.5rem;
+   background-color: #000000;
+   color: #fff;
+}
+.hr{
+    color: black;
+    width: 15rem;
+    margin-left:  6rem;
+    text-align: center;
+    align-items: center;
+}
+.imagem {
+    margin-left: 15%;
+    border-radius: 5px;
+    border: 0.5px solid black;
+    border: none;
+    
+}
+
+.cadastroContainer {
+    display: flex;
+}
+.container{
+    background-color: black;
+   
 }
