@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import styles from "@/app/componets/footer/footer.module.css";
+import styles from "./footer.module.css"
 import { FaGithub,FaInstagram } from "react-icons/fa";
 import { SiLinktree } from "react-icons/si";
 import { MdOutlineMail } from "react-icons/md";
