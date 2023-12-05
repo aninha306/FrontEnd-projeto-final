@@ -1,6 +1,4 @@
 'use client'
-import Header from "@/app/componets/header/header";
-import Footer from "@/app/componets/footer/footer";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";

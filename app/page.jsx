@@ -1,9 +1,8 @@
 
-import Header from './componets/header/header';
 import { RiDeleteBinLine } from "react-icons/ri";
 import { FaEdit } from "react-icons/fa";
-import Footer from './componets/footer/footer';
-
+import Header from "./components/header/header";
+import Footer from './components/footer/footer';
 
 import style from './pageIndex.module.css'
 
@@ -27,33 +26,9 @@ function Home() {
 
       <div className={style.main} >
 
-        <div className={style.qudrosDiv}>
-
-          <img className={style.imgsQuadrosFixos} src="https://m.media-amazon.com/images/I/71xpcgHewaL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="" />
-          <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
-          <div className={style.testoDiv}>
-            <h2> Noite Estrelada</h2>
-            <h2>  van gogh</h2>
-             <button className={style.button}><RiDeleteBinLine color={"white"} /></button>
-            <button className={style.button}><FaEdit color={"white"} /></button>
-            <button className={style.button} >Saiba Mais...</button>
-
-          </div>
-        </div>
-
-        <div className={style.qudrosDiv}>
-          <img className={style.imgsQuadrosFixos} src="https://www.melhoresdestinos.com.br/wp-content/uploads/2021/02/nascimento-de-venus-artes.jpg" alt="" />
-          <p className={style.direitos}>  As imagens podem ter direitos autorais.</p>
-          <div className={style.testoDiv}>
-            <h2>O Nascimento de Vênus </h2>
-            <h2> Sandro Botticelli</h2>
 
 
-            <button className={style.button}><RiDeleteBinLine color={"white"} /></button>
-            <button className={style.button}><FaEdit color={"white"} /></button>
-            <button className={style.button} >Saiba Mais...</button>
-          </div>
-        </div>
+       
 
 
 
