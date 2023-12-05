@@ -1,6 +1,6 @@
 import axios from "axios";
 const URL_API_Artes = "http://localhost:5000";
-const URL_API_Integrantes = "http://localhost:5000";
+const URL_API_Integrantes = "http://localhost:5000/artistas";
 
 //Consumir a API de integrantes
 export const getIntegrantes = async () => {
@@ -44,7 +44,7 @@ export const deleteIntegrantes = async (id) => {
     }
     }
     //Consumir a API de artes  
-export const getArtes = async () => {
+export const getTodasArtes = async () => {
     try {
         const response = await axios.get(`${URL_API_Artes}/artes`);
         return response.data;
@@ -52,7 +52,7 @@ export const getArtes = async () => {
         console.error(error);
     }
     }
-export const getArtesById = async (id) => {
+export const getArbuscarArtePorIDtesById = async (id) => {
     try {
         const response = await axios.get(`${URL_API_Artes}/artes/${id}`);
         return response.data;
@@ -60,7 +60,7 @@ export const getArtesById = async (id) => {
         console.error(error);
     }
     }
-export const postArtes = async (artes) => {
+export const criarArtes = async (artes) => {
     try {
         const response = await axios.post(`${URL_API_Artes}/artes`, artes);
         return response.data;
@@ -68,7 +68,7 @@ export const postArtes = async (artes) => {
         console.error(error);
     }
     }
-export const putArtes = async (id, artes) => {
+export const editarArtes = async (id, artes) => {
     try {
         const response = await axios.put(`${URL_API_Artes}/artes/${id}`, artes);
         return response.data;
@@ -76,7 +76,7 @@ export const putArtes = async (id, artes) => {
         console.error(error);
     }
     }
-export const deleteArtes = async (id) => {
+export const deletarArte = async (id) => {
     try {
         const response = await axios.delete(`${URL_API_Artes}/artes/${id}`);
         return response.data;
