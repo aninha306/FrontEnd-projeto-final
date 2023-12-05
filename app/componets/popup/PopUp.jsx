@@ -3,40 +3,45 @@ import React, { useState } from 'react';
 import PopUp from '../components/popUp/PopUp';
 import Header from '../components/header/Header';
 
-const App = () => {
-  const [showPopup, setShowPopup] = useState(false);
-  const [popupMessage, setPopupMessage] = useState('');
-  const [popupType, setPopupType] = useState('');
+class PopUp extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {value: ''};
+  
+      this.handleChange = this.handleChange.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
+    }
+  
+    handleChange(inp1) {
+      this.setState({value: inp1.target.value});
+    }
+  
+    handleSubmit(event) {
+      alert('Um nome foi enviado: ' + this.state.value);
+      inp1.preventDefault();
+    }
+  
+    render() {
+      return (
+        <form onSubmit={this.handleSubmit}>
+          
+          <label>
+            Nome:
+            <input type="text" value={this.state.value} onChange={this.handleChange} />
+          </label>
 
-  function handleShowPopup(message, type, time) {
-    setPopupMessage(message)
-    setPopupType(type)
-    setShowPopup(true)
-    setTimeout(() => {
-      setShowPopup(false)
-    }, time)
+          <label>
+            Email:
+            <input type="text" value={this.state.value} onChange={this.handleChange} />
+          </label>
+
+          <label>
+            Numero:
+            <input type="number" value={this.state.value} onChange={this.handleChange} />
+          </label>
+          
+          <input type="submit" value="Enviar" />
+        </form>
+      );
+    }
   }
-
-  return (
-    <div>
-      <Header />
-
-      <button onClick={() => handleShowPopup('Erro ao processar!', 'error', 4000)}>
-        Exibir mensagem de erro
-      </button>
-      
-      <button onClick={() => handleShowPopup('Mensagem Enviada!', 'success', 6000)}>
-        Exibir mensagem de sucesso
-      </button>
-
-      {showPopup && (
-        <PopUp
-          message={popupMessage}
-          type={popupType}
-        />
-      )}
-    </div>
-  );
-};
-
-export default App;
