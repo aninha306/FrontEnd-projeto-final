@@ -15,19 +15,22 @@ const App = () => {
     setTimeout(() => {
       setShowPopup(false)
     }, time)
+
+    if (inp1) {
+        inp1.value = '';
+        return error;
+    } else {
+        inp1 = value;
+        return sucess;
+    }
   }
 
   return (
     <div>
      
-
-      <button onClick={() => handleShowPopup('Erro ao processar!', 'error', 4000)}>
-        Exibir mensagem de erro
-      </button>
+    <button onClick={() => handleShowPopup('Erro ao processar!', 'error', 4000)}></button>
       
-      <button onClick={() => handleShowPopup('Mensagem Enviada!', 'success', 6000)}>
-        Exibir mensagem de sucesso
-      </button>
+    <button onClick={() => handleShowPopup('Mensagem Enviada!', 'success', 6000)}></button>
 
       {showPopup && (
         <PopUp
