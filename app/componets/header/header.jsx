@@ -15,7 +15,7 @@ function Header() {
                 <Link className={styles.links} href={'/'}>Home</Link>
                 <Link className={styles.links} href={'/'}>Sobre nós</Link>
                 <Link className={styles.links} href={'/'}>Quadros</Link>
-                <Link className={styles.links} href={'/'}>Contato</Link>
+                <Link className={styles.links} href={'/contato'}>Contato</Link>
             </div>
 
             <div className={styles.cadastro}>
