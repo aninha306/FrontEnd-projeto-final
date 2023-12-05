@@ -3,6 +3,7 @@ import Header from './componets/header/header';
 import { RiDeleteBinLine } from "react-icons/ri";
 import { FaEdit } from "react-icons/fa";
 import Footer from './componets/footer/footer';
+import Popup from './componets/popup/PopUp';
 
 
 import style from './pageIndex.module.css'
