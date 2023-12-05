@@ -1,67 +1,65 @@
 'use client'
-import { useState, useEffect } from "react";
-import axios from "axios";
-import { useRouter } from "next/navigation";
-
-import style from "./id.module.css";
 import Header from "@/app/componets/header/header";
 import Footer from "@/app/componets/footer/footer";
-import Link from "next/link";
-import e from "express";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
-export default function AtualizarCadastro({ params }) {
+import style from "./register.module.css";
+import Link from "next/link";
+
+export default function Register() {
     const [nomeObra, setNome] = useState("");
     const [url, setImagem] = useState("");
     const [artista, setArtista] = useState("");
     const [dataProducao, setData] = useState("");
     const [tipo, setTipo] = useState("");
     const [idadeArtista, setIdade] = useState("");
-    const { id } = params;
+    const [cadastro, setCadastro] = useState([]);
     const router = useRouter();
 
-    useEffect(() => {
-        async function BuscarObra() {
-            try {
-                const resposta = await axios.get(`/API/cadastro2/${id}`);
-                const cadastro = resposta.data;
-                setNome(cadastro.nomeObra);
-                setImagem(cadastro.url);
-                setArtista(cadastro.artista);
-                setData(cadastro.dataProducao);
-                setTipo(cadastro.tipo);
-                setIdade(cadastro.idadeArtista);
-            } catch (error) {
-                console.error("ERROR BUSCAR OBRA:", error);
-            }
-        }
-        if (id) {
-            BuscarObra();
-        }
-    }, [id]);
     const handleSubmit = async (e) => {
         e.prevenirObra();
 
         try {
-            await axios.put(`/API/cadastro2/${id}`, { nomeObra, url, artista, dataProducao, tipo, idadeArtista });
+            await axios.post("/API/cadastro2", { nomeObra, url, artista, dataProducao, tipo, idadeArtista });
+            setNome("");
+            setImagem("");
+            setArtista("");
+            setData("");
+            setTipo("");
+            setIdade("");
             router.push(`/cadastro2/`);
         } catch (error) {
-            console.error("Error atualizar cadastro", error);
+            console.error("ERRO AO ENVIAR DADOS", error);
         }
     };
+    useEffect(() => {
+        async function BuscarObra() {
+            try {
+                const resposta = await axios.get("/API/cadastro2");
+                setCadastro(resposta.data);
+            } catch (error) {
+                console.error("ERRO AO ENVIAR DADOS", error);
+            }
+        }
+        BuscarObra();
+    }, []);
+
     return (
         <div className={style.container}>
             <Header></Header>
-         <div className={style.acoes}> 
-          <Link href={`/cadastro2`}>
-            <button className={`${style.button} ${style.primeirobtn}`}>
-              Voltar para Obras
-            </button>
-          </Link>
-         </div>
-        <div className={style.cadastroContainer}>
-    
-            <h1 className={style.mainprincipal}>Atualizar Obra</h1>
-            {id ? (
+            <div className={style.acoes}>
+                <Link href={`/cadastro2`}>
+                    <button className={`${style.button} ${style.primeirobtn}`}>
+                        Voltar para Obras
+                    </button>
+                </Link>
+            </div>
+            <div className={style.cadastroContainer}>
+
+                <h1 className={style.mainprincipal}>Cadastrar Obras</h1>
+
                 <form onSubmit={handleSubmit}>
                     <div className={style.forms}>
                         <label htmlFor="nomeObra">
@@ -129,21 +127,15 @@ export default function AtualizarCadastro({ params }) {
                             onChange={(e) => setIdade(e.target.value)}
                             required />
                     </div>
-    
+
                     <button
                         type="submit"
                         className={`${style.button} ${style.submitButton}`}>
-                        Atualizar
+                        Cadastrar
                     </button>
                 </form>
-            ) : (
-                <p>Carregando...</p>
-            )
-    }
-    
+            </div>
         </div>
-        </div>
+        
     );
 }
-
-

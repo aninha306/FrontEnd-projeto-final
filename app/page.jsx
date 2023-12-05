@@ -3,6 +3,7 @@ import Header from './componets/header/header';
 import { RiDeleteBinLine } from "react-icons/ri";
 import { FaEdit } from "react-icons/fa";
 import Footer from './componets/footer/footer';
+import Popup from './componets/popup/PopUp';
 
 
 import style from './pageIndex.module.css'
@@ -36,7 +37,7 @@ function Home() {
             <h2>  van gogh</h2>
              <button className={style.button}><RiDeleteBinLine color={"white"} /></button>
             <button className={style.button}><FaEdit color={"white"} /></button>
-            <button className={style.button} >saiba mais...</button>
+            <button className={style.button} >Saiba Mais...</button>
 
           </div>
         </div>
@@ -51,7 +52,7 @@ function Home() {
 
             <button className={style.button}><RiDeleteBinLine color={"white"} /></button>
             <button className={style.button}><FaEdit color={"white"} /></button>
-            <button className={style.button} >saiba mais...</button>
+            <button className={style.button} >Saiba Mais...</button>
           </div>
         </div>
 
@@ -66,7 +67,7 @@ function Home() {
 
             <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
             <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
-            <button className={style.button}>saiba mais...</button>
+            <button className={style.button}>Saiba Mais...</button>
 
           </div>
         </div>
@@ -80,7 +81,7 @@ function Home() {
 
             <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
             <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
-            <button className={style.button}>saiba mais...</button>
+            <button className={style.button}>Saiba Mais...</button>
 
           </div>
         </div>
@@ -95,7 +96,7 @@ function Home() {
 
             <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
             <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
-            <button className={style.button}>saiba mais...</button>
+            <button className={style.button}>Saiba Mais...</button>
 
           </div>
         </div>
@@ -108,7 +109,7 @@ function Home() {
             <h2>Tarsila do Amaral</h2>
             <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
             <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
-            <button className={style.button}>saiba mais...</button>
+            <button className={style.button}>Saiba Mais...</button>
           </div>
         </div>
 
@@ -122,7 +123,7 @@ function Home() {
 
             <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
             <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
-            <button className={style.button}>saiba mais...</button>
+            <button className={style.button}>Saiba Mais...</button>
 
           </div>
         </div>
@@ -138,7 +139,7 @@ function Home() {
 
             <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
             <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
-            <button className={style.button}>saiba mais...</button>
+            <button className={style.button}>Saiba Mais...</button>
 
           </div>
         </div>
@@ -152,7 +153,7 @@ function Home() {
 
             <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
             <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
-            <button className={style.button}>saiba mais...</button>
+            <button className={style.button}>Saiba Mais...</button>
             
           </div>
         </div>
