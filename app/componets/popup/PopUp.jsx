@@ -15,14 +15,6 @@ const App = () => {
     setTimeout(() => {
       setShowPopup(false)
     }, time)
-
-    if (inp1) {
-        inp1.value = '';
-        return error;
-    } else {
-        inp1 = value;
-        return sucess;
-    }
   }
 
   return (
