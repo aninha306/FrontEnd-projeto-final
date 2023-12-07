@@ -19,6 +19,9 @@
     text-decoration: none;
     margin: 3rem;
     font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    
+
 }
 
 .links:before {
@@ -30,15 +33,11 @@
     left: 0;
     background-color: #fff;
     visibility: hidden;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
 }
 
 .links:hover:before {
     visibility: visible;
-    -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
 
@@ -82,48 +81,69 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
-        
-/* Estilos existentes */
-
 @media screen and (max-width: 768px) {
     .header {
         width: 105rem;
         height: auto;
         flex-direction: column;
         align-items: flex-start;
-        padding: 20px;
-        
+        padding: 2rem;
+    
     }
-
+    
+    .rotas {
+        width: 90rem;
+        display: flex;
+        flex-direction: row;
+        margin-right: 10rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-right: 2rem;
+    }
+    
     .img {
-        margin-bottom: 20px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-left: 50rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .links {
+        display: flex;
+        flex-direction: row;
+        font-size: 4rem;
+        text-align: center;
+        margin-right: 1rem;
+        
        
     }
-
-    .links {
-        width: 100rem;
-        margin: 10px 0;
-        font-size: 18px;
-        text-align: center;
-        justify-content: space-between;
-        gap: 10rem
-        
-
-    }
-
+    
     .butaocadastro {
-        margin-top: 10px;
-        width: 30%;
-        margin-left: 65rem;
+        font-family: 'Poppins', sans-serif;
+        width: 13rem;
+        height: 6rem;
+        background-color: #daa520;
+        display: flex;
+        font-size: 3rem;
+        margin-top: -8.5rem;
+        flex-direction: row;
+        margin-left: 85rem;
         text-align: center;
-        font-size: 30px;
-        margin-bottom: 9rem;
-        
+        text-decoration: none;
+        border: none;
     }
+
+    .link1{
+        text-decoration: none;
+    }
+}
+    
+    
 
     
-}
+
 
             
     
