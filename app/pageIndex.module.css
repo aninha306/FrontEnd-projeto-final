@@ -121,8 +121,14 @@
     }
 
     .infos{
-        width: 100%;
+        width: 85rem;
         margin-left: 0;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin-left: 15rem;
+        font-size: 1.5rem;
+        
     }
     
     .testoDiv{
