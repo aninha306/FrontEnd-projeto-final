@@ -1,7 +1,7 @@
 import axios from "axios";
 import { NextResponse } from "next/server";
 
-const url = process.env.BASE_URL + "cadastro2"
+const url = " http://localhost:5000/artes"
 
 export async function get (){
    try{
