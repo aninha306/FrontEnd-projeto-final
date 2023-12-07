@@ -176,16 +176,12 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        @media screen and (min-width: 768px) {
-
-            forms {
-                /* Defina larguras flexíveis para os campos de formulário */
-                width: 100%;
+        
                 
                 @media screen and (min-width: 768px) {
-                    width: 50%; /* Por exemplo, dois campos por linha em telas maiores */
-                }
-                }
+                    
+                    /* Por exemplo, dois campos por linha em telas maiores */
+                
                 
                 .header {
                     background-color: #000000;
@@ -261,10 +257,11 @@
                 .img {
                     margin-left: 20px;
                 }
-
             }
+        }
+            
     
-}
+
 
 
 
