@@ -50,7 +50,7 @@ export default function Contato() {
             />
             <hr className={styles.hr}></hr>
 
-            <button  className={styles.button}> Enviar </button>
+            <Link href={"/sucesso"}><button  className={styles.button}> Enviar </button></Link>
 
             <div className={styles.divicones}>
 

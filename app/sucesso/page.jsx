@@ -15,12 +15,14 @@ export default function Sucesso() {
 
                     <div className={styles.imagem}>
 
-                    <img  src={"/imagemsucesso.png"} alt="imagem sucesso" width={150} height={150} className={styles.img} />
+                    <img  src={"/gifcadastro.gif"} alt="imagem sucesso" width={150} height={150} className={styles.img} />
                     </div>
 
 
                     <div className={styles.divTitulo}>
                     <h1 className={styles.titulo}>Arte Além da Tela</h1>
+
+                    <Link href={"/"}><button className={styles.botao}>Voltar para home</button></Link>
 
                     </div>
                 </div>
