@@ -62,7 +62,7 @@ export default function Register() {
                 <div className={style.cadastroContainer}>
 
                     <div className={style.imagem}>
-                        <img src={'/imagem.gif'} width={350} height={450} className={style.img} />
+                        <img src={'/cadastro.gif'} width={350} height={450} className={style.img} />
                     </div>
 
                     
