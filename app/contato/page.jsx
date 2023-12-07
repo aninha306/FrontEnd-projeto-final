@@ -11,48 +11,6 @@ import Header from '../components/header/header';
 import { useState, useEffect } from 'react';
 
 export default function Contato() {
-
-  const comecoState ={
-    nome : '',
-    email : '',
-    numero: '',
-  }
-
-  const [form , setForm] = useState(comecoState);
-
-  const [erro, setErro] = useState({});
-  const [showPopup, setShowPopup ] = useState(false);
-
-  const verificador = (evento) =>{
-    setForm({
-      ...form,
-      [evento.target.nome]: evento.target.value,
-    });
-  };
-
-  const enviar = (evento ) =>{
-    evento.evitardefaut();
-
-    const validarerro = valida(form);
-
-    setErro(validarerro);
-
-    if (Object.keys(validarerro).length === 0){
-      setShowPopup(true);
-
-      setTime(() =>setShowPopup(false), 4000);
-
-      setForm(comecoState);
-    }
-  };
-  const validar = (form) =>{
-   
-
-    if(!form.nome ){
-    }
-  }
-
-
   return (
     <>
 
