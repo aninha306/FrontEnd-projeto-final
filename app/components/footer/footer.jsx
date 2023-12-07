@@ -19,7 +19,7 @@ function Footer(){
                 <div className={styles.camihos}>
                     <Link className={styles.links} href={"/"}>HOME</Link>
                     <Link className={styles.links} href={"/"}>SOBRE NÓS</Link>
-                    <Link className={styles.links} href={"/"}>QUADROS</Link>
+                    <Link className={styles.links} href={"/cadastro2"}>QUADROS</Link>
                     <Link className={styles.links} href={"/contato"}>CONTATO</Link>
                     <Link className={styles.links} href={"/"}>CADASTRO</Link> 
                 </div>
