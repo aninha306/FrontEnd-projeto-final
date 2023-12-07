@@ -43,3 +43,21 @@
 }
 
 
+
+
+    
+@media screen and (max-width: 768px) {
+   .main{
+        width: 105rem;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        margin-right: 60rem;
+        
+   }
+
+   .camihos{
+        font-size: 2rem;
+   }
+   }

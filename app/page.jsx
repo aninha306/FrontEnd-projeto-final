@@ -9,6 +9,7 @@ function Home() {
   return (
     <>
     <Header></Header>
+    
     <div className={style.principal}>
       <div className={style.divtitulo}>
         <h1 className={style.titulo}>Arte Além da Tela</h1>
@@ -29,12 +30,7 @@ function Home() {
       <div className={style.main} >
 
 
-
-       
-
-
-
-        <div className={style.qudrosDiv}>
+          <div className={style.qudrosDiv}>
           <img className={style.imgsQuadrosFixos} src="https://www.melhoresdestinos.com.br/wp-content/uploads/2021/02/obra-de-arte-o-grito-edvard-munch.jpg" alt="" />
           <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
           <div className={style.testoDiv}>
@@ -137,5 +133,6 @@ function Home() {
       </div>
       </div>
     </>
+    
   )
 } export default Home;
