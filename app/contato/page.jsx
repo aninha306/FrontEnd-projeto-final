@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import styles from "./contato.module.css"
 import Image from 'next/image';
@@ -7,8 +8,51 @@ import { SiLinktree } from "react-icons/si";
 import Link from 'next/link';
 import Footer from '../components/footer/footer';
 import Header from '../components/header/header';
+import { useState, useEffect } from 'react';
 
-function contato() {
+export default function Contato() {
+
+  const comecoState ={
+    nome : '',
+    email : '',
+    numero: '',
+  }
+
+  const [form , setForm] = useState(comecoState);
+
+  const [erro, setErro] = useState({});
+  const [showPopup, setShowPopup ] = useState(false);
+
+  const verificador = (evento) =>{
+    setForm({
+      ...form,
+      [evento.target.nome]: evento.target.value,
+    });
+  };
+
+  const enviar = (evento ) =>{
+    evento.evitardefaut();
+
+    const validarerro = valida(form);
+
+    setErro(validarerro);
+
+    if (Object.keys(validarerro).length === 0){
+      setShowPopup(true);
+
+      setTime(() =>setShowPopup(false), 4000);
+
+      setForm(comecoState);
+    }
+  };
+  const validar = (form) =>{
+   
+
+    if(!form.nome ){
+    }
+  }
+
+
   return (
     <>
 
@@ -80,5 +124,3 @@ function contato() {
     </>
   )
 }
-
-export default contato;
