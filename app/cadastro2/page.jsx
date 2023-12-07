@@ -31,7 +31,7 @@ export default function Page() {
     useEffect(() => {
         async function BuscarObras() {
             try {
-                const resposta = await axios.get("/API/cadastro2");
+                const resposta = await axios.get("/api/cadastro2");
                 setCadastro(resposta.data);
                 setDados(resposta.data);
             } catch (error) {
