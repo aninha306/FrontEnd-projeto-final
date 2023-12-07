@@ -19,7 +19,7 @@ function Header() {
             </div>
 
             <div className={styles.cadastro}>
-                <button href={'/cadastro2/register'} className={styles.butaocadastro}>Cadastro</button>
+               <Link href={'/cadastro2/register'}> <button className={styles.butaocadastro} >Cadastro</button></Link>
             </div>
 
         </div>
