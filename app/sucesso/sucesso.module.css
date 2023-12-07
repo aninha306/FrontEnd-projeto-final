@@ -1,25 +1,23 @@
 .main{
     background-color: black;
-    text-align: center;
     align-items: center;
-    height: 20rem;
-}
-.agredecimento{
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-align: center;
+    height: 29rem;
+}
+.divcontainer{
+    border: 4px solid #daa520;
+    height: 24rem;
+    width: 24rem;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   padding: 4rem;
+   margin-top: 5rem;
+
 }
 .titulo{
     color: white;
-    font-family: 'popins';
-}
-.imagem{
-    border: 4px solid #daa520;
-    height: 15rem;
-    width: 15rem;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-
+    margin-top: 2rem;
+    font-family: 'Poppis';
 }

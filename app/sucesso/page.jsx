@@ -11,12 +11,18 @@ export default function Sucesso() {
         <Header></Header>
             <div className={styles.main}>
 
-                <div className={styles.agredecimento}>
-                    <h1 className={styles.titulo}>Obrigado por entrar em contato</h1>
-                </div>
-                
-                <div className={styles.imagem}>
+                <div className={styles.divcontainer}>
+
+                    <div className={styles.imagem}>
+
                     <img  src={"/imagemsucesso.png"} alt="imagem sucesso" width={150} height={150} className={styles.img} />
+                    </div>
+
+
+                    <div className={styles.divTitulo}>
+                    <h1 className={styles.titulo}>Arte Além da Tela</h1>
+
+                    </div>
                 </div>
             </div>
             <Footer></Footer>
