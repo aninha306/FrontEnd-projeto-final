@@ -1,0 +1,25 @@
+.main{
+    background-color: black;
+    text-align: center;
+    align-items: center;
+    height: 20rem;
+}
+.agredecimento{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.titulo{
+    color: white;
+    font-family: 'popins';
+}
+.imagem{
+    border: 4px solid #daa520;
+    height: 15rem;
+    width: 15rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
