@@ -3,15 +3,7 @@ import { NextResponse } from "next/server";
 
 const url = " http://localhost:5000/artes"
 
-export async function get (){
-   try{
-        const resposta = await axios.get(url);
-        return NextResponse.json(resposta.data);
-    } catch(error){
-        console.log("[ORDER_GET]", error);
-        return new NextResponse("ERRO INTERNO DO SERVIDOR!", {status: 500});
-    }
-}
+
 export async function GET (request, {params}){
     const {id} = params;
 
@@ -23,17 +15,7 @@ export async function GET (request, {params}){
         return new NextResponse("ERRO INTERNO DO SERVIDOR!", {status: 500});
     }
 }
-export async function POST (request){
-    const params = await request.json();
 
-    try{
-        const resposta = await axios.post(url, params);
-        return NextResponse.json(resposta.data);
-    } catch(error){
-        console.log("[ORDER_POST]", error);
-        return new NextResponse("ERRO INTERNO DO SERVIDOR!", {status: 500});
-    }
-}
 
 export async function PUT (request, {params}){
     const {id} = params;
