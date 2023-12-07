@@ -1,13 +1,35 @@
-
+"use client"
 import { RiDeleteBinLine } from "react-icons/ri";
 import { FaEdit } from "react-icons/fa";
 import style from './pageIndex.module.css'
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function Home() {
+
+  const [artes, setArtes]= useState([]);
+
+            useEffect(() => {
+              async function BuscarObra() {
+                  try {
+                      const resposta = await axios.get("/api/artes");
+                      setArtes(resposta.data.artes);
+                  } catch (error) {
+                      console.error("ERRO AO ENVIAR DADOS", error);
+                  }
+              }
+              BuscarObra();
+          }, []);
+          console.log(artes)
   return (
     <>
+    {
+      artes.map(arte => (
+        <p key={arte.id}>{arte.nomeObra}</p>
+      ))
+    }
     <Header></Header>
     <div className={style.principal}>
       <div className={style.divtitulo}>
@@ -24,15 +46,7 @@ function Home() {
         <p>A arte, em sua essência, é uma forma de comunicação e expressão. Ela transcende a linguagem verbal, permitindo que os artistas transmitam ideias, emoções, conceitos e experiências através de diferentes meios. Pode ser visual, como pintura e escultura; auditiva, como música e poesia; cênica, como teatro e dança; ou uma combinação de várias formas, como no cinema.</p>
       </div>
 
-
-
       <div className={style.main} >
-
-
-
-       
-
-
 
         <div className={style.qudrosDiv}>
           <img className={style.imgsQuadrosFixos} src="https://www.melhoresdestinos.com.br/wp-content/uploads/2021/02/obra-de-arte-o-grito-edvard-munch.jpg" alt="" />
