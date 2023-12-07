@@ -1,7 +1,7 @@
 import axios from "axios";
 import { NextResponse } from "next/server";
 
-const url = " http://localhost:5000/artes"
+const url = " http://localhost:5000/artistas"
 
 
 export async function GET (request, {params}){

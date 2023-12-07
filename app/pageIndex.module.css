@@ -11,6 +11,8 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+  
+    
 
 
 }
@@ -47,6 +49,7 @@
     border: 10px double #daa520;
     box-shadow: 23px 24px 20px rgba(0, 0, 0, 0.2);
     font-family: 'Poppins', sans-serif;
+    
 }
 
 .imgsQuadrosFixos {
@@ -58,8 +61,8 @@
 }
 
 .testoDiv {
-    color: rgb(255, 255, 255);
-    font-size: 10px;
+    color: #daa520;
+    font-size: 15px;
     margin-left: 25px;
     margin-bottom: 2rem;
     margin-top: 25px;
