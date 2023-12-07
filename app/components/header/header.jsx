@@ -14,12 +14,12 @@ function Header() {
             <div className={styles.rotas}>
                 <Link className={styles.links} href={'/'}>Home</Link>
                 <Link className={styles.links} href={'/'}>Sobre nós</Link>
-                <Link className={styles.links} href={'/'}>Quadros</Link>
+                <Link className={styles.links} href={'/cadastro2'}>Quadros</Link>
                 <Link className={styles.links} href={'/contato'}>Contato</Link>
             </div>
 
             <div className={styles.cadastro}>
-                <button className={styles.butaocadastro}>Cadastro</button>
+               <Link href={'/cadastro2/register'}> <button className={styles.butaocadastro} >Cadastro</button></Link>
             </div>
 
         </div>
