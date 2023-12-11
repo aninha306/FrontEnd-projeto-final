@@ -1,0 +1,30 @@
+.main{
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+.blocos{
+    background-color: rgb(0, 0, 0);
+    width: 25rem;
+    height: 26rem;
+    margin: 33px;
+    border: 10px double #daa520;
+    box-shadow: 23px 24px 20px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+}
+.infos{
+    color: #daa520;
+    font-size: 15px;
+    margin-left: 25px;
+    margin-bottom: 2rem;
+    margin-top: 25px;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.title{
+        color: #ffffff;
+        text-align: center;
+        font-family: 'Poppins';
+        margin-bottom: 3%;
+}
