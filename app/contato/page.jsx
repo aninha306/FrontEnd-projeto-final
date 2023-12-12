@@ -45,7 +45,7 @@ export default function Contato() {
             <input
               type='number'
               className={styles.inp1}
-              placeholder='Numero'
+              placeholder='Número'
               required
             />
             <hr className={styles.hr}></hr>
@@ -67,12 +67,15 @@ export default function Contato() {
                 <FaInstagram color={"white"} fontSize={20} />
               </Link>
             </div>
+            <div className={styles.fim}>
+
+            
           </div>
 
         </div>
 
 
-
+        </div>
       </div>
       <Footer></Footer>
     </>
