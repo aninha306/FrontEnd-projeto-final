@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: center;
     display: flex;
+    margin-right: 3rem;
 }
 .icons1{
     margin: 3rem;
@@ -16,7 +17,7 @@
     color: #5e5e5e;
     transition: 1s;
 }
-.camihos{
+.caminhos{
     align-items: center;
     justify-content: center;
     display: flex;
