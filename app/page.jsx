@@ -43,7 +43,7 @@ function Home() {
             A definição de arte é uma questão complexa e muitas vezes subjetiva, pois a arte abrange uma ampla gama de formas de expressão criativa e manifestações culturais. Ao longo da história, diferentes culturas e períodos de tempo têm apresentado concepções distintas sobre o que constitui a arte. No entanto, algumas características e princípios fundamentais podem ser explorados para compreender melhor essa manifestação humana.</p>
           <p>A arte, em sua essência, é uma forma de comunicação e expressão. Ela transcende a linguagem verbal, permitindo que os artistas transmitam ideias, emoções, conceitos e experiências através de diferentes meios. Pode ser visual, como pintura e escultura; auditiva, como música e poesia; cênica, como teatro e dança; ou uma combinação de várias formas, como no cinema.</p>
         </div>
-
+        <div className={style.thiago}>
         {
           artes ? (
           artes.map(arte => (
@@ -71,6 +71,8 @@ function Home() {
             <ArteLoading />
           )
         }
+        </div>
+      
       </div>
       <Footer></Footer>
     </>
