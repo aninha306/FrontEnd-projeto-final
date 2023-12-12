@@ -32,7 +32,7 @@ export default function Contato() {
               placeholder='Nome'
               required
             />
-            <hr className={styles.inp1}></hr>
+            <hr className={styles.hr}></hr>
 
             <input
               type='text'
@@ -40,7 +40,7 @@ export default function Contato() {
               placeholder='Email'
               required
             />
-            <hr className={styles.inp1}></hr>
+            <hr className={styles.hr}></hr>
 
             <input
               type='number'
@@ -48,7 +48,7 @@ export default function Contato() {
               placeholder='Numero'
               required
             />
-            <hr className={styles.inp1}></hr>
+            <hr className={styles.hr}></hr>
 
             <Link href={"/sucesso"}><button  className={styles.button}> Enviar </button></Link>
 
