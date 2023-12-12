@@ -28,12 +28,11 @@ function Home() {
     <>
       <Header></Header>
       <div className={style.principal}>
-        <div className={style.poster}>
-
-          <>
+         <>
             <h1 className={style.titulo}>Arte Além da Tela</h1>
           </>
 
+          <div className={style.img}>
           <img src="https://photoarts.com.br/magazine/wp-content/uploads/sites/2/2021/07/artur-matosyan-4YWUMaftmag-unsplash-1-1.jpg" width={1250} height={600} alt="" />
         </div>
 
@@ -70,6 +69,8 @@ function Home() {
             <ArteLoading />
           )
         }
+        <div className={style.fim}>
+      </div>
       </div>
       <Footer></Footer>
     </>
