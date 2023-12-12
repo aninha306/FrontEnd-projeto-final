@@ -84,7 +84,7 @@
 
 @media only screen and (max-width: 450px) {
      .header { 
-        width:78rem;
+        width:105rem;
         height: 15rem;
      } 
      .imagem{
@@ -93,7 +93,7 @@
         margin-top: 2rem;
      }
      .links{
-        font-size: 2rem;
+        font-size: 3.3rem;
         margin: 1rem;
      }
      .rotas{
