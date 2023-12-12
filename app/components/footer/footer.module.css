@@ -43,3 +43,22 @@
 }
 
 
+@media only screen and (max-width: 450px) {
+    .main{
+        width:78rem;
+        height: 25rem;
+        margin-top: 83rem; 
+     }
+    
+    .caminhos{
+        font-size: 2.3rem;
+        margin-top: 3rem;
+        margin-left: 6rem;
+
+    }
+    .todosdireitosreservados{
+        font-size: 2.3rem;
+        margin-top: 4rem;
+    }
+    
+}
