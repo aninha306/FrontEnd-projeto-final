@@ -4,8 +4,9 @@ import { FaEdit } from "react-icons/fa";
 import style from './pageIndex.module.css'
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
+import ArteLoading from "./components/loading/loading";
 
 function Home() {
 
@@ -44,6 +45,7 @@ function Home() {
         </div>
 
         {
+          artes ? (
           artes.map(arte => (
             <div key={arte.id}>
 
@@ -63,10 +65,13 @@ function Home() {
               </div>
             </div>
           ))
+          )
+          : (
+            <ArteLoading />
+          )
         }
       </div>
       <Footer></Footer>
-
     </>
-  )
-} export default Home;
+  ) 
+}; export default Home;
