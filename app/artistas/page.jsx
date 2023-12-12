@@ -1,4 +1,3 @@
-
 "use client"
 import { RiDeleteBinLine } from "react-icons/ri";
 import { FaEdit } from "react-icons/fa";
@@ -7,7 +6,7 @@ import Header from "../components/header/header";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Footer from "../components/footer/footer";
-//import artistas from "../test";
+
 
 
 function sobreNos() {
@@ -28,13 +27,12 @@ function sobreNos() {
   console.log(artes)
   return (
     <>
-
       <Header></Header>
       <div className={style.title}>
         <h1>Sobre Nós.</h1>
-    </div>
+      </div>
 
-        <div className={style.main}>
+      <div className={style.main}>
         {
           artes.map(artista => (
             <div className={style.blocos}>
