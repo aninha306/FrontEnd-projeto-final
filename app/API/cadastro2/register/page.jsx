@@ -36,7 +36,7 @@ export default function Register() {
     useEffect(() => {
         async function BuscarObra() {
             try {
-                const resposta = await axios.get("/API/cadastro2");
+                const resposta = await axios.get("/api/cadastro2");
                 setCadastro(resposta.data);
             } catch (error) {
                 console.error("ERRO AO ENVIAR DADOS", error);
