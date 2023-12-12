@@ -88,3 +88,97 @@
 .icons{
     margin: 1rem;
 }
+
+@media only screen and (max-width: 450px) {
+    .principal{
+        width: 105rem;
+        height: 190rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #000000;
+        
+    }
+    .img{
+        width: 100%;
+        height: 55rem;
+        margin-top: 10rem;
+        padding: 10%;
+    }
+    .maeinputs {
+        display: flex;
+        height: 90rem;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 24px; /* Ajuste o tamanho da fonte para aumentar todos os elementos */
+        margin-top: 2rem;
+      }
+      
+      .divinputs button {
+        font-size: 70px; /* Ajuste o tamanho dos inputs e botões */
+        margin-top: 15rem;
+      }
+      .divinputs{
+        width: 80rem;
+        height: 80rem ;
+        margin-top: 3rem;
+        margin-left: 3rem;
+      }
+      .divicones {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 6rem;
+      }
+      
+      .icons {
+        margin: 0 50px; /* Espaçamento entre os ícones */
+      }
+      
+      /* Aumentando o tamanho dos ícones */
+      .icons svg {
+        font-size: 80px; /* Tamanho dos ícones */
+        margin-bottom: 29rem;
+      }
+      .button{
+        width: 40rem;
+        height: 15rem;
+        
+      }
+      .titulo{
+        font-size: 6rem;
+        margin-top: 25rem;
+        margin-top: 8rem;
+      }
+    .hr{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+        width: 60rem;
+        margin-left: 7rem;
+    }
+    .inp1{
+        width: 30rem;
+        height: 5rem;
+        font-size: 7rem;
+        margin-top: 5rem;   
+    }
+    .fim{
+        background-color: #000000;
+        height: 50rem;
+        width: 137rem;
+        height: 100rem;
+        margin-left:-50rem;
+        margin-top: -30rem;
+       
+        
+    }
+    
+ 
+   
+    
+
+}

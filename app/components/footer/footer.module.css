@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: center;
     display: flex;
+    margin-right: 3rem;
 }
 .icons1{
     margin: 3rem;
@@ -16,7 +17,7 @@
     color: #5e5e5e;
     transition: 1s;
 }
-.camihos{
+.caminhos{
     align-items: center;
     justify-content: center;
     display: flex;
@@ -43,3 +44,23 @@
 }
 
 
+@media only screen and (max-width: 450px) {
+    .main{
+        width:105rem;
+        height: 25rem;
+        margin-top: 83rem; 
+       
+     }
+    
+    .caminhos{
+        font-size: 2.3rem;
+        margin-top: 3rem;
+        margin-left: 6rem;
+
+    }
+    .todosdireitosreservados{
+        font-size: 2.3rem;
+        margin-top: 4rem;
+    }
+    
+}

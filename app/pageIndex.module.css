@@ -8,6 +8,7 @@
 }
 
 .main {
+
    display: flex;
     background-color: black;
     flex-direction: row;
@@ -46,16 +47,24 @@
 
 }
 
+.alinhamento{
+ display: flex;
+ flex-direction: column;
+ flex-wrap: wrap;
+ align-items: center;
+}
+
+
+
 .imgsQuadrosFixos {
     width: 18rem;
     height: 200px;
     margin-left: 48px;
     margin-top: 20px;
-    border-radius: 20px;
 }
 
 .testoDiv {
-    color: #daa520;
+    color: #ffffff;
     font-size: 15px;
     margin-left: 25px;
     margin-bottom: 2rem;
@@ -123,4 +132,6 @@
     color: #daa520;
     text-align: center;
     margin-right: 5%;
+    font-size: 20px;
 }
+

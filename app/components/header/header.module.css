@@ -81,3 +81,27 @@
 .rotas {
     font-family: 'Poppins', sans-serif;
 }
+
+@media only screen and (max-width: 450px) {
+     .header { 
+        width:105rem;
+        height: 15rem;
+     } 
+     .imagem{
+        width: 12rem;
+        height:12rem;
+        margin-top: 2rem;
+     }
+     .links{
+        font-size: 3.3rem;
+        margin: 1rem;
+     }
+     .rotas{
+       margin-right: 2.3rem;
+     }
+     .butaocadastro{
+        width: 13rem;
+        height: 4rem;
+        font-size: 3rem;
+     }
+   }

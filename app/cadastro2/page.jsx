@@ -31,7 +31,7 @@ export default function Page() {
     useEffect(() => {
         async function BuscarObras() {
             try {
-                const resposta = await axios.get("/api/cadastro2");
+                const resposta = await axios.get("/API/cadastro2");
                 setCadastro(resposta.data);
                 setDados(resposta.data);
             } catch (error) {
@@ -40,11 +40,10 @@ export default function Page() {
         }
         BuscarObras();
     }, []);
-
+    
     return (
         <>
             <Header></Header>
-            <div className={style.container}>
                 <div className={style.container}>
                     <div className={style.acoes}>
                         <Link href="/cadastro2/register">
@@ -100,11 +99,15 @@ export default function Page() {
                                     ))}
                                 </div>
                             ) : (
+
                                 <p>Nenhuma obra cadastrada.</p>
+
+                                <p>{dados.message ? dados.message : ""}</p>
                             )}
                         </div>
                     </div>
                 </div>
+
             </div>
             <Footer></Footer>
         </>
@@ -112,4 +115,10 @@ export default function Page() {
 }
 
 
-    
+
+
+                <Footer></Footer>
+        </>
+    );
+}
+

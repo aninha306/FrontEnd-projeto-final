@@ -16,10 +16,10 @@ function Footer(){
                     <Link href={'https://www.instagram.com'}><FaInstagram className={styles.icons1} fontSize={30} color={"white"}/></Link>
                     
                 </div>
-                <div className={styles.camihos}>
+                <div className={styles.caminhos}>
                 <Link className={styles.links} href={"/"}>HOME</Link>
                     <Link className={styles.links} href={"/"}>SOBRE NÓS</Link>
-                    <Link className={styles.links} href={"/cadastro2"}>QUADROS</Link>
+                    <Link className={styles.links} href={"/cadastro2"}>COLABORADORES</Link>
                     <Link className={styles.links} href={"/contato"}>CONTATO</Link>
                     <Link className={styles.links} href={"/cadastro2/register"}>CADASTRO</Link>
                 </div>

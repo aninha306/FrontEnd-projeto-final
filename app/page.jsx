@@ -4,9 +4,12 @@ import { FaEdit } from "react-icons/fa";
 import style from './pageIndex.module.css'
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-//import Filtro from "./components/filtro/filtro";
+
+
+import ArteLoading from "./components/loading/loading";
+
 
 function Home() {
 
@@ -74,9 +77,11 @@ function Home() {
         </div>
 
         {
+          artes ? (
           artes.map(arte => (
             <div key={arte.id}>
               <div className={style.main} >
+
                 <div className={style.qudrosDiv}>
                   <img src={arte.url} className={style.imgsQuadrosFixos} />
                   <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
@@ -89,16 +94,32 @@ function Home() {
                     <button className={style.button} 
                     // onClick={}
                     >Ver mais informações</button>
+
+                <div className={style.alinhamento}>
+                  <div className={style.qudrosDiv}>
+                    <img src={arte.url} className={style.imgsQuadrosFixos} />
+                    <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
+                    <div className={style.testoDiv}>
+                      <p className={style.texto}> {arte.nomeObra}</p>
+                      <p className={style.texto}>  {arte.artista}</p>
+                      <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
+                      <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
+                      <button className={style.button}>Saiba Mais...</button>
+                    </div>
+
                   </div>
                 </div>
               </div>
             </div>
           ))
+          )
+          : (
+            <ArteLoading />
+          )
         }
       </div>         
 
       <Footer></Footer>
-
     </>
-  )
-} export default Home;
+  ) 
+}; export default Home;
