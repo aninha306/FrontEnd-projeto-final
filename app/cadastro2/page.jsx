@@ -43,10 +43,7 @@ export default function Page() {
     
     return (
         <>
-
-
             <Header></Header>
-            <div className={style.container}>
 
                 <div className={style.container}>
                     <div className={style.acoes}>
@@ -103,16 +100,13 @@ export default function Page() {
                                     ))}
                                 </div>
                             ) : (
-                                <p>{dados.message ? dados.message : "Carregando..."}</p>
+                                <p>{dados.message ? dados.message : ""}</p>
                             )}
                         </div>
                     </div>
                 </div>
 
                 <Footer></Footer>
-
-            </div>
-
         </>
     );
 }
