@@ -44,7 +44,6 @@ export default function Page() {
     return (
         <>
             <Header></Header>
-
                 <div className={style.container}>
                     <div className={style.acoes}>
                         <Link href="/cadastro2/register">
@@ -100,13 +99,26 @@ export default function Page() {
                                     ))}
                                 </div>
                             ) : (
+
+                                <p>Nenhuma obra cadastrada.</p>
+
                                 <p>{dados.message ? dados.message : ""}</p>
                             )}
                         </div>
                     </div>
                 </div>
 
+            </div>
+            <Footer></Footer>
+        </>
+    );
+}
+
+
+
+
                 <Footer></Footer>
         </>
     );
 }
+
