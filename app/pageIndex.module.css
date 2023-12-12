@@ -7,12 +7,22 @@
     justify-content: center;
 }
 
+
+.thiago{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
 .main {
 
    display: flex;
     background-color: black;
     flex-direction: row;
     flex-wrap: wrap;
+
 }
 
 .poster {

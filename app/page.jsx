@@ -74,7 +74,7 @@ function Home() {
             <option value="Têmpera">Têmpera</option>
           </select>
         </div>
-
+        <div className={style.thiago}>
         {
           artes ? (
           artes.map(arte => (
@@ -128,7 +128,10 @@ function Home() {
             <ArteLoading />
           )
         }
-        <div className={style.fim}>
+
+        </div>
+              <div className={style.fim}>
+
       </div>
       </div>
       </div>         
