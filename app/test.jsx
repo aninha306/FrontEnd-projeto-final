@@ -15,7 +15,7 @@ function artistas() {
     useEffect(() => {
         async function BuscarObra() {
             try {
-                const resposta = await axios.get("/api/artista");
+                const resposta = await axios.get("/api/artistas");
                 setArtistas(resposta.data.artistas);
             } catch (error) {
                 console.error("ERRO AO ENVIAR DADOS", error);
@@ -35,8 +35,8 @@ function artistas() {
                         <h1>Sobre Nós.</h1>
                       </div>
                       <div className={style.blocos}>
-                        <p className={style.nome}>isabela</p>
-                        <p className={style.idade}>17 anos</p>
+                        <p className={style.nome}></p>
+                        <p className={style.idade}></p>
                         <img src="https://escoladainteligencia.com.br/wp-content/uploads/2018/04/179018-o-que-fazer-quando-se-percebe-uma-dificuldade-de-aprendizagem.jpg" alt="" />
                       </div>
 

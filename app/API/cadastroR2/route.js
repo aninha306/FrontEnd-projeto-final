@@ -1,12 +1,11 @@
 import axios from "axios";
 import { NextResponse } from "next/server";
 
-const url = process.env.BASE_URL + 'artistas'
+const url = process.env.BASE_URL + "cadastroR2"
 
 export async function GET (){
    try{
         const resposta = await axios.get(url);
-        console.log(resposta.data)
         return NextResponse.json(resposta.data);
     } catch(error){
         console.log("[ORDER_GET]", error);

@@ -52,8 +52,8 @@ function Home() {
                   <img src={arte.url} className={style.imgsQuadrosFixos} />
                   <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
                   <div className={style.testoDiv}>
-                    <p >{arte.nomeObra}</p>
-                    <p> {arte.artista}</p>
+                    <p className={style.texto}>{arte.nomeObra}</p>
+                    <p> className={style.texto} {arte.artista}</p>
                     <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
                     <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
                     <button className={style.button}>Saiba Mais...</button>
