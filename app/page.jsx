@@ -59,9 +59,12 @@ function Home() {
                     <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
                     <button className={style.button}>Saiba Mais...</button>
                   </div>
-
+                  <div className={style.fim}>
                 </div>
               </div>
+             
+      </div>
+      
             </div>
           ))
           )
