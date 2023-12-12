@@ -43,12 +43,11 @@ function Home() {
     <>
       <Header />
       <div className={style.principal}>
-        <div className={style.poster}>
-
-          <>
+         <>
             <h1 className={style.titulo}>Arte Além da Tela</h1>
           </>
 
+          <div className={style.img}>
           <img src="https://photoarts.com.br/magazine/wp-content/uploads/sites/2/2021/07/artur-matosyan-4YWUMaftmag-unsplash-1-1.jpg" width={1250} height={600} alt="" />
         </div>
     
@@ -86,6 +85,15 @@ function Home() {
                   <img src={arte.url} className={style.imgsQuadrosFixos} />
                   <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
                   <div className={style.testoDiv}>
+
+                    <p className={style.texto}>{arte.nomeObra}</p>
+                    <p> className={style.texto} {arte.artista}</p>
+                    <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
+                    <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
+                    <button className={style.button}>Saiba Mais...</button>
+                  </div>
+                  <div className={style.fim}>
+
                     <p >{arte.nomeObra}</p>
                     <p> {arte.artista}</p>
                     <p>{arte.tipo}</p>
@@ -110,6 +118,9 @@ function Home() {
                   </div>
                 </div>
               </div>
+             
+      </div>
+      
             </div>
           ))
           )
@@ -117,6 +128,9 @@ function Home() {
             <ArteLoading />
           )
         }
+        <div className={style.fim}>
+      </div>
+      </div>
       </div>         
 
       <Footer></Footer>
