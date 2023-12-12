@@ -67,12 +67,15 @@ export default function Contato() {
                 <FaInstagram color={"white"} fontSize={20} />
               </Link>
             </div>
+            <div className={styles.fim}>
+
+            
           </div>
 
         </div>
 
 
-
+        </div>
       </div>
       <Footer></Footer>
     </>
