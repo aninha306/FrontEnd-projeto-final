@@ -48,9 +48,6 @@ function Home() {
 
           <img src="https://photoarts.com.br/magazine/wp-content/uploads/sites/2/2021/07/artur-matosyan-4YWUMaftmag-unsplash-1-1.jpg" width={1250} height={600} alt="" />
         </div>
-  
- 
-
     
         <div className={style.infos}>
           <p className={style.textoInfo}>
@@ -89,13 +86,17 @@ function Home() {
                     <p>{arte.tipo}</p>
                     {/* <button className={style.button} onClick={editarArtes}><FaEdit color={"white"} fontSize={25} /></button> */}
                     <button className={style.button} onClick={() => deletarArte(arte.id)}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
+                    <button className={style.button} 
+                    // onClick={}
+                    >Ver mais informações</button>
                   </div>
                 </div>
               </div>
             </div>
           ))
         }
-      </div>
+      </div>         
+
       <Footer></Footer>
 
     </>

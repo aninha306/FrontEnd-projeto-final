@@ -2,16 +2,16 @@
 
 .principal {
     background-color: black;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .main {
-    display: flex;
-    flex-direction: wrap;
+   display: flex;
+    background-color: black;
+    flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 .poster {
