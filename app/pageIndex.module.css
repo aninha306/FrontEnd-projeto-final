@@ -2,29 +2,24 @@
 
 .principal {
     background-color: black;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .main {
 
-    display: flex;
+   display: flex;
+    background-color: black;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  
-    
-
-
 }
 
 .poster {
-
     background-color: rgb(0, 0, 0);
     margin-bottom: 25px;
     align-items: center;
     text-align: center;
-
-
 }
 
 .infos {
@@ -49,8 +44,17 @@
     border: 10px double #daa520;
     box-shadow: 23px 24px 20px rgba(0, 0, 0, 0.2);
     font-family: 'Poppins', sans-serif;
-    
+
 }
+
+.alinhamento{
+ display: flex;
+ flex-direction: column;
+ flex-wrap: wrap;
+ align-items: center;
+}
+
+
 
 .imgsQuadrosFixos {
     width: 18rem;
@@ -60,14 +64,43 @@
 }
 
 .testoDiv {
-    color: #daa520;
+    color: #ffffff;
     font-size: 15px;
     margin-left: 25px;
     margin-bottom: 2rem;
-    margin-top: 25px;
+    margin-top: 5px;
     flex-direction: column;
     text-align: center;
     justify-content: center;
+}
+
+.textoInfo {
+    color: #ffffff;
+    font-size: 20px;
+    margin-left: 25px;
+    margin-bottom: 2rem;
+    margin-top: 5px;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.filtro {
+    background-color: rgb(0, 0, 0);
+    width: 15rem;
+    height: 1.7rem;
+    color: #ffffff;
+    margin: 33px;
+    border: 1px double #daa520;
+    box-shadow: 23px 24px 20px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 5px;
+    justify-content: center;
+
 }
 
 .button {
@@ -87,13 +120,15 @@
     margin-bottom: 5px;
     font-size: 14px;
 }
-.titulo{
+
+.titulo {
     color: #ffffff;
     text-align: center;
     font-family: 'Poppins';
     margin-bottom: 3%;
 }
-.tituloquadro{
+
+.tituloquadro {
     color: #daa520;
     text-align: center;
     margin-right: 5%;
@@ -136,3 +171,6 @@
        
     }
 }
+    font-size: 20px;
+}
+

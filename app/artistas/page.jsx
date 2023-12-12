@@ -27,21 +27,24 @@ function sobreNos() {
   console.log(artes)
   return (
     <>
-      <Header></Header>
-      <div className={style.title}>
-        <h1>Sobre Nós.</h1>
-      </div>
 
+      <Header></Header>
+     
       <div className={style.main}>
+        
         {
+          
           artes.map(artista => (
+            
             <div className={style.blocos}>
               <div className={style.infos}>
                 <p className={style.texto}>{artista.nome}</p>
                 <p className={style.texto}>{artista.idade}</p>
-                <img src="{}" alt="" />
-                <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
-                <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
+                <img className={style.imgsQuadrosFixos} src={artista.imagem} alt="" />
+                <div>
+                <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={20} /></button>
+                <button className={style.button}><FaEdit color={"white"} fontSize={20} /></button>
+                </div>
               </div>
             </div>
           ))
