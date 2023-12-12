@@ -45,7 +45,7 @@ export default function Contato() {
             <input
               type='number'
               className={styles.inp1}
-              placeholder='Numero'
+              placeholder='Número'
               required
             />
             <hr className={styles.hr}></hr>

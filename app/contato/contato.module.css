@@ -92,7 +92,7 @@
 @media only screen and (max-width: 450px) {
     .principal{
         width: 105rem;
-        height: 150rem;
+        height: 170rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -106,44 +106,62 @@
     }
     .maeinputs {
         display: flex;
+        height: 90rem;
         flex-direction: column;
         align-items: center;
+        text-align: center;
+        font-size: 24px; /* Ajuste o tamanho da fonte para aumentar todos os elementos */
+      }
+      
+      .divinputs button {
+        font-size: 70px; /* Ajuste o tamanho dos inputs e botões */
+        margin-top: 15rem;
+      }
+      .divinputs{
+        width: 80rem;
+        height: 80rem ;
+        margin-top: 15rem;
+      }
+      .divicones {
+        display: flex;
         justify-content: center;
-        height: 150rem; 
-        margin-left: 8rem;
-        width: 85rem;
+        align-items: center;
+        margin-top: 6rem;
+      }
+      
+      .icons {
+        margin: 0 50px; /* Espaçamento entre os ícones */
+      }
+      
+      /* Aumentando o tamanho dos ícones */
+      .icons svg {
+        font-size: 80px; /* Tamanho dos ícones */
+        margin-bottom: 29rem;
+      }
+      .button{
+        width: 40rem;
+        height: 15rem;
+        
+      }
+      .titulo{
+        font-size: 6rem;
+        margin-top: 25rem;
+        margin-top: -40rem;
+      }
+    .hr{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+        width: 60rem;
+        margin-left: 7rem;
     }
-   
-    .divinputs{
-    width: 85rem;
-    height: 40rem;
-    margin-top: 4rem;
-   
-   }
-   .inp1{
-    
-    font-size: 3rem;
-   }
-   .hr{
-    width: 15rem;
-    margin-left: 2rem;
-    text-align: center;
-    align-items: center;
+    .inp1{
+        width: 30rem;
+        height: 5rem;
+        font-size: 7rem;
+        margin-top: 5rem;   
     }
-    .button{
-       width: 30rem;
-       height: 7rem;
-       font-size: 6rem;
-       text-align: center;
-       align-items: baseline;
-       justify-content: center;
-       margin-top: 15rem;
-    }
-   
-    .titulo{
-        font-size: 3rem;
-    }
-    
  
    
     
