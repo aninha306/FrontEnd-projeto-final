@@ -5,11 +5,7 @@
 }
 
 .main {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+
 }
 
 .poster {
@@ -45,7 +41,19 @@
     box-shadow: 23px 24px 20px rgba(0, 0, 0, 0.2);
     font-family: 'Poppins', sans-serif;
     
+
+
+    
 }
+
+.alinhamento{
+ display: flex;
+ flex-direction: column;
+ flex-wrap: wrap;
+ align-items: center;
+}
+
+
 
 .imgsQuadrosFixos {
     width: 18rem;

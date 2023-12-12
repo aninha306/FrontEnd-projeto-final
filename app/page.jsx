@@ -48,17 +48,18 @@ function Home() {
             <div key={arte.id}>
 
               <div className={style.main} >
-                <div className={style.qudrosDiv}>
-                  <img src={arte.url} className={style.imgsQuadrosFixos} />
-                  <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
-                  <div className={style.testoDiv}>
-                    <p className={style.texto}> {arte.nomeObra}</p>
-                    <p className={style.texto}>  {arte.artista}</p>
-                    <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
-                    <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
-                    <button className={style.button}>Saiba Mais...</button>
+                <div className={style.alinhamento}>
+                  <div className={style.qudrosDiv}>
+                    <img src={arte.url} className={style.imgsQuadrosFixos} />
+                    <p className={style.direitos}>As imagens podem ter direitos autorais.</p>
+                    <div className={style.testoDiv}>
+                      <p className={style.texto}> {arte.nomeObra}</p>
+                      <p className={style.texto}>  {arte.artista}</p>
+                      <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={25} /></button>
+                      <button className={style.button}><FaEdit color={"white"} fontSize={25} /></button>
+                      <button className={style.button}>Saiba Mais...</button>
+                    </div>
                   </div>
-
                 </div>
               </div>
             </div>
