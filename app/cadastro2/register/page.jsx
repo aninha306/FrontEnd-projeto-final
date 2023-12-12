@@ -27,7 +27,7 @@ export default function Register() {
             setArtista("");
             setData("");
             setTipo("");
-            setIdade("");
+            setIdade("")
             router.push(`/cadastro2/`);
         } catch (error) {
             console.error("ERRO AO ENVIAR DADOS", error);
