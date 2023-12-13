@@ -40,9 +40,9 @@ function Home() {
   return (
     <>
       <Header />
-     
+
       <div className={style.principal}>
-     
+
         <div className={style.poster}>
         <div className={style.thiago}>
           <>
@@ -95,9 +95,9 @@ function Home() {
             </select>
           </div>
          </div>
-          
-         
-        
+
+
+
           {artes ? (
             artes.map((arte) => (
               <div key={arte.id}>

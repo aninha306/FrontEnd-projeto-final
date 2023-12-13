@@ -26,8 +26,7 @@ export default function Register() {
             setNome("");
             setImagem("");
             setArtista("");
-            setData("");
-            setTipo("");
+            Register("")
             setIdade("");
             router.push(`/cadastro2/`);
         } catch (error) {
