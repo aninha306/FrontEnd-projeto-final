@@ -14,14 +14,15 @@ export default function Register() {
     const [dataProducao, setData] = useState("");
     const [tipo, setTipo] = useState("");
     const [idadeArtista, setIdade] = useState("");
-    const [cadastro, setCadastro] = useState([]);
+    const [artes, setCadastro] = useState([]);
     const router = useRouter();
 
     const handleSubmit = async (e) => {
-        e.prevenirObra();
+        e.preventDefault();
 
         try {
-            await axios.post("/API/cadastro2", { nomeObra, url, artista, dataProducao, tipo, idadeArtista });
+            console.log("Enviando dados:", { nomeObra, url, artista, dataProducao, tipo, idadeArtista });
+            await axios.post("/API/artes", { nomeObra, url, artista, dataProducao, tipo, idadeArtista });
             setNome("");
             setImagem("");
             setArtista("");
@@ -30,16 +31,16 @@ export default function Register() {
             setIdade("");
             router.push(`/cadastro2/`);
         } catch (error) {
-            console.error("ERRO AO ENVIAR DADOS", error);
+            console.error("TA QUASE", error);
         }
     };
     useEffect(() => {
         async function BuscarObra() {
             try {
-                const resposta = await axios.get("/API/cadastro2");
-                setCadastro(resposta.data);
+                const resposta = await axios.get("/API/artes");
+                setCadastro(resposta.data.artes);
             } catch (error) {
-                console.error("ERRO AO ENVIAR DADOS", error);
+                console.error("errooooo", error);
             }
         }
         BuscarObra();

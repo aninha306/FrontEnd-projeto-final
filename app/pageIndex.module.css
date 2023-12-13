@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nosifer&family=Poppins:wght@100&family=Sedgwick+Ave+Display&display=swap');
 
 .principal {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     flex-direction: row-reverse;
     flex-wrap: wrap;
     justify-content: center;
@@ -16,15 +16,7 @@
     justify-content: center;
     align-items: center;
 
-.main {
-
-   display: flex;
-    background-color: black;
-    flex-direction: row;
-    flex-wrap: wrap;
-
 }
-
 .poster {
     background-color: rgb(0, 0, 0);
     margin-bottom: 25px;
@@ -33,6 +25,7 @@
 }
 
 .infos {
+    margin-top: 25px;
     font-size: 20px;
     border: 8px double #daa520;
     height: 20rem;
@@ -44,6 +37,7 @@
     text-align: center;
     color: #ffffff;
     justify-content: center;
+
 }
 
 .qudrosDiv {
@@ -56,15 +50,6 @@
     font-family: 'Poppins', sans-serif;
 
 }
-
-.alinhamento{
- display: flex;
- flex-direction: column;
- flex-wrap: wrap;
- align-items: center;
-}
-
-
 
 .imgsQuadrosFixos {
     width: 18rem;
@@ -85,10 +70,12 @@
 }
 
 .textoInfo {
+    
     color: #ffffff;
     font-size: 20px;
     margin-left: 25px;
     margin-bottom: 2rem;
+    margin-top: 32rem;
     margin-top: 5px;
     flex-direction: column;
     text-align: center;
@@ -96,16 +83,26 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-.filtro {
+.mainFiltro{
+    background-color:rgb(0, 0, 0);
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 200px;
+
+}
+
+.filtrinho {
     background-color: rgb(0, 0, 0);
     width: 15rem;
-    height: 1.7rem;
+    height: 2rem;
     color: #ffffff;
     margin: 33px;
     border: 1px double #daa520;
     box-shadow: 23px 24px 20px rgba(0, 0, 0, 0.2);
     font-family: 'Poppins', sans-serif;
-    display: flex;
     flex-direction: column;
     text-align: center;
     border-radius: 5px;
@@ -115,7 +112,7 @@
 
 .button {
     background-color: rgb(0, 0, 0);
-    margin-top: 30px;
+    margin-top: 20px;
     padding: 9px;
     color: rgb(255, 255, 255);
     border: none;
@@ -132,7 +129,7 @@
 }
 
 .titulo {
-    color: #ffffff;
+    color: #daa520;
     text-align: center;
     font-family: 'Poppins';
     margin-bottom: 3%;
@@ -181,6 +178,6 @@
        
     }
 }
-    font-size: 20px;
-}
+    
+
 
