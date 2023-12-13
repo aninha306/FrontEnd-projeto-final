@@ -17,6 +17,7 @@ export default function Page() {
         const url = `API/cadastro2/${id}`;
 
         try {
+            console.log("Enviando dados:", { nomeObra, url, artista, dataProducao, tipo, idadeArtista });
             await axios.delete(url);
             setDados(dados.filter((cadastro) => cadastro.id !== id));
         } catch (error) {
@@ -40,10 +41,11 @@ export default function Page() {
         }
         BuscarObras();
     }, []);
-    
+
     return (
         <>
             <Header></Header>
+            <div>
                 <div className={style.container}>
                     <div className={style.acoes}>
                         <Link href="/cadastro2/register">
@@ -58,39 +60,39 @@ export default function Page() {
                         <div className={style.cadastro2}>
                             {dados.length ? (
                                 <div className={style.obraList}>
-                                    {cadastro.map((cadastro) => (
-                                        <div key={cadastro.id} className={style.cadastro}>
+                                    {artes.map((artes) => (
+                                        <div key={artes.id} className={style.artes}>
                                             <div className={style.infos}>
-                                                <img src="{cadastro.url}" alt="img" />
+                                                <img src="{artes.url}" alt="img" />
                                                 <p>
-                                                    <strong>ID:</strong> {cadastro.id}
+                                                    <strong>ID:</strong> {artes.id}
                                                 </p>
                                                 <p>
-                                                    <strong>Nome da Obra:</strong> {cadastro.nomeObra}
+                                                    <strong>Nome da Obra:</strong> {artes.nomeObra}
                                                 </p>
                                                 <p>
-                                                    <strong>Nome do Artista:</strong> {cadastro.artista}
+                                                    <strong>Nome do Artista:</strong> {artes.artista}
                                                 </p>
                                                 <p>
-                                                    <strong>Data de Produção:</strong> {cadastro.dataProducao}
+                                                    <strong>Data de Produção:</strong> {artes.dataProducao}
                                                 </p>
                                                 <p>
-                                                    <strong>Tipo de Obra:</strong> {cadastro.tipo}
+                                                    <strong>Tipo de Obra:</strong> {artes.tipo}
                                                 </p>
                                                 <p>
-                                                    <strong>Idade do Artista:</strong> {cadastro.idadeArtista}
+                                                    <strong>Idade do Artista:</strong> {artes.idadeArtista}
                                                 </p>
                                             </div>
 
                                             <div className={style.buttons}>
                                                 <button className={`${style.button}, ${style.deleteButton}`}
-                                                    onClick={() => deletar(cadastro.id)}
+                                                    onClick={() => deletar(artes.id)}
                                                 >
                                                     <FaTrash />
                                                     Deletar
                                                 </button>
                                                 <button className={`${style.button}, ${style.editButton}`}
-                                                    onClick={() => atualizar(cadastro.id)}>
+                                                    onClick={() => atualizar(artes.id)}>
                                                     <FaEdit />
                                                     Atualizar
                                                 </button>
@@ -100,7 +102,6 @@ export default function Page() {
                                 </div>
                             ) : (
 
-                                <p>Nenhuma obra cadastrada.</p>
 
                                 <p>{dados.message ? dados.message : ""}</p>
                             )}
@@ -117,8 +118,5 @@ export default function Page() {
 
 
 
-                <Footer></Footer>
-        </>
-    );
-}
+
 

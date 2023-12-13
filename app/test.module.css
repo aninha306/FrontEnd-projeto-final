@@ -1,5 +1,5 @@
 .main{
-    background-color: rgb(0, 0, 0);
+    background-image: url("https://s2.glbimg.com/J9plVyzuEIMsN7a1d3TVfNucEY2gJ2xTW1L6mk3ngA1Ioz-HdGixxa_8qOZvMp3w/e.glbimg.com/og/ed/f/original/2012/10/04/expo_picasso_guggenheim_17.jpg");
     font-family: 'Poppins', sans-serif;
   display: flex;
     flex-wrap: wrap;
@@ -10,14 +10,14 @@
     width: 300px;
     height: 420px;
     margin: 33px;
-    border: 10px double #daa520;
+    border: 10px double #d6d6d6;
     box-shadow: 23px 24px 20px rgba(0, 0, 0, 0.2);
     font-family: 'Poppins', sans-serif;
     text-align: center;
     margin-left: 200px;
 }
 .infos{
-    color: #daa520;
+    color: #d4d4d4;
     font-size: 20px;
     margin-left: 25px;
     margin-bottom: 2rem;

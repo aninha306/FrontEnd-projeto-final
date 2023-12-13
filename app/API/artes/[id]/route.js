@@ -1,7 +1,7 @@
 import axios from "axios";
 import { NextResponse } from "next/server";
 
-const url = process.env.BASE_URL
+const url = " http://localhost:5000/artes"
 
 
 export async function GET(request, { params }) {
@@ -28,6 +28,7 @@ export async function PUT(request, { params }) {
         console.log("[ORDER_PUT]", error);
         return new NextResponse("ERRO INTERNO DO SERVIDOR!", { status: 500 });
     }
+    
 }
 export async function DELETE(request, { params }) {
     const { id } = params;
