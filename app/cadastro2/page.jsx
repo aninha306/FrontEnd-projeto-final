@@ -9,7 +9,6 @@ import Link from "next/link";
 import { FaEdit, FaTrash } from "react-icons/fa";
 
 export default function Page() {
-    const [cadastro, setCadastro2] = useState([]);
     const [dados2, setDados2] = useState([]);
     const router = useRouter();
 
@@ -33,8 +32,7 @@ export default function Page() {
         async function BuscarObras2() {
             try {
                 const resposta = await axios.get("/api/artes");
-                setCadastro2(resposta.data);
-                setDados2(resposta.data);
+                setDados2(resposta.data.artes);
             } catch (error) {
                 console.error("ERRO AO BUSCAR DADOS bu!", error);
             }
@@ -58,9 +56,11 @@ export default function Page() {
                     <div className={style.cadastroContainer}>
                         <h1 className={style.mainprincipal}>Obras Cadastradas</h1>
                         <div className={style.cadastro2}>
-                            {dados2.length ? (
+                            {dados2.length >0 ? (
                                 <div className={style.obraList}>
-                                    {artes.map((artes) => (
+
+                                    {
+                                    dados2.map((artes) => (
                                         <div key={artes.id} className={style.artes}>
                                             <div className={style.infos}>
                                                 <img src="{artes.url}" alt="img" />
