@@ -1,6 +1,5 @@
 "use client"
 import React, { useEffect, useState } from "react";
-
 import { RiDeleteBinLine } from "react-icons/ri";
 import { FaEdit } from "react-icons/fa";
 import style from "./pageIndex.module.css";
@@ -8,12 +7,16 @@ import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import axios from "axios";
 import ArteLoading from "./components/loading/loading";
+import { useRouter } from "next/router";
 
 function Home() {
   const [artes, setArtes] = useState([]);
   const [filtroArte, setFiltroArte] = useState("");
   const [deleteArte, setDeleteArte] = useState(1);
+  const [updateArte , setUpdateArte] = useState(1)
+ const router = useRouter();
 
+  //Carrega as obras de arte do banco de dados ao carregar a página
   useEffect(() => {
     async function BuscarObra() {
       try {
@@ -29,12 +32,16 @@ function Home() {
       }
     }
     BuscarObra();
-  }, [filtroArte, deleteArte]);
+  }, [filtroArte, deleteArte. updateArte]);
 
   const deletarArte = async (id) => {
     await axios.delete(`/API/artes/${id}`);
     //alert("APAGOOOOOOOOOOOOOOOOOOOOU");
     setDeleteArte(deleteArte + 1);
+    };
+  
+  const editarArte = async (id) => {
+  router.push(`/API/artes/${id}`)
   };
 
   return (

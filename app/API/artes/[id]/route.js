@@ -1,7 +1,6 @@
 import axios from "axios";
 import { NextResponse } from "next/server";
-
-const url = " http://localhost:5000/artes"
+const url = " http://localhost:5000/"
 
 
 export async function GET(request, { params }) {
@@ -22,7 +21,7 @@ export async function PUT(request, { params }) {
     const body = await request.json();
 
     try {
-        const resposta = await axios.put(`${url}/${id}`, body);
+        const resposta = await axios.put(`${url}${id}`, body);
         return NextResponse.json(resposta.data);
     } catch (error) {
         console.log("[ORDER_PUT]", error);
@@ -32,7 +31,7 @@ export async function PUT(request, { params }) {
 }
 export async function DELETE(request, { params }) {
     const { id } = params;
-    console.log("APIIIIIIIIII DELEEEEEEEEEEETE");
+    // console.log("APIIIIIIIIII DELEEEEEEEEEEETE");
 
     try {
         const resposta = await axios.delete(`${url}${id}`);
