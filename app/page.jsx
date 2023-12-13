@@ -1,6 +1,4 @@
-"use client"
 import React, { useEffect, useState } from "react";
-
 import { RiDeleteBinLine } from "react-icons/ri";
 import { FaEdit } from "react-icons/fa";
 import style from "./pageIndex.module.css";
@@ -8,11 +6,14 @@ import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import axios from "axios";
 import ArteLoading from "./components/loading/loading";
+import { useRouter } from "next/navigation";
 
 function Home() {
   const [artes, setArtes] = useState([]);
   const [filtroArte, setFiltroArte] = useState("");
   const [deleteArte, setDeleteArte] = useState(1);
+  const [updateArte, setUpdateArte] = useState(1);
+  const router = useRouter();
 
   useEffect(() => {
     async function BuscarObra() {
@@ -24,23 +25,28 @@ function Home() {
         const resposta = await axios.get(`/api/artes?${queryParams}`);
         setArtes(resposta.data.artes);
       } catch (error) {
-        console.error("erro ao enviar dados aaaa", error);
-        console.log(artes)
+        console.error("Erro ao buscar obras de arte:", error);
       }
     }
     BuscarObra();
-  }, [filtroArte, deleteArte]);
+  }, [filtroArte, deleteArte, updateArte]); // Corrigi o ponto no array de dependências
 
   const deletarArte = async (id) => {
-    await axios.delete(`/API/artes/${id}`);
-    //alert("APAGOOOOOOOOOOOOOOOOOOOOU");
-    setDeleteArte(deleteArte + 1);
+    try {
+      await axios.delete(`/API/artes/${id}`);
+      setDeleteArte(deleteArte + 1); // Atualiza o estado para recarregar as obras após a exclusão
+    } catch (error) {
+      console.error("Erro ao excluir a obra de arte:", error);
+    }
+  };
+
+  const editarArte = async (id) => {
+    router.push(`/teste/${id}`); // Redireciona para a página de edição com o ID da obra
   };
 
   return (
     <>
       <Header />
-     
       <div className={style.principal}>
      
         <div className={style.poster}>
@@ -112,7 +118,10 @@ function Home() {
                       <button className={style.button} onClick={() => deletarArte(arte.id)}>
                         <RiDeleteBinLine color="white" fontSize={25} />
                       </button>
-                      <button className={style.button} >
+                      <button className={style.button} onClick={() => editarArte(arte.id)} >
+                        <FaEdit color="white" fontSize={25} />
+                      </button>
+                      <button className={style.button}>
                         Ver mais informações
                       </button>
                     </div>
