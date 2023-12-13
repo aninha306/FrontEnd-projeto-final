@@ -9,37 +9,37 @@ import Link from "next/link";
 import { FaEdit, FaTrash } from "react-icons/fa";
 
 export default function Page() {
-    const [cadastro, setCadastro2] = useState([]);
-    const [dados2, setDados2] = useState([]);
+    const [cadastro, setCadastro] = useState([]);
+    const [dados, setDados] = useState([]);
     const router = useRouter();
 
     const deletar = async (id) => {
-        const url = `API/cadastro2/${id}`;
+        const url = `API/register/${id}`;
 
         try {
             console.log("Enviando dados:", { nomeObra, url, artista, dataProducao, tipo, idadeArtista });
             await axios.delete(url);
-            setDados2(dados2.filter((cadastro) => cadastro.id !== id));
+            setDados(dados.filter((cadastro) => cadastro.id !== id));
         } catch (error) {
-            console.error("ERRO AO BUSCAR DADOS!", error);
+            console.error("BUUUU!", error);
         }
     };
 
     const atualizar = async (id) => {
-        router.push(`/cadastro2/${id}`);
+        router.push(`/register/${id}`);
     }
 
     useEffect(() => {
-        async function BuscarObras2() {
+        async function BuscarObras() {
             try {
                 const resposta = await axios.get("/API/cadastro2");
-                setCadastro2(resposta.data);
-                setDados2(resposta.data);
+                setCadastro(resposta.data);
+                setDados(resposta.data);
             } catch (error) {
-                console.error("ERRO AO BUSCAR DADOS bu!", error);
+                console.error("ERRO AO BUSCAR DADOS bbbbb!", error);
             }
         }
-        BuscarObras2();
+        BuscarObras();
     }, []);
 
     return (
@@ -48,7 +48,7 @@ export default function Page() {
             <div>
                 <div className={style.container}>
                     <div className={style.acoes}>
-                        <Link href="/cadastro2">
+                        <Link href="/colaboradores">
                             <button className={`${style.button} ${style.primeirobtn}`}>
                                 Cadastrar Obra
                             </button>
@@ -56,9 +56,9 @@ export default function Page() {
                     </div>
 
                     <div className={style.cadastroContainer}>
-                        <h1 className={style.mainprincipal}>Obras Cadastradas</h1>
+                        <h1 className={style.mainprincipal}>OIII</h1>
                         <div className={style.cadastro2}>
-                            {dados2.length ? (
+                            {dados.length ? (
                                 <div className={style.obraList}>
                                     {artes.map((artes) => (
                                         <div key={artes.id} className={style.artes}>
@@ -103,7 +103,7 @@ export default function Page() {
                             ) : (
 
 
-                                <p>{dados2.message ? dados2.message : ""}</p>
+                                <p>{dados.message ? dados.message : ""}</p>
                             )}
                         </div>
                     </div>

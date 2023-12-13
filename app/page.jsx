@@ -24,7 +24,7 @@ function Home() {
         const resposta = await axios.get(`/API/artes?${queryParams}`);
         setArtes(resposta.data.artes);
       } catch (error) {
-        console.error("erro ao enviar dados", error);
+        console.error("erro ao enviar dados aaaa", error);
         console.log(artes)
       }
     }

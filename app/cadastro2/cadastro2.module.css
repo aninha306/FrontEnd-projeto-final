@@ -13,7 +13,7 @@
 }
 
 .mainprincipal {
-    color: #fff;
+    color: #7e0606;
     font-family: 'Poppins';
     font-size: 35px;
     margin-left: 38%;
@@ -22,6 +22,14 @@
 
 .container {
     background-color: #000000;
+}
+
+.cadastroContainer{
+    background-color: aquamarine;
+   height: 100rem;
+}
+.infos{
+    background-color: bisque;
 }
 
 
