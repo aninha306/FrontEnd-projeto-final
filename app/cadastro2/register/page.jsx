@@ -34,18 +34,7 @@ export default function Register() {
             console.error("TA QUASE", error);
         }
     };
-    useEffect(() => {
-        async function BuscarObra() {
-            try {
-                const resposta = await axios.get("/api/artes");
-                setCadastro(resposta.data.artes);
-            } catch (error) {
-                console.error("errooooo", error);
-            }
-        }
-        BuscarObra();
-    }, []);
-
+   
     return (
         <>
             <Header></Header>

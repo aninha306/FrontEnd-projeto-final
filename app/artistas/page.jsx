@@ -6,6 +6,7 @@ import Header from "../components/header/header";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Footer from "../components/footer/footer";
+import Link from "next/link";
 
 
 
@@ -29,26 +30,38 @@ function sobreNos() {
     <>
 
       <Header></Header>
-     
+      
       <div className={style.main}>
-        
+        <Link href={`/cadastroArtistas`}>
+          <button className={style.primeirobtn}>
+            seja membro!
+          </button>
+        </Link>
+
+
         {
-          
           artes.map(artista => (
-            
+
+
+
             <div className={style.blocos}>
               <div className={style.infos}>
                 <p className={style.texto}>{artista.nome}</p>
                 <p className={style.texto}>{artista.idade}</p>
                 <img className={style.imgsQuadrosFixos} src={artista.imagem} alt="" />
                 <div>
-                <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={20} /></button>
-                <button className={style.button}><FaEdit color={"white"} fontSize={20} /></button>
+                  <button className={style.button}><RiDeleteBinLine color={"white"} fontSize={20} /></button>
+                  <button className={style.button}><FaEdit color={"white"} fontSize={20} /></button>
                 </div>
+
+
               </div>
+
             </div>
+
           ))
         } </div>
+
 
       <Footer></Footer>
     </>
