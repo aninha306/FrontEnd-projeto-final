@@ -21,7 +21,7 @@ function Home() {
         if (filtroArte) {
           queryParams += `tipo=${filtroArte}`;
         }
-        const resposta = await axios.get(`/API/artes?${queryParams}`);
+        const resposta = await axios.get(`/api/artes?${queryParams}`);
         setArtes(resposta.data.artes);
       } catch (error) {
         console.error("erro ao enviar dados aaaa", error);
@@ -51,7 +51,7 @@ function Home() {
           <div className={style.img}>
             <img
               src="https://photoarts.com.br/magazine/wp-content/uploads/sites/2/2021/07/artur-matosyan-4YWUMaftmag-unsplash-1-1.jpg"
-              width={1290}
+              width={1195}
               height={600}
               alt=""
             />

@@ -14,7 +14,7 @@ export default function Page() {
     const router = useRouter();
 
     const deletar = async (id) => {
-        const url = `API/cadastro2/${id}`;
+        const url = `api/cadastro2/${id}`;
 
         try {
             console.log("Enviando dados:", { nomeObra, url, artista, dataProducao, tipo, idadeArtista });
@@ -32,7 +32,7 @@ export default function Page() {
     useEffect(() => {
         async function BuscarObras2() {
             try {
-                const resposta = await axios.get("/API/cadastro2");
+                const resposta = await axios.get("/api/artes");
                 setCadastro2(resposta.data);
                 setDados2(resposta.data);
             } catch (error) {

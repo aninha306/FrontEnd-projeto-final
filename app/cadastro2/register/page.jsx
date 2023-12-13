@@ -22,7 +22,7 @@ export default function Register() {
 
         try {
             console.log("Enviando dados:", { nomeObra, url, artista, dataProducao, tipo, idadeArtista });
-            await axios.post("/API/artes", { nomeObra, url, artista, dataProducao, tipo, idadeArtista });
+            await axios.post("/api/artes", { nomeObra, url, artista, dataProducao, tipo, idadeArtista });
             setNome("");
             setImagem("");
             setArtista("");
@@ -37,7 +37,7 @@ export default function Register() {
     useEffect(() => {
         async function BuscarObra() {
             try {
-                const resposta = await axios.get("/API/artes");
+                const resposta = await axios.get("/api/artes");
                 setCadastro(resposta.data.artes);
             } catch (error) {
                 console.error("errooooo", error);

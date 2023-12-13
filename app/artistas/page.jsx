@@ -16,7 +16,7 @@ function sobreNos() {
   useEffect(() => {
     async function BuscarObra() {
       try {
-        const resposta = await axios.get("/API/artistas");
+        const resposta = await axios.get("/api/artistas");
         setArtes(resposta.data);
       } catch (error) {
         console.error("ERRO AO ENVIAR DADOS", error);
