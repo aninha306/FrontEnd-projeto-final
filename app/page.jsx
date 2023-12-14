@@ -133,7 +133,7 @@ function Home() {
               ))
             ) : (
               <div className={styles.maingifLoading}>
-              <img className={styles.gifLoading} src="/loadingArte.gif" alt="Loading gif" />
+              <img className={styles.gifLoading} src="loading.gif" alt="Loading.gif" />
             </div>
             )}
           </div>
