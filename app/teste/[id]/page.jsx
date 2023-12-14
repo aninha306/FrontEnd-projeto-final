@@ -1,8 +1,8 @@
 "use client"
-import axios from 'axios'
-import { useEffect, useState } from 'react'
-import styles from "./editar.module.css"
-import { useRouter } from 'next/navigation' // Add this import
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import styles from "./editar.module.css";
+import { useRouter } from 'next/router';
 
 export default function Editar({ params }) {
   const [nomeObra, setNomeObra] = useState("");
@@ -13,7 +13,7 @@ export default function Editar({ params }) {
   const [url, setUrl] = useState("");
   const [descricao, setDescricao] = useState("");
   const { id } = params;
-  const router = useRouter(); // Add this line
+  const router = useRouter;
 
   useEffect(() => {
     async function fetchArts() {
@@ -26,6 +26,7 @@ export default function Editar({ params }) {
         setIdadeArtista(arte.idadeArtista);
         setDataProducao(arte.dataProducao);
         setUrl(arte.url);
+        setDescricao(arte.descricao);
       } catch (error) {
         console.error("Error fetching art details:", error);
       }
@@ -35,6 +36,7 @@ export default function Editar({ params }) {
       fetchArts();
     }
   }, [id]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -46,19 +48,27 @@ export default function Editar({ params }) {
         idadeArtista,
         dataProducao,
         descricao
-
       });
       router.push(`/`);
     } catch (error) {
-      console.error("Error updating art:", error);
+      console.error("bobocaaa ta com erro", error);
     }
   };
+
+  const handleExcluir = async () => {
+    try {
+      await axios.delete(`/api/artes/${id}`);
+      router.push(`/`);
+    } catch (error) {
+      console.error("Error deleting art:", error);
+    }
+  };
+
   return (
     <>
       <div className={styles.container}>
         <div className={styles.arteContainer}>
           <h1 className={styles.mainText}>Atualizar Arte</h1>
-
           {id ? (
             <form onSubmit={handleSubmit}>
               <div className={styles.formGroup}>
@@ -157,8 +167,27 @@ export default function Editar({ params }) {
           ) : (
             <p>Carregando...</p>
           )}
+
+          {id && (
+            <>
+              <button
+                type="button"
+                className={`${styles.button} ${styles.deleteButton}`}
+                onClick={handleExcluir}
+              >
+                Excluir Arte
+              </button>
+              <button
+                type="button"
+                className={`${styles.button} ${styles.backButton}`}
+                onClick={() => router.push('/')}
+              >
+                Voltar para Obras
+              </button>
+            </>
+          )}
         </div>
       </div>
     </>
-  )
+  );
 }

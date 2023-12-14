@@ -31,7 +31,7 @@ export default function Page() {
     useEffect(() => {
         async function BuscarObras2() {
             try {
-                const resposta = await axios.get("/api/artes");
+                const resposta = await axios.get("/API/artes");
                 setDados2(resposta.data.artes);
             } catch (error) {
                 console.error("ERRO AO BUSCAR DADOS bu!", error);
@@ -63,24 +63,24 @@ export default function Page() {
                                     dados2.map((artes) => (
                                         <div key={artes.id} className={style.artes}>
                                             <div className={style.infos}>
-                                                <img src="{artes.url}" alt="img" />
-                                                <p>
-                                                    <strong>ID:</strong> {artes.id}
+                                                <img  className={style.imgsQuadrosFixos} src={artes.url} alt="img" />
+                                                <p className={style.pInfos}>
+                                                   ID: {artes.id}
                                                 </p>
-                                                <p>
-                                                    <strong>Nome da Obra:</strong> {artes.nomeObra}
+                                                <p className={style.pInfos}>
+                                                   Nome da Obra:    {artes.nomeObra}
                                                 </p>
-                                                <p>
-                                                    <strong>Nome do Artista:</strong> {artes.artista}
+                                                <p className={style.pInfos}>
+                                                   Nome do Artista: {artes.artista}
                                                 </p>
-                                                <p>
-                                                    <strong>Data de Produção:</strong> {artes.dataProducao}
+                                                <p className={style.pInfos}>
+                                                   Data de Produção: {artes.dataProducao}
                                                 </p>
-                                                <p>
-                                                    <strong>Tipo de Obra:</strong> {artes.tipo}
+                                                <p className={style.pInfos}>
+                                                   Tipo de Obra: {artes.tipo}
                                                 </p>
-                                                <p>
-                                                    <strong>Idade do Artista:</strong> {artes.idadeArtista}
+                                                <p className={style.pInfos}>
+                                                   Idade do Artista: {artes.idadeArtista}
                                                 </p>
                                             </div>
 

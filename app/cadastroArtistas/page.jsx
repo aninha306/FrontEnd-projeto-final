@@ -34,7 +34,7 @@ export default function Register() {
     useEffect(() => {
         async function BuscarObra() {
             try {
-                const resposta = await axios.get("/api/artistas");
+                const resposta = await axios.get("/API/artistas");
                 setCadastro(resposta.data);
             } catch (error) {
                 console.error("errooooo", error);

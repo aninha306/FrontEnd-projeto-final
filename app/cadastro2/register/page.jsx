@@ -22,7 +22,7 @@ export default function Register() {
 
         try {
             console.log("Enviando dados:", { nomeObra, url, artista, dataProducao, tipo, idadeArtista });
-            await axios.post("/api/artes", { nomeObra, url, artista, dataProducao, tipo, idadeArtista });
+            await axios.post("/API/artes", { nomeObra, url, artista, dataProducao, tipo, idadeArtista });
             setNome("");
             setImagem("");
             setArtista("");
