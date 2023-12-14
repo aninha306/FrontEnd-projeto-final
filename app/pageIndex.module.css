@@ -2,28 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap');
 
 .principal {
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-    justify-content: center;
+    background-image: url("https://img.freepik.com/fotos-premium/fundo-abstrato-da-textura-de-marmore-preto_158502-225.jpg?w=360");
+    background-position: center;
+}
 
+.poster {
+    width: 100%;
 }
 
 
 .thiago{
-   background-image: url("https://img.freepik.com/fotos-premium/fundo-abstrato-da-textura-de-marmore-preto_158502-225.jpg?w=360");
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
 
-}
-.poster {
-    background-color: rgb(115, 36, 36);
-    margin-bottom: 25px;
-    align-items: center;
-    text-align: center;
 }
 
 .infos {
@@ -45,7 +39,6 @@
 
 .qudrosDiv {
     background-color: rgb(0, 0, 0);
-    width: 25rem;
     height: 26rem;
     margin: 37px;
     border: 8px double #daa520;
@@ -57,7 +50,7 @@
 .imgsQuadrosFixos {
     width: 18rem;
     height: 200px;
-    margin-top: 20px;
+    margin: 1rem;
 }
 
 .testoDiv {
@@ -142,6 +135,9 @@
     margin-right: 5%;
 }
 
+.divImageLoading {
+    height: 10rem;
+}
 
 @media only screen and (max-width: 450px) {
     .titulo{

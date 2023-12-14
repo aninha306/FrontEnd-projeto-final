@@ -13,7 +13,7 @@ export default function Page() {
     const router = useRouter();
 
     const deletar = async (id) => {
-        const url = `api/cadastro2/${id}`;
+        const url = `API/cadastro2/${id}`;
 
         try {
             console.log("Enviando dados:", { nomeObra, url, artista, dataProducao, tipo, idadeArtista });
@@ -46,7 +46,7 @@ export default function Page() {
             <div>
                 <div className={style.container}>
                     <div className={style.acoes}>
-                        <Link href="/cadastro2">
+                        <Link href="/cadastro2/register">
                             <button className={`${style.button} ${style.primeirobtn}`}>
                                 Cadastrar Obra
                             </button>
@@ -64,23 +64,23 @@ export default function Page() {
                                         <div key={artes.id} className={style.artes}>
                                             <div className={style.infos}>
                                                 <img  className={style.imgsQuadrosFixos} src={artes.url} alt="img" />
-                                                <p className={style.pInfos}>
+                                                {/* <p className={style.pInfos}>
                                                    ID: {artes.id}
+                                                </p> */}
+                                                <p className={style.pInfos}>
+                                                  <strong>Nome da Obra:</strong>     {artes.nomeObra}
                                                 </p>
                                                 <p className={style.pInfos}>
-                                                   Nome da Obra:    {artes.nomeObra}
+                                                <strong> Nome do Artista:</strong> {artes.artista}
                                                 </p>
                                                 <p className={style.pInfos}>
-                                                   Nome do Artista: {artes.artista}
+                                                <strong>  Data de Produção: </strong>{artes.dataProducao}
                                                 </p>
                                                 <p className={style.pInfos}>
-                                                   Data de Produção: {artes.dataProducao}
+                                                <strong>  Tipo de Obra:</strong> {artes.tipo}
                                                 </p>
                                                 <p className={style.pInfos}>
-                                                   Tipo de Obra: {artes.tipo}
-                                                </p>
-                                                <p className={style.pInfos}>
-                                                   Idade do Artista: {artes.idadeArtista}
+                                                <strong>  Idade do Artista:</strong> {artes.idadeArtista}
                                                 </p>
                                             </div>
 
@@ -89,13 +89,15 @@ export default function Page() {
                                                     onClick={() => deletar(artes.id)}
                                                 >
                                                     <FaTrash />
-                                                    Deletar
+                                                 
                                                 </button>
+                                                <Link href={"/teste/{id}"}>
                                                 <button className={`${style.button}, ${style.editButton}`}
                                                     onClick={() => atualizar(artes.id)}>
                                                     <FaEdit />
-                                                    Atualizar
+                                                   
                                                 </button>
+                                                </Link>
                                             </div>
                                         </div>
                                     ))}

@@ -19,9 +19,12 @@ export async function GET(request, { params }) {
 export async function PUT(request, { params }) {
     const { id } = params;
     const body = await request.json();
+    console.log("CCCCCCCCCCCCCCCCCCCCCCc");
+    console.log(id);
+    console.log(body);
 
     try {
-        const resposta = await axios.put(`${url}${id}`, body);
+        const resposta = await axios.put(`${url}/${id}`, body);
         return NextResponse.json(resposta.data);
     } catch (error) {
         console.log("[ORDER_PUT]", error);
@@ -34,7 +37,7 @@ export async function DELETE(request, { params }) {
     // console.log("APIIIIIIIIII DELEEEEEEEEEEETE");
 
     try {
-        const resposta = await axios.delete(`${url}${id}`);
+        const resposta = await axios.delete(`${url}/${id}`);
         return NextResponse.json(resposta.data);
     } catch (error) {
         console.log("[ORDER_DELETE]", error);

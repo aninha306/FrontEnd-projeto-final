@@ -37,8 +37,6 @@ function sobreNos() {
             seja membro!
           </button>
         </Link>
-
-
         {
           artes.map(artista => (
 

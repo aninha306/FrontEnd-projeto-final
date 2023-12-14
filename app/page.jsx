@@ -6,14 +6,16 @@ import { useRouter } from "next/navigation";
 import style from "./pageIndex.module.css";
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
-// import loadingArte from "./components/loading/loading";
+import LoadingArte from "./components/loading/loading.jsx";
 import axios from "axios";
 import Link from "next/link";
 
 function Home() {
   const [artes, setArtes] = useState([]);
   const [filtroArte, setFiltroArte] = useState("");
+  const [deleteArte, setDeleteArte] = useState(1)
   const [updateTrigger, setUpdateTrigger] = useState(1);
+  const [data, setData] = useState(null);
   const router = useRouter();
 
   useEffect(() => {
@@ -29,44 +31,37 @@ function Home() {
         console.error("Erro ao buscar obras de arte:", error);
       }
     }
-
     BuscarObra();
-  }, [filtroArte, updateTrigger]);
+  }, [filtroArte, deleteArte]); // Corrigi o ponto no array de dependências
 
   const deletarArte = async (id) => {
     try {
       await axios.delete(`/API/artes/${id}`);
-      updateArtes();
+      setDeleteArte(deleteArte + 1); // Atualiza o estado para recarregar as obras após a exclusão
     } catch (error) {
       console.error("Erro ao excluir a obra de arte:", error);
     }
   };
-  const editarArte = (id) => {
-    router.push(`/editar/${id}`);
-  };
-  const updateArtes = () => {
-    setUpdateTrigger(updateTrigger + 1);
-  };
 
+  const updateArte = async (id) => {
+    const url = `/teste/${id}`
+    console.log(url);
+    router.push(url); // Redireciona para a página de edição com o ID da obra
+  };
   return (
-    <>
+    <div className={style.principal}>
       <Header />
-      <div className={style.principal}>
-        <div className={style.poster}>
-          <div className={style.thiago}>
-            <div className={style.blocoCima}>
-         
-           
-
-            <div className={style.infos}>
+      <div className={style.poster}>
+        <div className={style.thiago}>
+          <div className={style.infos}>
             <h1 className={style.titulo}>Arte Além da Tela</h1>
-              <p className={style.textoInfo}>
-                A definição de arte é uma questão complexa e muitas vezes subjetiva, pois a arte abrange uma ampla gama de formas de expressão criativa e manifestações culturais. Ao longo da história, diferentes culturas e períodos de tempo têm apresentado concepções distintas sobre o que constitui a arte. No entanto, algumas características e princípios fundamentais podem ser explorados para compreender melhor essa manifestação humana.
-              </p>
-              <p className={style.textoInfo}>
-                A arte, em sua essência, é uma forma de comunicação e expressão. Ela transcende a linguagem verbal, permitindo que os artistas transmitam ideias, emoções, conceitos e experiências através de diferentes meios. Pode ser visual, como pintura e escultura; auditiva, como música e poesia; cênica, como teatro e dança; ou uma combinação de várias formas, como no cinema.
-              </p>
-              <div className={style.mainFiltro}>
+            <p className={style.textoInfo}>
+              A definição de arte é uma questão complexa e muitas vezes subjetiva, pois a arte abrange uma ampla gama de formas de expressão criativa e manifestações culturais. Ao longo da história, diferentes culturas e períodos de tempo têm apresentado concepções distintas sobre o que constitui a arte. No entanto, algumas características e princípios fundamentais podem ser explorados para compreender melhor essa manifestação humana.
+            </p>
+            <p className={style.textoInfo}>
+              A arte, em sua essência, é uma forma de comunicação e expressão. Ela transcende a linguagem verbal, permitindo que os artistas transmitam ideias, emoções, conceitos e experiências através de diferentes meios. Pode ser visual, como pintura e escultura; auditiva, como música e poesia; cênica, como teatro e dança; ou uma combinação de várias formas, como no cinema.
+            </p>
+            <div className={style.mainFiltro}>
               <div>
                 <select
                   value={filtroArte}
@@ -89,58 +84,56 @@ function Home() {
                 </select>
               </div>
             </div>
-            </div>
-
-            
-            </div>
-            {artes ? (
-              artes.map((arte) => (
-                <div key={arte.id}>
-                  <div className={style.main}>
-                    <div className={style.qudrosDiv}>
-                      <img
-                        src={arte.url}
-                        className={style.imgsQuadrosFixos}
-                        alt={arte.nomeObra}
-                      />
-                      <p className={style.direitos}>
-                        As imagens podem ter direitos autorais.
-                      </p>
-                      <div className={style.testoDiv}>
-                        <p>{arte.nomeObra}</p>
-                        <p>{arte.artista}</p>
-                        <p>{arte.tipo}</p>
+          </div>
+          {artes ? (
+            artes.map((arte) => (
+              <div key={arte.id}>
+                <div className={style.main}>
+                  <div className={style.qudrosDiv}>
+                    <img
+                      src={arte.url}
+                      className={style.imgsQuadrosFixos}
+                      alt={arte.nomeObra}
+                    />
+                    <p className={style.direitos}>
+                      As imagens podem ter direitos autorais.
+                    </p>
+                    <div className={style.testoDiv}>
+                      <p>{arte.nomeObra}</p>
+                      <p>{arte.artista}</p>
+                      <p>{arte.tipo}</p>
+                      <button
+                        className={style.button}
+                        onClick={() => deletarArte(arte.id)}
+                      >
+                        <RiDeleteBinLine color="white" fontSize={25} />
+                      </button>
                         <button
                           className={style.button}
-                          onClick={() => deletarArte(arte.id)}
-                        >
-                          <RiDeleteBinLine color="white" fontSize={25} />
-                        </button>
-                        <Link href={"/teste/{id}"}>
-                        <button
-                          className={style.button}
-                          onClick={() => editarArte(arte.id)}>
+                          onClick={() => updateArte(arte.id)}>
                           <FaEdit color="white" fontSize={25} />
                         </button>
-                        </Link>
+                      <Link href={"/cadastro2"}>
                         <button className={style.button}>
                           Ver mais informações
                         </button>
-                      </div>
+                      </Link>
                     </div>
                   </div>
                 </div>
-              ))
-            ) : (
-              <div className={styles.maingifLoading}>
-              <img className={styles.gifLoading} src="loading.gif" alt="Loading.gif" />
+              </div>
+            ))
+          ) : (
+            <div className={style.divImageLoading}>
+              <LoadingArte />
             </div>
-            )}
-          </div>
+          )}
         </div>
+      </div>
+      <div className={style.divFoter}>
         <Footer />
       </div>
-    </>
+    </div>
   );
 }
 
