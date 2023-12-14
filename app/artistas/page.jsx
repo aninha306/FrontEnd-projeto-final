@@ -30,13 +30,11 @@ function sobreNos() {
     <>
 
       <Header></Header>
+
       
+
       <div className={style.main}>
-        <Link href={`/cadastroArtistas`}>
-          <button className={style.primeirobtn}>
-            seja membro!
-          </button>
-        </Link>
+        
 
 
         {
@@ -61,7 +59,7 @@ function sobreNos() {
 
           ))
         } </div>
-
+ 
 
       <Footer></Footer>
     </>

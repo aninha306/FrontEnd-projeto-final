@@ -7,7 +7,8 @@ import style from "./pageIndex.module.css";
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import axios from "axios";
-import ArteLoading from "./components/loading/loading";
+import ImageLoading from "./components/loading/loading";
+import Link from "next/link";
 
 function Home() {
   const [artes, setArtes] = useState([]);
@@ -51,13 +52,13 @@ function Home() {
   return (
     <>
       <Header />
+    
       <div className={style.principal}>
         <div className={style.poster}>
           <div className={style.thiago}>
             <div className={style.blocoCima}>
          
-           
-
+      
             <div className={style.infos}>
             <h1 className={style.titulo}>Arte Além da Tela</h1>
               <p className={style.textoInfo}>
@@ -122,16 +123,18 @@ function Home() {
                         >
                           <FaEdit color="white" fontSize={25} />
                         </button>
+                        <Link href={`/cadastro2`}>
                         <button className={style.button}>
                           Ver mais informações
-                        </button>
+                        </button></Link>
                       </div>
                     </div>
                   </div>
                 </div>
               ))
-            ) : (
-              <ArteLoading />
+              
+            ) : (   <ImageLoading />
+           
             )}
           </div>
         </div>

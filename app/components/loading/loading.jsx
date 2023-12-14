@@ -1,28 +1,22 @@
-import React from "react";
-import styles from "./loading.module.css"
 
-const arteLoading = () =>{
-    const [loadingArte, setLoadingArte] = useState(true);
-  
-    useEffect(() =>{
-  
-      const chamadaFalsa = () =>{
-  
-        setTimeout(() =>{
-          setLoadingArte(false);
-        }, 2000)
-      };
-      chamadaFalsa();
-    }, []);
-  };
+// function ImageLoading() {
+//     return (
+//         <div data-tes-id=' LOADING'>
+//         </div>
+//     )
+// 
 
-function loadingArte(){
-    return(
-        <>
-        <div className={styles.maingifLoading}>
-        <img className={styles.gifLoading} src="/loadingArte.gif" alt="Loading gif"/>
-    </div>
-        </>
+// export default ImageLoading
+
+import React from 'react'
+import style from "./loading.module.css"
+
+function ImageLoading() {
+    return (
+        <div id={style.containerImgLoading}>
+                <img id={style.image} src='/loadingArte.gif' alt="Loading Image" />
+        </div>
     )
 }
-export default loadingArte;
+
+export default ImageLoading

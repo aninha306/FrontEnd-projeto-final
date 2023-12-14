@@ -2,7 +2,10 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import styles from "./editar.module.css";
+import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Header from '@/app/components/header/header';
+import Footer from '@/app/components/footer/footer';
 
 export default function Editar({ params }) {
   const [nomeObra, setNomeObra] = useState("");
@@ -11,53 +14,59 @@ export default function Editar({ params }) {
   const [idadeArtista, setIdadeArtista] = useState("");
   const [dataProducao, setDataProducao] = useState("");
   const [url, setUrl] = useState("");
-  const [descricao, setDescricao] = useState("");
+  
   const { id } = params;
   const router = useRouter;
-
   useEffect(() => {
     async function fetchArts() {
       try {
-        const response = await axios.get(`/API/artes/${id}`);
-        const arte = response.data;
+        const response = await axios.get(`API/artes/${id}`);
+        const arte = response.data.artes;
         setNomeObra(arte.nomeObra);
         setTipo(arte.tipo);
         setArtista(arte.artista);
         setIdadeArtista(arte.idadeArtista);
         setDataProducao(arte.dataProducao);
         setUrl(arte.url);
-        setDescricao(arte.descricao);
+  
       } catch (error) {
-        console.error("Error fetching art details:", error);
+        console.error("Erro ao buscar arte:", error);
       }
     }
-
+  
     if (id) {
       fetchArts();
     }
   }, [id]);
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`/api/artes/${id}`, {
+      if (!id) {
+        console.error("ID não está definido");
+        return;
+      }
+  
+      await axios.put(`API/artes/${id}`, {
         nomeObra,
         url,
         tipo,
         artista,
         idadeArtista,
         dataProducao,
-        descricao
+        
       });
       router.push(`/`);
     } catch (error) {
-      console.error("bobocaaa ta com erro", error);
+      console.log("Enviando dados:", { nomeObra, url, artista, dataProducao, tipo, idadeArtista, descricao });
+      console.error("Erro ao atualizar arte:", error);
     }
   };
+  
 
   const handleExcluir = async () => {
     try {
-      await axios.delete(`/api/artes/${id}`);
+      await axios.delete(`/API/artes/${id}`);
       router.push(`/`);
     } catch (error) {
       console.error("Error deleting art:", error);
@@ -66,27 +75,17 @@ export default function Editar({ params }) {
 
   return (
     <>
+    <Header/>
       <div className={styles.container}>
         <div className={styles.arteContainer}>
           <h1 className={styles.mainText}>Atualizar Arte</h1>
           {id ? (
             <form onSubmit={handleSubmit}>
               <div className={styles.formGroup}>
-                <label htmlFor="url" className={styles.label}>
-                  URL:
-                </label>
-                <input
-                  type="text"
-                  value={url}
-                  onChange={(e) => setUrl(e.target.value)}
-                  required
-                />
-              </div>
               <div className={styles.formGroup}>
-                <label htmlFor="nomeObra" className={styles.label}>
-                  Nome:
-                </label>
-                <input
+              <p>Nome da obra:</p>  
+                < input className={styles.input}
+                 
                   type="text"
                   value={nomeObra}
                   onChange={(e) => setNomeObra(e.target.value)}
@@ -94,44 +93,18 @@ export default function Editar({ params }) {
                 />
               </div>
 
-              <div className={styles.formGroup}>
-                <label htmlFor="tipo" className={styles.label}>
-                  Tipo da Obra:
-                </label>
-                <input
+                <p>Link da Obra:</p>
+                < input className={styles.input}
                   type="text"
-                  value={tipo}
-                  onChange={(e) => setTipo(e.target.value)}
+                  value={url}
+                  onChange={(e) => setUrl(e.target.value)}
                   required
                 />
               </div>
+
               <div className={styles.formGroup}>
-                <label htmlFor="idadeArtista" className={styles.label}>
-                  Idade do Artista:
-                </label>
-                <input
-                  type="text"
-                  value={idadeArtista}
-                  onChange={(e) => setIdadeArtista(e.target.value)}
-                  required
-                />
-              </div>
-              <div className={styles.formGroup}>
-                <label htmlFor="dataProducao" className={styles.label}>
-                  Data de Produção:
-                </label>
-                <input
-                  type="text"
-                  value={dataProducao}
-                  onChange={(e) => setDataProducao(e.target.value)}
-                  required
-                />
-              </div>
-              <div className={styles.formGroup}>
-                <label htmlFor="artista" className={styles.label}>
-                  Artista:
-                </label>
-                <input
+               <p> Nome do artista:</p>
+                < input className={styles.input}
                   type="text"
                   value={artista}
                   onChange={(e) => setArtista(e.target.value)}
@@ -140,23 +113,39 @@ export default function Editar({ params }) {
               </div>
 
               <div className={styles.formGroup}>
-                <label htmlFor="descricao" className={styles.label}>
-                  Descrição:
-                </label>
-                <input
+               <p>Data de produção:</p> 
+                < input className={styles.input}
                   type="text"
-                  value={descricao}
-                  onChange={(e) => setDescricao(e.target.value)}
+                  value={dataProducao}
+                  onChange={(e) => setDataProducao(e.target.value)}
                   required
                 />
               </div>
-              <button
-                type="submit"
-                className={`${styles.button} ${styles.submitButton}`}
-                onClick={handleSubmit}
-              >
-                Salvar alterações
-              </button>
+             
+              <div className={styles.formGroup}>
+              <p> Tipo da Obra:</p> 
+                < input className={styles.input}
+                  type="text"
+                  value={tipo}
+                  onChange={(e) => setTipo(e.target.value)}
+                  required
+                />
+              </div>
+              <div className={styles.formGroup}>
+            
+          <p>Idade do artista:</p>  
+                < input className={styles.input}
+                  type="text"
+                  value={idadeArtista}
+                  onChange={(e) => setIdadeArtista(e.target.value)}
+                  required
+                />
+              </div>
+              
+              
+
+            
+              
               {/* <button
                 type="submit"
                 onClick={() => (router.push= '/')}
@@ -169,25 +158,37 @@ export default function Editar({ params }) {
           )}
 
           {id && (
-            <>
+            <div className={styles.caixaBotao}>
+             <button
+                type="submit"
+                className={`${styles.button} ${styles.Button}`}
+                onClick={handleSubmit}
+              >
+                editar
+              </button>
+
+           
               <button
                 type="button"
-                className={`${styles.button} ${styles.deleteButton}`}
+                className={`${styles.button} ${styles.Button}`}
                 onClick={handleExcluir}
               >
                 Excluir Arte
               </button>
+
+              <Link  href="/cadastro2" >
               <button
                 type="button"
-                className={`${styles.button} ${styles.backButton}`}
-                onClick={() => router.push('/')}
+                className={`${styles.button} ${styles.Button}`}
+             
               >
                 Voltar para Obras
-              </button>
-            </>
+              </button></Link>
+            </div>
           )}
         </div>
       </div>
+      <Footer/>
     </>
   );
 }
