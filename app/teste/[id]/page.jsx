@@ -2,7 +2,9 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import styles from "./editar.module.css";
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
+import Header from '@/app/components/header/header';
+import Footer from '@/app/components/footer/footer';
 
 export default function Editar({ params }) {
   const [nomeObra, setNomeObra] = useState("");
@@ -13,7 +15,9 @@ export default function Editar({ params }) {
   const [url, setUrl] = useState("");
   const [descricao, setDescricao] = useState("");
   const { id } = params;
-  const router = useRouter;
+  console.log("AAAAAAAAAAAAAAAAAAAA");
+  console.log(id);
+  const router = useRouter();
 
   useEffect(() => {
     async function fetchArts() {
@@ -40,7 +44,7 @@ export default function Editar({ params }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`/api/artes/${id}`, {
+      await axios.put(`/API/artes/${id}`, {
         nomeObra,
         url,
         tipo,
@@ -66,6 +70,7 @@ export default function Editar({ params }) {
 
   return (
     <>
+    <Header/>
       <div className={styles.container}>
         <div className={styles.arteContainer}>
           <h1 className={styles.mainText}>Atualizar Arte</h1>
@@ -172,13 +177,6 @@ export default function Editar({ params }) {
             <>
               <button
                 type="button"
-                className={`${styles.button} ${styles.deleteButton}`}
-                onClick={handleExcluir}
-              >
-                Excluir Arte
-              </button>
-              <button
-                type="button"
                 className={`${styles.button} ${styles.backButton}`}
                 onClick={() => router.push('/')}
               >
@@ -188,6 +186,7 @@ export default function Editar({ params }) {
           )}
         </div>
       </div>
+      <Footer/>
     </>
   );
 }

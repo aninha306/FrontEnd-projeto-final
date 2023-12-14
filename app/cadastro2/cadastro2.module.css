@@ -15,6 +15,22 @@
     border-color: #daa520;
 }
 
+.buttons {
+    background-color: #000000;
+    color: #ffffff;
+    width: 12vw;
+    height: 6vh;
+    border-radius: 10px;
+    margin-top: 2%;
+    align-items: center;
+    text-align: center;
+   margin-left: 150px;
+    font-size: 15px;
+    border-color: #daa520;
+}
+
+
+
 .mainprincipal {
 
     color: #daa520;
@@ -59,6 +75,7 @@
     font-family: 'Poppins', sans-serif;
     padding: 2px;
     margin-top: 4px;
+    margin-left: 20px;
 }
 
 .imgsQuadrosFixos {

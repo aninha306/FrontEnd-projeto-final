@@ -43,6 +43,25 @@
     justify-content: center;
     flex-direction: column;
 }
+.primeirobtn{
+    text-align: center;
+
+    margin-top: 30px;
+
+    background-color: #000000;
+
+    color: #fff;
+
+    border-color: #daa520;
+
+    width: 155px;
+
+    height: 4vh;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+}
 .imgsQuadrosFixos {
     width: 12rem;
     height: 200px;

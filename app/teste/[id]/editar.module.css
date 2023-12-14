@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&family=Poppins:wght@100&family=Sedgwick+Ave+Display&display=swap');
+
+
+
+
+
+
+
+.arteContainer{
+
+    background-color: black;
+
+    align-items: center;
+
+
+
+
+}
+
+.mainText{
+
+color: white;
+
+font-family: 'Poppins', sans-serif;
+
+text-align: center;
+
+padding-top: 40px;
+
+}
+
+
+
+
+.formGroup{
+
+    color: white;
+
+    text-align: center;
+
+    align-items: normal;
+
+    font-family: 'Poppins', sans-serif;
+
+    margin-top: 20px;
+
+
+
+
+
+
+
+}
+
+
+
+
+.input{
+
+    width: 15rem;
+
+    height: 2rem;
+
+    border-radius: 5px;
+
+    border: 0.5px solid rgb(165, 158, 10);
+
+    text-decoration: none;
+
+    margin-top: 1.5rem;
+
+    margin-left: 1.5rem;
+
+    background-color: #000000;
+
+    color: #fff;
+
+    font-family: 'Poppins', sans-serif;
+
+    align-items: normal;
+
+
+
+
+}
+
+.Button {
+
+   text-align: center;
+
+    margin-top: 30px;
+
+    background-color: #000000;
+
+    color: #fff;
+
+    border-color: #daa520;
+
+    width: 155px;
+
+    height: 4vh;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+}
+
+.caixaBotao{
+
+    background-color: #000000;
+
+    align-items: center;
+
+    margin-left: 28rem;
+
+}
