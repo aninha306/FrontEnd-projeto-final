@@ -2,18 +2,19 @@
 import React, { useEffect, useState } from "react";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { FaEdit } from "react-icons/fa";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import style from "./pageIndex.module.css";
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
+import loadingArte from "./components/loading/loading";
 import axios from "axios";
-import ArteLoading from "./components/loading/loading";
+import Link from "next/link";
 
 function Home() {
   const [artes, setArtes] = useState([]);
   const [filtroArte, setFiltroArte] = useState("");
   const [updateTrigger, setUpdateTrigger] = useState(1);
-  const router = useRouter;
+  const router = useRouter();
 
   useEffect(() => {
     async function BuscarObra() {
@@ -40,7 +41,6 @@ function Home() {
       console.error("Erro ao excluir a obra de arte:", error);
     }
   };
-
   const editarArte = (id) => {
     router.push(`/editar/${id}`);
   };
@@ -116,12 +116,13 @@ function Home() {
                         >
                           <RiDeleteBinLine color="white" fontSize={25} />
                         </button>
+                        <Link href={"/teste/{id}"}>
                         <button
                           className={style.button}
-                          onClick={() => editarArte(arte.id)}
-                        >
+                          onClick={() => editarArte(arte.id)}>
                           <FaEdit color="white" fontSize={25} />
                         </button>
+                        </Link>
                         <button className={style.button}>
                           Ver mais informações
                         </button>
@@ -131,7 +132,7 @@ function Home() {
                 </div>
               ))
             ) : (
-              <ArteLoading />
+              <loadingArte/>
             )}
           </div>
         </div>

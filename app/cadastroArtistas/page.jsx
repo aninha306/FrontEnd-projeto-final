@@ -19,7 +19,7 @@ export default function Register() {
 
         try {
             console.log("Enviando dados:", { nome, idade, imagem });
-            await axios.post("/api/artistas", { nome, idade, imagem});
+            await axios.post("/API/artistas", { nome, idade, imagem});
             setNome("");
             setIdade("");
             setImagem("");
