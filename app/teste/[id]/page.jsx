@@ -66,26 +66,17 @@ export default function Editar({ params }) {
 
   return (
     <>
+
+
       <div className={styles.container}>
         <div className={styles.arteContainer}>
           <h1 className={styles.mainText}>Atualizar Arte</h1>
           {id ? (
             <form onSubmit={handleSubmit}>
               <div className={styles.formGroup}>
-                <label htmlFor="url" className={styles.label}>
-                  URL:
-                </label>
-                <input
-                  type="text"
-                  value={url}
-                  onChange={(e) => setUrl(e.target.value)}
-                  required
-                />
-              </div>
+
               <div className={styles.formGroup}>
-                <label htmlFor="nomeObra" className={styles.label}>
-                  Nome:
-                </label>
+                <p>Nome da sua obra:</p>
                 <input
                   type="text"
                   value={nomeObra}
@@ -94,10 +85,40 @@ export default function Editar({ params }) {
                 />
               </div>
 
+               <p>Link da sua obra:</p>
+                <input
+                  type="text"
+                  value={url}
+                  onChange={(e) => setUrl(e.target.value)}
+                  required
+                />
+              </div>
+
+                 
               <div className={styles.formGroup}>
-                <label htmlFor="tipo" className={styles.label}>
-                  Tipo da Obra:
-                </label>
+               <p>Artista:</p>
+                <input
+                  type="text"
+                  value={artista}
+                  onChange={(e) => setArtista(e.target.value)}
+                  required
+                />
+              </div>
+              
+              
+              <div className={styles.formGroup}>
+              <p>Data de producao:</p>
+                <input
+                  type="text"
+                  value={dataProducao}
+                  onChange={(e) => setDataProducao(e.target.value)}
+                  required
+                />
+              </div>
+             
+
+              <div className={styles.formGroup}>
+               <p>Tipo da sua obra:</p>
                 <input
                   type="text"
                   value={tipo}
@@ -106,9 +127,7 @@ export default function Editar({ params }) {
                 />
               </div>
               <div className={styles.formGroup}>
-                <label htmlFor="idadeArtista" className={styles.label}>
-                  Idade do Artista:
-                </label>
+                <p>Idade do artista:</p>
                 <input
                   type="text"
                   value={idadeArtista}
@@ -116,40 +135,10 @@ export default function Editar({ params }) {
                   required
                 />
               </div>
-              <div className={styles.formGroup}>
-                <label htmlFor="dataProducao" className={styles.label}>
-                  Data de Produção:
-                </label>
-                <input
-                  type="text"
-                  value={dataProducao}
-                  onChange={(e) => setDataProducao(e.target.value)}
-                  required
-                />
-              </div>
-              <div className={styles.formGroup}>
-                <label htmlFor="artista" className={styles.label}>
-                  Artista:
-                </label>
-                <input
-                  type="text"
-                  value={artista}
-                  onChange={(e) => setArtista(e.target.value)}
-                  required
-                />
-              </div>
 
-              <div className={styles.formGroup}>
-                <label htmlFor="descricao" className={styles.label}>
-                  Descrição:
-                </label>
-                <input
-                  type="text"
-                  value={descricao}
-                  onChange={(e) => setDescricao(e.target.value)}
-                  required
-                />
-              </div>
+          
+
+       
               <button
                 type="submit"
                 className={`${styles.button} ${styles.submitButton}`}
