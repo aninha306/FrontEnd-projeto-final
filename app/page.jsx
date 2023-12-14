@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import style from "./pageIndex.module.css";
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
-import loadingArte from "./components/loading/loading";
+// import loadingArte from "./components/loading/loading";
 import axios from "axios";
 import Link from "next/link";
 
@@ -132,9 +132,9 @@ function Home() {
                 </div>
               ))
             ) : (
-              <div className={styles.maingifLoading}>
-              <img className={styles.gifLoading} src="loading.gif" alt="Loading.gif" />
-            </div>
+            
+              <image className={style.gifLoading} src="loading.gif" alt="Loading.gif" />
+          
             )}
           </div>
         </div>
