@@ -83,7 +83,54 @@ padding-top: 40px;
 
 
 }
+.submitButton{
+    text-align: center;
 
+    margin-top: 25px;
+
+    background-color: #000000;
+    margin-left: 35rem;
+    color: #fff;
+
+    border-color: #daa520;
+
+    width: 155px;
+
+    height: 4vh;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+}
+.input{
+    width: 25rem;
+    height: 2.5rem;
+    margin-bottom: 6px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 0.5px solid rgb(165, 158, 10);
+    
+}
+.backButton{
+    text-align: center;
+
+    margin-top: 20px;
+
+    background-color: #000000;
+
+    color: #fff;
+
+    border-color: #daa520;
+
+    width: 155px;
+
+    height: 4vh;
+  margin-left: 35rem;
+    border-radius: 10px;
+
+    font-size: 16px;
+}
 .Button {
 
    text-align: center;
